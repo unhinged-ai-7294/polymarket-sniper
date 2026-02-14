@@ -1,0 +1,20 @@
+{
+  "name": "polymarket-sniper",
+  "version": "1.0.0",
+  "description": "Automated sniper bot for Polymarket crypto up/down 5-min and 15-min markets",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["polymarket", "trading", "crypto", "bot"],
+  "author": "unhinged-ai-7294",
+  "license": "MIT",
+  "dependencies": {
+    "@polymarket/clob-client": "^3.0.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.0",
+    "ethers": "^5.7.0",
+    "ws": "^8.0.0"
+  }
+}
