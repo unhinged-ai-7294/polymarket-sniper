@@ -86,7 +86,7 @@ function shouldSnipe(market, currentPrice, priceTobeat, secondsRemaining) {
 }
 
 /**
- * Place a market order
+ * Place a market buy order
  */
 async function placeOrder(tokenId, side, amount) {
   const client = getClient();
@@ -96,19 +96,25 @@ async function placeOrder(tokenId, side, amount) {
   }
   
   try {
-    console.log(`🎯 Placing ${side} order for $${amount}...`);
+    console.log(`🎯 Placing ${side} order for $${amount} on token ${tokenId.slice(0,10)}...`);
     
-    const order = await client.createMarketOrder({
+    // Use createMarketBuyOrder for market orders
+    const order = await client.createMarketBuyOrder({
       tokenID: tokenId,
-      amount: amount,
-      side: side // 'BUY'
+      amount: parseFloat(amount) // USDC amount
     });
     
-    console.log('✅ Order placed:', order);
-    return order;
+    console.log('✅ Order created, posting...');
+    
+    // Post the order to execute it
+    const result = await client.postOrder(order);
+    console.log('✅ Order executed:', result);
+    
+    return result;
     
   } catch (error) {
     console.error('❌ Order failed:', error.message);
+    console.error('   Full error:', error);
     return null;
   }
 }

@@ -7,14 +7,20 @@
     "start": "node src/index.js",
     "dev": "node --watch src/index.js"
   },
-  "keywords": ["polymarket", "trading", "crypto", "bot"],
+  "keywords": [
+    "polymarket",
+    "trading",
+    "crypto",
+    "bot"
+  ],
   "author": "unhinged-ai-7294",
   "license": "MIT",
   "dependencies": {
     "@polymarket/clob-client": "^3.0.0",
     "axios": "^1.6.0",
     "dotenv": "^16.0.0",
-    "ethers": "^5.7.0",
+    "ethers": "^5.7.2",
+    "tslib": "^2.8.1",
     "ws": "^8.0.0"
   }
 }

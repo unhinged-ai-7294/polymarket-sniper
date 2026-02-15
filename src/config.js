@@ -14,7 +14,8 @@ module.exports = {
   
   // Trading parameters
   BET_AMOUNT_USD: parseFloat(process.env.BET_AMOUNT_USD) || 2,
-  MIN_CONFIDENCE: parseFloat(process.env.MIN_CONFIDENCE) || 0.80,
+  MIN_CONFIDENCE: parseFloat(process.env.MIN_CONFIDENCE) || 0.60,
+  MAX_CONFIDENCE: parseFloat(process.env.MAX_CONFIDENCE) || 0.85,
   SNIPE_SECONDS: parseInt(process.env.SNIPE_SECONDS) || 30,
   
   // Market filters - BTC and ETH 5-min and 15-min markets
