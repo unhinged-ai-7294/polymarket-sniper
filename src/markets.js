@@ -1,180 +1,121 @@
 const axios = require('axios');
 const config = require('./config');
 
-/**
- * Target series for crypto up/down markets with their timeframes
- */
-const TARGET_SERIES = [
-  { prefix: 'btc-updown', duration: 5, seriesSlug: 'btc-up-or-down-5m' }
-];
+const INTERVAL_SECS = 300; // 5 minutes
 
 /**
- * Calculate timestamps for current and upcoming market windows
+ * Build the slug for a given 5-minute window timestamp.
  */
-function getMarketTimestamps(durationMinutes) {
-  const now = new Date();
-  const timestamps = [];
-  
-  // Round down to nearest interval
-  const minutes = now.getUTCMinutes();
-  const roundedMinutes = Math.floor(minutes / durationMinutes) * durationMinutes;
-  
-  // Current window
-  const currentStart = new Date(now);
-  currentStart.setUTCMinutes(roundedMinutes, 0, 0);
-  const currentEnd = new Date(currentStart.getTime() + durationMinutes * 60 * 1000);
-  
-  // Next window
-  const nextEnd = new Date(currentEnd.getTime() + durationMinutes * 60 * 1000);
-  
-  // Return timestamps for current and next windows
-  timestamps.push(Math.floor(currentEnd.getTime() / 1000));
-  timestamps.push(Math.floor(nextEnd.getTime() / 1000));
-  
-  return timestamps;
+function buildSlug(ts) {
+  return `btc-updown-5m-${ts}`;
 }
 
 /**
- * Build market slug from prefix and timestamp
+ * Get the unix timestamp for the current 5-minute window start.
  */
-function buildSlug(prefix, duration, timestamp) {
-  return `${prefix}-${duration}m-${timestamp}`;
+function currentWindowTs() {
+  return Math.floor(Date.now() / 1000 / INTERVAL_SECS) * INTERVAL_SECS;
 }
 
 /**
- * Fetch active crypto up/down markets by constructing expected slugs
+ * Fetch the "price to beat" (openPrice) for a market from Polymarket's event page.
+ * This is the Chainlink BTC/USD price at the start of the 5-minute window.
  */
-async function fetchCryptoUpDownMarkets() {
-  console.log('📊 Fetching crypto up/down markets...');
-  
-  const markets = [];
-  const slugsToQuery = [];
-  
-  // Build list of expected slugs for current and next windows
-  for (const series of TARGET_SERIES) {
-    const timestamps = getMarketTimestamps(series.duration);
-    for (const ts of timestamps) {
-      slugsToQuery.push({
-        slug: buildSlug(series.prefix, series.duration, ts),
-        series: series
-      });
-    }
-  }
-  
-  // Query each potential market
-  for (const { slug, series } of slugsToQuery) {
-    try {
-      const response = await axios.get(`${config.GAMMA_HOST}/events`, {
-        params: { slug }
-      });
-      
-      const events = response.data;
-      if (!events || events.length === 0) continue;
-      
-      const event = events[0];
-      
-      // Skip closed markets
-      if (event.closed) continue;
-      
-      const market = event.markets?.[0];
-      if (!market) continue;
-      
-      // Parse outcomes and prices
-      let outcomes = ['Up', 'Down'];
-      let outcomePrices = [0.5, 0.5];
-      let tokens = [];
-      
-      try {
-        outcomes = JSON.parse(market.outcomes || '["Up", "Down"]');
-        outcomePrices = JSON.parse(market.outcomePrices || '["0.5", "0.5"]').map(p => parseFloat(p));
-        tokens = JSON.parse(market.clobTokenIds || '[]');
-      } catch (e) {}
-      
-      markets.push({
-        eventId: event.id,
-        eventSlug: event.slug,
-        eventTitle: event.title,
-        marketId: market.id,
-        conditionId: market.conditionId,
-        question: market.question,
-        outcomes,
-        outcomePrices,
-        endDate: event.endDate,
-        startTime: event.startTime,
-        tokens,
-        acceptingOrders: market.acceptingOrders,
-        lastTradePrice: market.lastTradePrice,
-        bestBid: market.bestBid,
-        bestAsk: market.bestAsk,
-        seriesSlug: series.seriesSlug,
-        symbol: series.prefix.split('-')[0].toUpperCase()
-      });
-      
-    } catch (error) {
-      // Silently skip markets that don't exist
-      if (error.response?.status !== 404) {
-        console.error(`❌ Error fetching ${slug}:`, error.message);
+async function fetchPriceToBeat(slug) {
+  try {
+    const { data: html } = await axios.get(`https://polymarket.com/event/${slug}`, {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      timeout: 10000
+    });
+
+    const match = html.match(/<script id="__NEXT_DATA__"[^>]*>(.*?)<\/script>/);
+    if (!match) return null;
+
+    const nextData = JSON.parse(match[1]);
+    const queries = nextData?.props?.pageProps?.dehydratedState?.queries || [];
+
+    for (const q of queries) {
+      const key = q.queryKey || [];
+      if (Array.isArray(key) && key[0] === 'crypto-prices') {
+        const openPrice = q.state?.data?.openPrice;
+        if (typeof openPrice === 'number' && openPrice > 0) {
+          return openPrice;
+        }
       }
     }
-  }
-  
-  // Sort by end date (soonest first)
-  markets.sort((a, b) => new Date(a.endDate) - new Date(b.endDate));
-  
-  console.log(`✅ Found ${markets.length} target markets`);
-  return markets;
-}
 
-/**
- * Get market details including current prices
- */
-async function getMarketDetails(conditionId) {
-  try {
-    const response = await axios.get(`${config.GAMMA_HOST}/markets/${conditionId}`);
-    return response.data;
+    return null;
   } catch (error) {
-    console.error(`❌ Error fetching market ${conditionId}:`, error.message);
+    console.error(`  Error fetching price to beat:`, error.message);
     return null;
   }
 }
 
 /**
- * Parse time remaining from market endDate
- * Returns seconds until market closes
+ * Fetch a BTC 5m market by its window timestamp.
+ * Returns parsed market object or null.
+ */
+async function fetchMarketByTimestamp(ts) {
+  const slug = buildSlug(ts);
+  try {
+    const { data: events } = await axios.get(`${config.GAMMA_HOST}/events`, {
+      params: { slug }
+    });
+
+    if (!events || events.length === 0) return null;
+
+    const event = events[0];
+    if (event.closed) return null;
+
+    const market = event.markets?.[0];
+    if (!market) return null;
+
+    return {
+      eventId: event.id,
+      slug: event.slug,
+      title: event.title,
+      marketId: market.id,
+      conditionId: market.conditionId,
+      outcomes: JSON.parse(market.outcomes || '["Up","Down"]'),
+      outcomePrices: JSON.parse(market.outcomePrices || '["0.5","0.5"]').map(Number),
+      endDate: event.endDate,
+      startTime: event.startTime || market.eventStartTime,
+      tokens: JSON.parse(market.clobTokenIds || '[]'),
+      acceptingOrders: market.acceptingOrders
+    };
+  } catch (error) {
+    if (error.response?.status !== 404) {
+      console.error(`  Error fetching ${slug}:`, error.message);
+    }
+    return null;
+  }
+}
+
+/**
+ * Fetch the current active BTC 5m market (tries current window, then next).
+ */
+async function fetchCurrentMarket() {
+  const ts = currentWindowTs();
+
+  let market = await fetchMarketByTimestamp(ts);
+  if (market) return market;
+
+  return fetchMarketByTimestamp(ts + INTERVAL_SECS);
+}
+
+/**
+ * Seconds remaining until endDate.
  */
 function getSecondsRemaining(endDate) {
   if (!endDate) return Infinity;
-  const end = new Date(endDate);
-  const now = new Date();
-  return Math.max(0, Math.floor((end - now) / 1000));
-}
-
-/**
- * Get confidence level based on market prices
- * Higher confidence = price closer to 0 or 1
- */
-function getConfidence(outcomePrices) {
-  if (!outcomePrices || outcomePrices.length < 2) return 0.5;
-  const upPrice = parseFloat(outcomePrices[0]);
-  const downPrice = parseFloat(outcomePrices[1]);
-  return Math.max(upPrice, downPrice);
-}
-
-/**
- * Determine predicted direction based on prices
- */
-function getPredictedDirection(outcomePrices) {
-  if (!outcomePrices || outcomePrices.length < 2) return null;
-  const upPrice = parseFloat(outcomePrices[0]);
-  const downPrice = parseFloat(outcomePrices[1]);
-  return upPrice > downPrice ? 'Up' : 'Down';
+  return Math.max(0, Math.floor((new Date(endDate) - Date.now()) / 1000));
 }
 
 module.exports = {
-  fetchCryptoUpDownMarkets,
-  getMarketDetails,
+  fetchCurrentMarket,
+  fetchMarketByTimestamp,
+  fetchPriceToBeat,
   getSecondsRemaining,
-  getConfidence,
-  getPredictedDirection,
-  TARGET_SERIES
+  currentWindowTs,
+  INTERVAL_SECS
 };

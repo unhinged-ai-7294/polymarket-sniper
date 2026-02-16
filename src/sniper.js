@@ -1,181 +1,261 @@
-const WebSocket = require('ws');
+const { ethers } = require('ethers');
+const { ExchangeOrderBuilder, Side: UtilsSide, getContracts } = require('@polymarket/order-utils');
 const axios = require('axios');
 const config = require('./config');
-const { getClient } = require('./client');
+const { getClient, getWallet } = require('./client');
 
-// Track active subscriptions and positions
-const activeMarkets = new Map();
-const openPositions = new Set();
+const EXCHANGE_ADDRESS = getContracts(config.CHAIN_ID).Exchange;
 
 /**
- * Connect to Polymarket WebSocket for real-time price updates
+ * Build, sign, and POST an order manually (bypassing SDK's broken amount calc).
  */
-function connectWebSocket(tokenIds, onPriceUpdate) {
-  console.log('🔌 Connecting to WebSocket...');
-  
-  const ws = new WebSocket(config.WSS_HOST);
-  
-  ws.on('open', () => {
-    console.log('✅ WebSocket connected');
-    
-    // Subscribe to market channel for price updates
-    const subscribeMsg = {
-      type: 'MARKET',
-      assets_ids: tokenIds
+async function placeOrder(tokenId, amount, price) {
+  const logs = [];
+  const client = getClient();
+  const wallet = getWallet();
+  if (!client || !wallet) {
+    logs.push('ERROR: Client not initialized');
+    return { order: null, response: null, error: 'Client not initialized', logs };
+  }
+
+  // Clamp price to valid range (0.01–0.99)
+  const clampedPrice = Math.min(0.99, Math.max(0.01, Math.round(price * 100) / 100));
+
+  // Compute amounts matching Polymarket UI format:
+  //   makerAmount = whole cents (2 USDC decimals, divisible by 10000 atomic)
+  //   takerAmount = up to 4 decimal tokens (divisible by 100 atomic)
+  const dollarAmount = parseFloat(amount);
+  const makerAmount = String(Math.round(dollarAmount * 100) * 10000);
+  const rawTaker = dollarAmount / clampedPrice;
+  const takerAmount = String(Math.round(rawTaker * 10000) * 100);
+
+  try {
+    logs.push(`BUY $${dollarAmount} @ ${clampedPrice} | maker=${makerAmount} taker=${takerAmount}`);
+
+    const orderBuilder = new ExchangeOrderBuilder(EXCHANGE_ADDRESS, config.CHAIN_ID, wallet);
+    const order = await orderBuilder.buildSignedOrder({
+      maker: config.PROXY_WALLET,
+      taker: '0x0000000000000000000000000000000000000000',
+      tokenId,
+      makerAmount,
+      takerAmount,
+      side: UtilsSide.BUY,
+      feeRateBps: '1000',
+      nonce: '0',
+      signer: wallet.address,
+      expiration: '0',
+      signatureType: 1
+    });
+
+    const payload = {
+      order: {
+        salt: parseInt(order.salt),
+        maker: order.maker,
+        signer: order.signer,
+        taker: order.taker,
+        tokenId: order.tokenId,
+        makerAmount: order.makerAmount,
+        takerAmount: order.takerAmount,
+        side: 'BUY',
+        expiration: order.expiration,
+        nonce: order.nonce,
+        feeRateBps: order.feeRateBps,
+        signatureType: order.signatureType,
+        signature: order.signature
+      },
+      owner: client.creds?.key || '',
+      orderType: 'FAK'
     };
-    
-    ws.send(JSON.stringify(subscribeMsg));
-    console.log(`📡 Subscribed to ${tokenIds.length} tokens`);
-  });
-  
-  ws.on('message', (data) => {
-    try {
-      const msg = JSON.parse(data);
-      if (msg.type === 'price_change' || msg.event_type === 'price_change') {
-        onPriceUpdate(msg);
-      }
-    } catch (e) {
-      // Ignore parse errors
+
+    const { createL2Headers } = require('@polymarket/clob-client/dist/headers');
+    const headers = await createL2Headers(wallet, client.creds, {
+      method: 'POST',
+      requestPath: '/order',
+      body: JSON.stringify(payload)
+    });
+
+    const resp = await axios.post(`${config.CLOB_HOST}/order`, payload, { headers });
+    const response = resp.data;
+    logs.push('Response: ' + JSON.stringify(response));
+
+    if (response?.error) {
+      logs.push('Order error: ' + response.error);
+      return { order, response, error: response.error, logs };
     }
-  });
-  
-  ws.on('error', (error) => {
-    console.error('❌ WebSocket error:', error.message);
-  });
-  
-  ws.on('close', () => {
-    console.log('🔌 WebSocket closed, reconnecting in 5s...');
-    setTimeout(() => connectWebSocket(tokenIds, onPriceUpdate), 5000);
-  });
-  
-  return ws;
+    if (response?.success === false || response?.errorMsg) {
+      const reason = response.errorMsg || 'unknown';
+      if (reason) {
+        logs.push('Order note: ' + reason);
+      }
+    }
+
+    return { order, response, error: null, logs };
+  } catch (error) {
+    const apiError = error.response?.data?.error || error.response?.data?.errorMsg;
+    logs.push('Order failed: ' + (apiError || error.message));
+    if (error.response?.data) {
+      logs.push('API response: ' + JSON.stringify(error.response.data));
+    }
+    return { order: null, response: null, error: apiError || error.message, logs };
+  }
 }
 
 /**
- * Evaluate if we should snipe this market
+ * Build, sign, and POST a SELL order (to exit a position).
  */
-function shouldSnipe(market, currentPrice, priceTobeat, secondsRemaining) {
-  // Only snipe in final N seconds
-  if (secondsRemaining > config.SNIPE_SECONDS) {
-    return { snipe: false, reason: `Too early (${secondsRemaining}s remaining)` };
+async function placeSellOrder(tokenId, tokenAmount, price) {
+  const logs = [];
+  const client = getClient();
+  const wallet = getWallet();
+  if (!client || !wallet) {
+    logs.push('ERROR: Client not initialized');
+    return { order: null, response: null, error: 'Client not initialized', logs };
   }
-  
-  // Skip if we already have a position
-  if (openPositions.has(market.conditionId)) {
-    return { snipe: false, reason: 'Already have position' };
+
+  const clampedPrice = Math.min(0.99, Math.max(0.01, Math.round(price * 100) / 100));
+
+  // SELL side: makerAmount = tokens to sell, takerAmount = USDC to receive
+  const makerAmount = String(Math.round(tokenAmount * 10000) * 100);
+  const rawTaker = tokenAmount * clampedPrice;
+  const takerAmount = String(Math.round(rawTaker * 100) * 10000);
+
+  try {
+    logs.push(`SELL ${tokenAmount.toFixed(4)} tokens @ ${clampedPrice} | maker=${makerAmount} taker=${takerAmount}`);
+
+    const orderBuilder = new ExchangeOrderBuilder(EXCHANGE_ADDRESS, config.CHAIN_ID, wallet);
+    const order = await orderBuilder.buildSignedOrder({
+      maker: config.PROXY_WALLET,
+      taker: '0x0000000000000000000000000000000000000000',
+      tokenId,
+      makerAmount,
+      takerAmount,
+      side: UtilsSide.SELL,
+      feeRateBps: '1000',
+      nonce: '0',
+      signer: wallet.address,
+      expiration: '0',
+      signatureType: 1
+    });
+
+    const payload = {
+      order: {
+        salt: parseInt(order.salt),
+        maker: order.maker,
+        signer: order.signer,
+        taker: order.taker,
+        tokenId: order.tokenId,
+        makerAmount: order.makerAmount,
+        takerAmount: order.takerAmount,
+        side: 'SELL',
+        expiration: order.expiration,
+        nonce: order.nonce,
+        feeRateBps: order.feeRateBps,
+        signatureType: order.signatureType,
+        signature: order.signature
+      },
+      owner: client.creds?.key || '',
+      orderType: 'FAK'
+    };
+
+    const { createL2Headers } = require('@polymarket/clob-client/dist/headers');
+    const headers = await createL2Headers(wallet, client.creds, {
+      method: 'POST',
+      requestPath: '/order',
+      body: JSON.stringify(payload)
+    });
+
+    const resp = await axios.post(`${config.CLOB_HOST}/order`, payload, { headers });
+    const response = resp.data;
+    logs.push('Response: ' + JSON.stringify(response));
+
+    if (response?.error) {
+      logs.push('Sell order error: ' + response.error);
+      return { order, response, error: response.error, logs };
+    }
+    if (response?.success === false || response?.errorMsg) {
+      const reason = response.errorMsg || 'unknown';
+      if (reason) logs.push('Sell order note: ' + reason);
+    }
+
+    return { order, response, error: null, logs };
+  } catch (error) {
+    const apiError = error.response?.data?.error || error.response?.data?.errorMsg;
+    logs.push('Sell order failed: ' + (apiError || error.message));
+    if (error.response?.data) {
+      logs.push('API response: ' + JSON.stringify(error.response.data));
+    }
+    return { order: null, response: null, error: apiError || error.message, logs };
   }
-  
-  // Calculate confidence based on price difference
-  const priceDiff = currentPrice - priceTobeat;
-  const upConfidence = priceDiff > 0 ? 0.5 + Math.min(0.49, Math.abs(priceDiff) / priceTobeat * 10) : 0.5 - Math.min(0.49, Math.abs(priceDiff) / priceTobeat * 10);
-  
-  // Determine direction and confidence
-  const goUp = upConfidence >= 0.5;
-  const confidence = goUp ? upConfidence : (1 - upConfidence);
-  
-  if (confidence < config.MIN_CONFIDENCE) {
-    return { snipe: false, reason: `Low confidence (${(confidence * 100).toFixed(1)}%)` };
-  }
-  
+}
+
+/**
+ * Execute a stop-loss sell on a position.
+ */
+async function executeStopLoss(market, direction, tokenAmount, price) {
+  const tokenId = direction === 'UP' ? market.tokens[0] : market.tokens[1];
+  const logs = [];
+
+  logs.push(`STOP LOSS SELL: ${market.title}`);
+  logs.push(`  Direction: ${direction}`);
+  logs.push(`  Tokens: ${tokenAmount.toFixed(4)}`);
+  logs.push(`  Price: ${price}`);
+
+  const result = await placeSellOrder(tokenId, tokenAmount, price);
+  logs.push(...result.logs);
+
   return {
-    snipe: true,
-    direction: goUp ? 'UP' : 'DOWN',
-    confidence,
-    reason: `Sniping ${goUp ? 'UP' : 'DOWN'} with ${(confidence * 100).toFixed(1)}% confidence`
+    success: !result.error,
+    market: market.title,
+    direction,
+    tokenAmount,
+    order: result.order,
+    response: result.response,
+    error: result.error,
+    logs
   };
 }
 
 /**
- * Place a market buy order
+ * Execute a snipe trade on a market.
  */
-async function placeOrder(tokenId, side, amount) {
-  const client = getClient();
-  if (!client) {
-    console.error('❌ Client not initialized');
-    return null;
-  }
-  
-  try {
-    console.log(`🎯 Placing ${side} order for $${amount} on token ${tokenId.slice(0,10)}...`);
-    
-    // Use createMarketBuyOrder for market orders
-    const order = await client.createMarketBuyOrder({
-      tokenID: tokenId,
-      amount: parseFloat(amount) // USDC amount
-    });
-    
-    console.log('✅ Order created, posting...');
-    
-    // Post the order to execute it
-    const result = await client.postOrder(order);
-    console.log('✅ Order executed:', result);
-    
-    return result;
-    
-  } catch (error) {
-    console.error('❌ Order failed:', error.message);
-    console.error('   Full error:', error);
-    return null;
-  }
-}
-
-/**
- * Execute snipe trade
- */
-async function executeSnipe(market, direction) {
+async function executeSnipe(market, direction, price) {
   const tokenId = direction === 'UP' ? market.tokens[0] : market.tokens[1];
-  
-  console.log(`\n🎯 SNIPING: ${market.eventTitle}`);
-  console.log(`   Direction: ${direction}`);
-  console.log(`   Amount: $${config.BET_AMOUNT_USD}`);
-  console.log(`   Token ID: ${tokenId}`);
-  
-  const result = await placeOrder(tokenId, 'BUY', config.BET_AMOUNT_USD);
-  
-  if (result) {
-    openPositions.add(market.conditionId);
+  const logs = [];
+
+  logs.push(`SNIPING: ${market.title}`);
+  logs.push(`  Direction: ${direction}`);
+  logs.push(`  Amount: $${config.BET_AMOUNT_USD}`);
+  logs.push(`  Price: ${price}`);
+
+  const result = await placeOrder(tokenId, config.BET_AMOUNT_USD, price);
+  logs.push(...result.logs);
+
+  if (result.error) {
     return {
-      success: true,
-      market: market.eventTitle,
+      success: false,
+      market: market.title,
       direction,
       amount: config.BET_AMOUNT_USD,
-      order: result
+      order: result.order,
+      response: result.response,
+      error: result.error,
+      logs
     };
   }
-  
-  return { success: false, market: market.eventTitle, direction };
-}
 
-/**
- * Get live crypto price from Chainlink
- */
-async function getLivePrice(symbol) {
-  try {
-    // Use CoinGecko as backup price source
-    const ids = {
-      'BTC': 'bitcoin',
-      'ETH': 'ethereum',
-      'SOL': 'solana',
-      'XRP': 'ripple'
-    };
-    
-    const id = ids[symbol.toUpperCase()];
-    if (!id) return null;
-    
-    const response = await axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${id}&vs_currencies=usd`);
-    return response.data[id]?.usd;
-    
-  } catch (error) {
-    console.error(`❌ Error fetching ${symbol} price:`, error.message);
-    return null;
-  }
+  return {
+    success: true,
+    market: market.title,
+    direction,
+    amount: config.BET_AMOUNT_USD,
+    order: result.order,
+    response: result.response,
+    error: null,
+    logs
+  };
 }
 
 module.exports = {
-  connectWebSocket,
-  shouldSnipe,
   executeSnipe,
-  getLivePrice,
-  activeMarkets,
-  openPositions
+  executeStopLoss
 };

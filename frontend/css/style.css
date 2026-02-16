@@ -1,0 +1,370 @@
+/* ─── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0f0f23;
+  --bg-box: #1a1a2e;
+  --border: #3a3a5c;
+  --text: #e0e0e0;
+  --green: #00ff41;
+  --red: #ff0040;
+  --gold: #ffd700;
+  --blue: #00d4ff;
+  --dim: #666680;
+  --shadow: #000000;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Pixel Box ────────────────────────────────────────────── */
+.pixel-box {
+  background: var(--bg-box);
+  border: 4px solid var(--border);
+  box-shadow: 4px 4px 0 var(--shadow);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 0;
+}
+
+/* ─── Header ───────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-color: var(--gold);
+}
+
+.header h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--dim);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+/* ─── Live Indicator ───────────────────────────────────────── */
+.live-dot {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--green);
+  animation: blink 1s step-start infinite;
+}
+
+.live-dot.disconnected {
+  color: var(--red);
+  animation: none;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ─── Grid ─────────────────────────────────────────────────── */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ─── Stat Rows ────────────────────────────────────────────── */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #2a2a44;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  color: var(--dim);
+}
+
+.stat-value {
+  font-weight: bold;
+  text-align: right;
+}
+
+.market-title {
+  font-size: 16px;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Colors ───────────────────────────────────────────────── */
+.color-up { color: var(--green); }
+.color-down { color: var(--red); }
+.color-btc { color: var(--blue); }
+.color-gold { color: var(--gold); }
+.color-profit { color: var(--green); }
+.color-loss { color: var(--red); }
+
+/* ─── Progress / Time Bar ──────────────────────────────────── */
+.progress-bar {
+  display: inline-block;
+  width: 120px;
+  height: 16px;
+  background: #2a2a44;
+  border: 2px solid var(--border);
+  vertical-align: middle;
+  margin-right: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: var(--pct, 0%);
+  background: var(--green);
+  transition: width 0.5s linear, background 0.3s;
+}
+
+.progress-bar.warning::after {
+  background: var(--gold);
+}
+
+.progress-bar.danger::after {
+  background: var(--red);
+}
+
+/* ─── Odds Bars ────────────────────────────────────────────── */
+.odds-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.odds-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  width: 50px;
+}
+
+.odds-bar-wrap {
+  flex: 1;
+  height: 20px;
+  background: #2a2a44;
+  border: 2px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.odds-bar {
+  display: block;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.odds-bar-up {
+  background: var(--green);
+  width: 50%;
+}
+
+.odds-bar-down {
+  background: var(--red);
+  width: 50%;
+}
+
+.odds-pct {
+  width: 60px;
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* ─── Signal Box ───────────────────────────────────────────── */
+.signal-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signal-display {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  text-align: center;
+  color: var(--gold);
+  padding: 20px;
+  word-break: break-word;
+  line-height: 1.8;
+}
+
+.signal-display.buy {
+  color: var(--green);
+  animation: blink 0.5s step-start infinite;
+}
+
+.signal-display.placing {
+  color: var(--gold);
+  animation: blink 0.3s step-start infinite;
+}
+
+.signal-display.done {
+  color: var(--dim);
+  animation: none;
+}
+
+/* ─── Chart ────────────────────────────────────────────────── */
+.chart-box {
+  min-height: 200px;
+}
+
+.chart-box canvas {
+  width: 100% !important;
+  height: 180px !important;
+}
+
+/* ─── Trades Table ─────────────────────────────────────────── */
+.trades-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trades-table th {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--dim);
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.trades-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #2a2a44;
+  font-size: 18px;
+}
+
+.empty-row {
+  color: var(--dim);
+  text-align: center;
+  padding: 16px !important;
+}
+
+.trade-win {
+  color: var(--green);
+}
+
+.trade-fail {
+  color: var(--red);
+}
+
+/* Trade flash animation */
+.trades-table tr.flash-green {
+  animation: flashGreen 1s ease;
+}
+
+.trades-table tr.flash-red {
+  animation: flashRed 1s ease;
+}
+
+@keyframes flashGreen {
+  0% { background: rgba(0, 255, 65, 0.3); }
+  100% { background: transparent; }
+}
+
+@keyframes flashRed {
+  0% { background: rgba(255, 0, 64, 0.3); }
+  100% { background: transparent; }
+}
+
+/* ─── Log Box ──────────────────────────────────────────────── */
+.log-box {
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-box h2 {
+  flex-shrink: 0;
+}
+
+.log-scroll {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--dim);
+  max-height: 240px;
+}
+
+.log-scroll .log-line {
+  white-space: pre-wrap;
+  word-break: break-all;
+  padding: 1px 0;
+}
+
+.log-scroll .log-line.trade-line {
+  color: var(--green);
+}
+
+.log-scroll .log-line.error-line {
+  color: var(--red);
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 2px solid var(--bg);
+}
+
+/* ─── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 12px;
+  }
+
+  body {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .progress-bar {
+    width: 80px;
+  }
+
+  .signal-display {
+    font-size: 11px;
+  }
+}

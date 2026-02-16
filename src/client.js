@@ -23,14 +23,16 @@ async function initializeClient() {
   console.log('✅ API credentials derived');
   
   // Reinitialize with full auth
-  // Signature type 0 = EOA wallet
+  // Signature type 1 = POLY_PROXY (Google/email login)
+  const funder = config.PROXY_WALLET || wallet.address;
+  console.log(`Proxy wallet: ${funder}`);
   clobClient = new ClobClient(
     config.CLOB_HOST,
     config.CHAIN_ID,
     wallet,
     apiCreds,
-    0, // EOA signature type
-    wallet.address // funder address
+    1, // POLY_PROXY signature type
+    funder
   );
   
   console.log('✅ Client initialized successfully');

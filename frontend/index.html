@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POLYMARKET SNIPER</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="pixel-box header">
+    <h1>POLYMARKET SNIPER</h1>
+    <span id="live-indicator" class="live-dot">LIVE</span>
+  </header>
+
+  <!-- Top Grid: Portfolio + Live Market -->
+  <div class="grid-2col">
+    <div class="pixel-box">
+      <h2>PORTFOLIO</h2>
+      <div class="stat-row">
+        <span class="stat-label">Total Value:</span>
+        <span class="stat-value" id="total-value">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">USDC Balance:</span>
+        <span class="stat-value" id="usdc-balance">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">In Positions:</span>
+        <span class="stat-value" id="positions-value">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Session P&amp;L:</span>
+        <span class="stat-value" id="session-pnl">--</span>
+      </div>
+    </div>
+
+    <div class="pixel-box">
+      <h2>LIVE MARKET</h2>
+      <div class="stat-row">
+        <span class="stat-label">Market:</span>
+        <span class="stat-value market-title" id="market-title">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Time Left:</span>
+        <span class="stat-value">
+          <span class="progress-bar" id="time-bar"></span>
+          <span id="time-left">--</span>
+        </span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">BTC:</span>
+        <span class="stat-value color-btc" id="btc-price">--</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Momentum:</span>
+        <span class="stat-value" id="momentum">--</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Middle Grid: Odds + Signal -->
+  <div class="grid-2col">
+    <div class="pixel-box">
+      <h2>ODDS</h2>
+      <div class="odds-row">
+        <span class="odds-label color-up">UP</span>
+        <span class="odds-bar-wrap">
+          <span class="odds-bar odds-bar-up" id="odds-bar-up"></span>
+        </span>
+        <span class="odds-pct" id="odds-up">--</span>
+      </div>
+      <div class="odds-row">
+        <span class="odds-label color-down">DOWN</span>
+        <span class="odds-bar-wrap">
+          <span class="odds-bar odds-bar-down" id="odds-bar-down"></span>
+        </span>
+        <span class="odds-pct" id="odds-down">--</span>
+      </div>
+    </div>
+
+    <div class="pixel-box signal-box">
+      <h2>SIGNAL</h2>
+      <div class="signal-display" id="signal-display">WAIT</div>
+    </div>
+  </div>
+
+  <!-- Chart -->
+  <div class="pixel-box chart-box">
+    <h2>PORTFOLIO PERFORMANCE</h2>
+    <canvas id="portfolio-chart"></canvas>
+  </div>
+
+  <!-- Recent Trades -->
+  <div class="pixel-box">
+    <h2>RECENT TRADES</h2>
+    <table class="trades-table">
+      <thead>
+        <tr>
+          <th>TIME</th>
+          <th>MARKET</th>
+          <th>DIR</th>
+          <th>ODDS</th>
+          <th>RESULT</th>
+        </tr>
+      </thead>
+      <tbody id="trades-body">
+        <tr><td colspan="5" class="empty-row">No trades yet</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Live Log -->
+  <div class="pixel-box log-box">
+    <h2>LIVE LOG</h2>
+    <div class="log-scroll" id="log-scroll"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
