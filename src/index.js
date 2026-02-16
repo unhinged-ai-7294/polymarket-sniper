@@ -260,7 +260,7 @@ function connectMarketWs(tokens) {
 // T-60 → 90%+, T-50 → 80%+, T-40 → 75%+, T-20 → 85%+
 const CHECKPOINTS = [
   { at: 50, minOdds: 0.9 },
-  { at: 40, minOdds: 0.8 },
+  { at: 40, minOdds: 0.85 },
   { at: 20, minOdds: 0.87 },
   { at: 10, minOdds: 0.85 },
 ];
