@@ -174,7 +174,8 @@ async function placeSellOrder(tokenId, tokenAmount, price) {
     }
     if (response?.success === false || response?.errorMsg) {
       const reason = response.errorMsg || 'unknown';
-      if (reason) logs.push('Sell order note: ' + reason);
+      logs.push('Sell order failed: ' + reason);
+      return { order, response, error: reason, logs };
     }
 
     return { order, response, error: null, logs };

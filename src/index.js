@@ -245,7 +245,14 @@ function connectMarketWs(tokens) {
   });
 
   wsMarket.on('error', (err) => log('Market WS error: ' + err.message));
-  wsMarket.on('close', () => {});
+  wsMarket.on('close', () => {
+    log('Market WS disconnected, reconnecting in 1s...');
+    setTimeout(() => {
+      if (currentMarket && getSecondsRemaining(currentMarket.endDate) > 5) {
+        connectMarketWs(currentMarket.tokens);
+      }
+    }, 1000);
+  });
   wsMarket.on('ping', () => wsMarket.pong());
 }
 
@@ -253,7 +260,7 @@ function connectMarketWs(tokens) {
 // T-60 → 90%+, T-50 → 80%+, T-40 → 75%+, T-20 → 85%+
 const CHECKPOINTS = [
   { at: 50, minOdds: 0.9 },
-  { at: 40, minOdds: 0.75 },
+  { at: 40, minOdds: 0.8 },
   { at: 20, minOdds: 0.87 },
   { at: 10, minOdds: 0.85 },
 ];
@@ -407,41 +414,55 @@ async function checkStopLoss() {
 
     log(`>>> STOP LOSS TRIGGERED: ${position.direction} dropped from ${position.entryPrice.toFixed(2)} to ${currentPrice.toFixed(2)} (${(drop * 100).toFixed(0)}c drop, threshold ${(config.STOP_LOSS_CENTS * 100).toFixed(0)}c)`);
 
-    // Sell at a slightly lower price for fill (2c slippage)
-    const sellPrice = Math.max(0.01, currentPrice - 0.02);
+    // Retry with increasing slippage to guarantee fill
+    const SL_SLIPPAGE_STEPS = [0.02, 0.05, 0.10, 0.15];
+    let sold = false;
 
-    try {
-      const result = await executeStopLoss(currentMarket, position.direction, position.tokenAmount, sellPrice);
+    for (let attempt = 0; attempt < SL_SLIPPAGE_STEPS.length; attempt++) {
+      const sellPrice = Math.max(0.01, currentPrice - SL_SLIPPAGE_STEPS[attempt]);
+      log(`    Stop loss attempt ${attempt + 1}/${SL_SLIPPAGE_STEPS.length}: selling @ ${sellPrice.toFixed(2)} (${(SL_SLIPPAGE_STEPS[attempt] * 100).toFixed(0)}c slippage)`);
 
-      if (result.logs) {
-        for (const line of result.logs) {
-          log(`    [stop-loss] ${line}`);
+      try {
+        const result = await executeStopLoss(currentMarket, position.direction, position.tokenAmount, sellPrice);
+
+        if (result.logs) {
+          for (const line of result.logs) {
+            log(`    [stop-loss] ${line}`);
+          }
         }
+
+        if (result.success) {
+          const loss = (position.entryPrice - sellPrice) * position.tokenAmount;
+          log(`>>> STOP LOSS SOLD: ${position.tokenAmount.toFixed(4)} tokens @ ${sellPrice.toFixed(2)} (loss ~$${loss.toFixed(2)})`);
+          tradeHistory.push({
+            timestamp: new Date().toISOString(),
+            market: currentMarket.slug,
+            direction: position.direction,
+            odds: currentPrice,
+            buyPrice: sellPrice,
+            btcOpen: btcOpenPrice,
+            btcAtBet: btcCurrentPrice,
+            success: true,
+            error: null,
+            type: 'STOP_LOSS_SELL'
+          });
+          broadcastEvent({ type: 'trade', trade: tradeHistory[tradeHistory.length - 1] });
+          sold = true;
+          break;
+        } else {
+          log(`    Stop loss attempt ${attempt + 1} failed: ${result.error}`);
+        }
+      } catch (err) {
+        log(`    Stop loss attempt ${attempt + 1} error: ${err.message}`);
       }
 
-      if (result.success) {
-        const loss = (position.entryPrice - sellPrice) * position.tokenAmount;
-        log(`>>> STOP LOSS SOLD: ${position.tokenAmount.toFixed(4)} tokens @ ${sellPrice.toFixed(2)} (loss ~$${loss.toFixed(2)})`);
-        tradeHistory.push({
-          timestamp: new Date().toISOString(),
-          market: currentMarket.slug,
-          direction: position.direction,
-          odds: currentPrice,
-          buyPrice: sellPrice,
-          btcOpen: btcOpenPrice,
-          btcAtBet: btcCurrentPrice,
-          success: true,
-          error: null,
-          type: 'STOP_LOSS_SELL'
-        });
-        broadcastEvent({ type: 'trade', trade: tradeHistory[tradeHistory.length - 1] });
-      } else {
-        log(`>>> STOP LOSS SELL FAILED: ${result.error}`);
-        // Allow retry on next tick
-        stopLossFired = false;
+      if (attempt < SL_SLIPPAGE_STEPS.length - 1) {
+        await new Promise(r => setTimeout(r, 500));
       }
-    } catch (err) {
-      log(`>>> STOP LOSS ERROR: ${err.message}`);
+    }
+
+    if (!sold) {
+      log(`>>> STOP LOSS ALL ATTEMPTS FAILED - will retry on next tick`);
       stopLossFired = false;
     }
 
