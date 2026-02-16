@@ -250,11 +250,12 @@ function connectMarketWs(tokens) {
 }
 
 // ─── Snipe check (tiered checkpoints) ─────────────────────────────────
-// T-60 → 90%+, T-50 → 80%+, T-40 → 75%+, after T-40 → no trade
+// T-60 → 90%+, T-50 → 80%+, T-40 → 75%+, T-20 → 85%+
 const CHECKPOINTS = [
   { at: 60, minOdds: 0.90 },
   { at: 50, minOdds: 0.80 },
   { at: 40, minOdds: 0.75 },
+  { at: 20, minOdds: 0.85 },
 ];
 let nextCheckpointIdx = 0;
 
