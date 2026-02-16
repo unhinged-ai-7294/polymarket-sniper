@@ -254,7 +254,8 @@ function connectMarketWs(tokens) {
 const CHECKPOINTS = [
   { at: 50, minOdds: 0.9 },
   { at: 40, minOdds: 0.75 },
-  { at: 20, minOdds: 0.85 },
+  { at: 20, minOdds: 0.87 },
+  { at: 10, minOdds: 0.85 },
 ];
 let nextCheckpointIdx = 0;
 
