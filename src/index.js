@@ -295,12 +295,13 @@ async function checkSnipe() {
   // Retry loop with escalating slippage
   const SLIPPAGE_STEPS = [0.03, 0.06, 0.10, 0.14, 0.14];
   const RETRY_DELAY = 1500;
+  const retryCutoff = Math.max(cp.at - 17, 3); // stop retrying ~17s after checkpoint, but never below 3s
 
   let filled = false;
   for (let attempt = 0; attempt < SLIPPAGE_STEPS.length; attempt++) {
     const timeLeft = getSecondsRemaining(currentMarket.endDate);
-    if (timeLeft < 38) {
-      log(`    Past T-40 cutoff (${timeLeft}s left), stopping retries`);
+    if (timeLeft < retryCutoff) {
+      log(`    Past cutoff (${timeLeft}s left, cutoff ${retryCutoff}s), stopping retries`);
       break;
     }
 
