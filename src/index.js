@@ -31,6 +31,8 @@ let wsRtds = null;
 let wsMarket = null;
 let dashboardInterval = null;
 let snipeCheckInterval = null;
+let earlyEntryInterval = null;
+let oddsTickInterval = null;
 let stopLossInterval = null;
 let cycleTimeout = null;
 
@@ -124,6 +126,34 @@ function finalizeCycleData() {
 
   saveCycleData(cycleData);
   log(`Cycle recorded: ${cycleData.slug} → ${cycleData.actualOutcome} (${cycleData.snapshots.length} snapshots)`);
+
+  // If we placed a bet and lost, print report and stop everything
+  if (cycleData.betPlaced && cycleData.betPlaced.success && cycleData.actualOutcome) {
+    if (cycleData.betPlaced.direction !== cycleData.actualOutcome) {
+      const bp = cycleData.betPlaced;
+      const btcDiff = cycleData.finalBtcPrice && cycleData.priceToBeat
+        ? (cycleData.finalBtcPrice - cycleData.priceToBeat).toFixed(2)
+        : '??';
+
+      log('');
+      log('════════════════ LOSS REPORT ════════════════');
+      log(`Market:       ${cycleData.title || cycleData.slug}`);
+      log(`Trigger:      ${bp.source}`);
+      log(`Entry time:   ${bp.timestamp}`);
+      log(`Direction:    ${bp.direction}`);
+      log(`Buy price:    ${(bp.buyPrice * 100).toFixed(1)}c (odds were ${(bp.oddsAtBet * 100).toFixed(1)}%)`);
+      log(`Price to beat:$${cycleData.priceToBeat ? cycleData.priceToBeat.toFixed(2) : '??'}`);
+      log(`─────────────────────────────────────────────`);
+      log(`Reason:       Market resolved ${cycleData.actualOutcome} — bet was ${bp.direction}`);
+      log(`Final BTC:    $${cycleData.finalBtcPrice ? cycleData.finalBtcPrice.toFixed(2) : '??'} (${btcDiff >= 0 ? '+' : ''}$${btcDiff} from open)`);
+      log(`Final odds:   UP ${cycleData.finalOdds.up !== null ? (cycleData.finalOdds.up * 100).toFixed(1) + '%' : '??'} / DOWN ${cycleData.finalOdds.down !== null ? (cycleData.finalOdds.down * 100).toFixed(1) + '%' : '??'}`);
+      log(`Loss:         ~$${(config.BET_AMOUNT_USD).toFixed(2)}`);
+      log('═════════════════════════════════════════════');
+      log('Shutting down after first loss.');
+      process.exit(1);
+    }
+  }
+
   cycleData = null;
 }
 
@@ -256,10 +286,109 @@ function connectMarketWs(tokens) {
   wsMarket.on('ping', () => wsMarket.pong());
 }
 
+// ─── Early entry detection ─────────────────────────────────────────────
+// Track recent odds snapshots for surge detection
+const oddsHistory = []; // { ts, upOdds, downOdds, btcPrice }
+const ODDS_HISTORY_MAX = 30; // keep last 30 readings (~60s at 2s intervals)
+
+function recordOddsTick() {
+  if (upOdds === null || downOdds === null) return;
+  oddsHistory.push({
+    ts: Date.now(),
+    upOdds,
+    downOdds,
+    btcPrice: btcCurrentPrice
+  });
+  if (oddsHistory.length > ODDS_HISTORY_MAX) oddsHistory.shift();
+}
+
+// Early entry: fires before checkpoints when odds are already decisive
+// If odds hit 94%+ and stay there, buy in now — by T-30 there'll be no liquidity
+let earlyEntryFired = false;
+
+function checkEarlyEntry() {
+  if (!currentMarket || hasBet || isExecutingTrade || earlyEntryFired) return;
+  if (upOdds === null || downOdds === null) return;
+
+  const secsLeft = getSecondsRemaining(currentMarket.endDate);
+  // Only active between T-240 and T-30 (before normal checkpoints)
+  if (secsLeft > 240 || secsLeft < 30) return;
+
+  // Need at least 3 odds readings to confirm it's sustained
+  if (oddsHistory.length < 3) return;
+
+  const leader = upOdds >= downOdds ? 'UP' : 'DOWN';
+  const leaderOdds = Math.max(upOdds, downOdds);
+
+  // Need leader odds at 94%+
+  if (leaderOdds < 0.94) return;
+
+  // Check last 3 ticks all show leader at 94%+ (sustained, not a momentary flash)
+  const recent = oddsHistory.slice(-3);
+  const getLeaderOdds = (h) => leader === 'UP' ? h.upOdds : h.downOdds;
+  const allSustained = recent.every(h => getLeaderOdds(h) >= 0.94);
+  if (!allSustained) return;
+
+  // All conditions met — odds are locked in, buy before liquidity dries up
+  earlyEntryFired = true;
+  const duration = ((recent[recent.length - 1].ts - recent[0].ts) / 1000).toFixed(0);
+
+  log(`>>> EARLY ENTRY: ${leader} — odds sustained at ${(leaderOdds*100).toFixed(1)}%+ for ${duration}s | T-${secsLeft}`);
+  executeTrade(leader, leaderOdds, `EARLY T-${secsLeft}`);
+}
+
+// ─── Last resort: final 3 seconds, no bet placed yet ─────────────────
+// All checkpoints passed without a trade. Look at BTC price and odds momentum
+// to decide which side to buy. Either signal is enough:
+//   A) BTC price is $15+ from open → buy the side price favors
+//   B) Odds momentum surging 3c+ for one side → buy the surging side
+function checkLastResort() {
+  if (!currentMarket || hasBet || isExecutingTrade) return;
+  if (upOdds === null || downOdds === null) return;
+  if (!btcOpenPrice || !btcCurrentPrice) return;
+
+  const secsLeft = getSecondsRemaining(currentMarket.endDate);
+  if (secsLeft > 3 || secsLeft < 1) return;
+
+  let buyDir = null;
+  let reason = '';
+
+  // Signal A: BTC price $15+ from open — price is telling us a direction
+  const btcDiff = btcCurrentPrice - btcOpenPrice;
+  const absBtcDiff = Math.abs(btcDiff);
+  const btcDir = btcDiff >= 0 ? 'UP' : 'DOWN';
+
+  if (absBtcDiff >= 15) {
+    buyDir = btcDir;
+    reason = `BTC $${absBtcDiff.toFixed(0)} from open`;
+  }
+
+  // Signal B: Odds momentum surging one direction (15c+ in recent ticks)
+  if (!buyDir && oddsHistory.length >= 3) {
+    const recent = oddsHistory.slice(-3);
+    const upRise = recent[recent.length - 1].upOdds - recent[0].upOdds;
+    const downRise = recent[recent.length - 1].downOdds - recent[0].downOdds;
+
+    if (upRise >= 0.15) {
+      buyDir = 'UP';
+      reason = `odds surging UP +${(upRise*100).toFixed(0)}c`;
+    } else if (downRise >= 0.15) {
+      buyDir = 'DOWN';
+      reason = `odds surging DOWN +${(downRise*100).toFixed(0)}c`;
+    }
+  }
+
+  if (!buyDir) return;
+
+  const buyOdds = buyDir === 'UP' ? upOdds : downOdds;
+  const leaderOdds = Math.max(upOdds, downOdds);
+  log(`>>> LAST RESORT: ${buyDir} — ${reason} | odds ${(leaderOdds*100).toFixed(1)}% | T-${secsLeft}`);
+  executeTrade(buyDir, buyOdds, `LAST-RESORT T-${secsLeft}`);
+}
+
 // ─── Snipe check (tiered checkpoints) ─────────────────────────────────
-// T-60 → 90%+, T-50 → 80%+, T-40 → 75%+, T-20 → 85%+
+// T-30 → 90%+, T-20 → 87%+, T-10 → 85%+
 const CHECKPOINTS = [
-  // { at: 50, minOdds: 0.9 },
   { at: 30, minOdds: 0.9 },
   { at: 20, minOdds: 0.87 },
   { at: 10, minOdds: 0.85 },
@@ -269,9 +398,17 @@ let nextCheckpointIdx = 0;
 async function checkSnipe() {
   if (!currentMarket || hasBet || isExecutingTrade) return;
   if (upOdds === null || downOdds === null) return;
-  if (nextCheckpointIdx >= CHECKPOINTS.length) return;
 
   const secsLeft = getSecondsRemaining(currentMarket.endDate);
+
+  // Last resort: final 3 seconds, all checkpoints exhausted
+  if (secsLeft <= 3 && secsLeft >= 1) {
+    checkLastResort();
+    return;
+  }
+
+  if (nextCheckpointIdx >= CHECKPOINTS.length) return;
+
   const cp = CHECKPOINTS[nextCheckpointIdx];
 
   // Wait until we reach the current checkpoint
@@ -292,17 +429,23 @@ async function checkSnipe() {
     return;
   }
 
-  // We have an edge — buy the leader
+  // We have an edge — buy the leader via checkpoint
+  log(`>>> BUY ${leader} — ${(leaderOdds*100).toFixed(1)}% odds (T-${cp.at}, threshold ${(cp.minOdds*100)}%+)`);
+  executeTrade(leader, leaderOdds, `T-${cp.at}`);
+}
+
+// ─── Shared trade execution ──────────────────────────────────────────
+async function executeTrade(leader, leaderOdds, source) {
   isExecutingTrade = true;
   hasBet = true;
 
-  log(`>>> BUY ${leader} — ${(leaderOdds*100).toFixed(1)}% odds (T-${cp.at}, threshold ${(cp.minOdds*100)}%+)`);
   log(`    Amount: $${config.BET_AMOUNT_USD}`);
 
   // Retry loop with escalating slippage
   const SLIPPAGE_STEPS = [0.03, 0.06, 0.10, 0.14, 0.14];
   const RETRY_DELAY = 1500;
-  const retryCutoff = Math.max(cp.at - 17, 3); // stop retrying ~17s after checkpoint, but never below 3s
+  const secsAtEntry = getSecondsRemaining(currentMarket.endDate);
+  const retryCutoff = Math.max(secsAtEntry - 17, 3);
 
   let filled = false;
   for (let attempt = 0; attempt < SLIPPAGE_STEPS.length; attempt++) {
@@ -336,7 +479,13 @@ async function checkSnipe() {
           direction: leader,
           entryPrice: buyPrice,
           tokenAmount: tokensReceived,
-          tokenId: leader === 'UP' ? currentMarket.tokens[0] : currentMarket.tokens[1]
+          tokenId: leader === 'UP' ? currentMarket.tokens[0] : currentMarket.tokens[1],
+          source,
+          entryTime: new Date().toISOString(),
+          oddsAtEntry: liveOdds,
+          btcAtEntry: btcCurrentPrice,
+          btcOpen: btcOpenPrice,
+          secsLeftAtEntry: timeLeft
         };
         stopLossFired = false;
         log(`    Position: ${tokensReceived.toFixed(4)} tokens @ ${buyPrice} (stop loss at ${(buyPrice - config.STOP_LOSS_CENTS).toFixed(2)})`);
@@ -350,9 +499,10 @@ async function checkSnipe() {
           btcOpen: btcOpenPrice,
           btcAtBet: btcCurrentPrice,
           success: true,
-          error: null
+          error: null,
+          source
         });
-        log(`>>> TRADE SUCCESS: ${leader} on ${currentMarket.slug} (attempt ${attempt + 1})`);
+        log(`>>> TRADE SUCCESS: ${leader} on ${currentMarket.slug} (${source}, attempt ${attempt + 1})`);
         broadcastEvent({ type: 'trade', trade: tradeHistory[tradeHistory.length - 1] });
         if (cycleData) {
           cycleData.betPlaced = {
@@ -360,7 +510,8 @@ async function checkSnipe() {
             oddsAtBet: liveOdds,
             buyPrice,
             timestamp: new Date().toISOString(),
-            success: true
+            success: true,
+            source
           };
         }
         break;
@@ -377,7 +528,7 @@ async function checkSnipe() {
   }
 
   if (!filled) {
-    log(`>>> ALL ATTEMPTS FAILED for ${leader}`);
+    log(`>>> ALL ATTEMPTS FAILED for ${leader} (${source})`);
     hasBet = false;
     lastBetResult = { direction: leader, odds: leaderOdds, success: false, error: 'all attempts failed' };
     tradeHistory.push({
@@ -388,7 +539,8 @@ async function checkSnipe() {
       btcOpen: btcOpenPrice,
       btcAtBet: btcCurrentPrice,
       success: false,
-      error: 'all attempts exhausted'
+      error: 'all attempts exhausted',
+      source
     });
     broadcastEvent({ type: 'trade', trade: tradeHistory[tradeHistory.length - 1] });
     if (nextCheckpointIdx < CHECKPOINTS.length) {
@@ -448,7 +600,25 @@ async function checkStopLoss() {
           });
           broadcastEvent({ type: 'trade', trade: tradeHistory[tradeHistory.length - 1] });
           sold = true;
-          break;
+
+          // Detailed loss report
+          log('');
+          log('════════════════ LOSS REPORT ════════════════');
+          log(`Market:       ${currentMarket.title}`);
+          log(`Trigger:      ${position.source}`);
+          log(`Entry time:   ${position.entryTime}`);
+          log(`Direction:    ${position.direction}`);
+          log(`Entry price:  ${(position.entryPrice * 100).toFixed(1)}c (odds were ${(position.oddsAtEntry * 100).toFixed(1)}%)`);
+          log(`BTC at entry: $${position.btcAtEntry ? position.btcAtEntry.toFixed(2) : '??'} (open: $${position.btcOpen ? position.btcOpen.toFixed(2) : '??'})`);
+          log(`Secs left:    ${position.secsLeftAtEntry}s at entry`);
+          log(`─────────────────────────────────────────────`);
+          log(`Reason:       STOP LOSS — odds dropped ${(drop * 100).toFixed(0)}c (${(position.entryPrice * 100).toFixed(1)}c → ${(currentPrice * 100).toFixed(1)}c)`);
+          log(`Sold at:      ${(sellPrice * 100).toFixed(1)}c`);
+          log(`Loss:         ~$${loss.toFixed(2)}`);
+          log(`BTC now:      $${btcCurrentPrice ? btcCurrentPrice.toFixed(2) : '??'}`);
+          log('═════════════════════════════════════════════');
+          log('Shutting down after first loss.');
+          process.exit(1);
         } else {
           log(`    Stop loss attempt ${attempt + 1} failed: ${result.error}`);
         }
@@ -498,8 +668,17 @@ function computeSignal() {
     signal = lastBetResult
       ? `BET ${lastBetResult.direction} (${lastBetResult.success ? 'OK' : 'FAILED'})`
       : 'BETTING...';
+  } else if (nextCheckpointIdx >= CHECKPOINTS.length && secsLeft <= 3) {
+    signal = `LAST RESORT >>> ${leader} ${(leaderOdds*100).toFixed(1)}%`;
   } else if (nextCheckpointIdx >= CHECKPOINTS.length) {
     signal = 'DONE (all checkpoints passed)';
+  } else if (!earlyEntryFired && secsLeft > 30 && secsLeft <= 240 && leaderOdds !== null) {
+    // Show early entry status
+    if (leaderOdds >= 0.94) {
+      signal = `EARLY >>> ${leader} odds at ${(leaderOdds*100).toFixed(1)}% (confirming...)`;
+    } else {
+      signal = `SCAN: ${leader} ${(leaderOdds*100).toFixed(1)}% (need 94%+) | T-${currentCp ? currentCp.at : '?'} fallback`;
+    }
   } else if (currentCp && secsLeft <= currentCp.at && leaderOdds !== null) {
     signal = leaderOdds >= currentCp.minOdds
       ? `>>> BUY ${leader} ${(leaderOdds*100).toFixed(1)}% <<<`
@@ -571,9 +750,14 @@ function printDashboard() {
     const pnl = posPrice !== null ? ((posPrice - position.entryPrice) * position.tokenAmount) : null;
     console.log(`Position:   ${position.direction} ${position.tokenAmount.toFixed(2)} tokens @ ${(position.entryPrice*100).toFixed(0)}c | now ${posPrice !== null ? (posPrice*100).toFixed(0)+'c' : '??'} | SL @ ${(stopAt*100).toFixed(0)}c${pnl !== null ? ' | P&L $' + pnl.toFixed(2) : ''}`);
   }
+  if (btcOpenPrice && btcCurrentPrice) {
+    const btcDiff = Math.abs(btcCurrentPrice - btcOpenPrice);
+    const btcDir = (btcCurrentPrice - btcOpenPrice) >= 0 ? 'UP' : 'DOWN';
+    console.log(`BTC dist:   $${btcDiff.toFixed(0)} ${btcDir} from open${earlyEntryFired ? ' (early entry fired)' : ''}`);
+  }
   console.log(`Trades:     ${total} total | ${wins} wins | $${config.BET_AMOUNT_USD}/trade`);
   const snapCount = cycleData ? cycleData.snapshots.length : 0;
-  console.log(`Recording:  ${snapCount} snapshots`);
+  console.log(`Recording:  ${snapCount} snapshots | ${oddsHistory.length} odds ticks`);
   console.log('=============================================');
 
   // Show trade log buffer
@@ -596,6 +780,8 @@ async function startNewCycle() {
 
   if (dashboardInterval) clearInterval(dashboardInterval);
   if (snipeCheckInterval) clearInterval(snipeCheckInterval);
+  if (earlyEntryInterval) clearInterval(earlyEntryInterval);
+  if (oddsTickInterval) clearInterval(oddsTickInterval);
   if (stopLossInterval) clearInterval(stopLossInterval);
   if (cycleTimeout) clearTimeout(cycleTimeout);
 
@@ -627,6 +813,8 @@ async function startNewCycle() {
   stopLossFired = false;
   position = null;
   nextCheckpointIdx = 0;
+  earlyEntryFired = false;
+  oddsHistory.length = 0;
 
   // Fetch the price to beat from Polymarket (retry up to 3 times)
   btcOpenPrice = null;
@@ -657,6 +845,10 @@ async function startNewCycle() {
 
   // Snipe check every 1s
   snipeCheckInterval = setInterval(checkSnipe, 1000);
+
+  // Early entry: record odds ticks every 2s & check for entry every 2s
+  oddsTickInterval = setInterval(recordOddsTick, 2000);
+  earlyEntryInterval = setInterval(checkEarlyEntry, 2000);
 
   // Stop loss check every 1s
   stopLossInterval = setInterval(checkStopLoss, 1000);
@@ -868,6 +1060,8 @@ process.on('SIGINT', () => {
   if (wsMarket) wsMarket.close();
   if (dashboardInterval) clearInterval(dashboardInterval);
   if (snipeCheckInterval) clearInterval(snipeCheckInterval);
+  if (earlyEntryInterval) clearInterval(earlyEntryInterval);
+  if (oddsTickInterval) clearInterval(oddsTickInterval);
   if (stopLossInterval) clearInterval(stopLossInterval);
   if (cycleTimeout) clearTimeout(cycleTimeout);
 
