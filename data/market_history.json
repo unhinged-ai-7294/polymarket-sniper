@@ -72243,5 +72243,6169 @@
       "down": 0.255
     },
     "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771318800",
+    "title": "Bitcoin Up or Down - February 17, 4:00AM-4:05AM ET",
+    "startTime": "2026-02-17T09:00:00Z",
+    "endTime": "2026-02-17T09:05:00Z",
+    "priceToBeat": 68140.6487278622,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:00:51.588Z",
+        "secsLeft": 248,
+        "priceToBeat": null,
+        "btcPrice": null,
+        "momentum": null,
+        "upOdds": 0.66,
+        "downOdds": 0.34
+      },
+      {
+        "ts": "2026-02-17T09:00:57.589Z",
+        "secsLeft": 242,
+        "priceToBeat": null,
+        "btcPrice": 68157.04662343115,
+        "momentum": null,
+        "upOdds": 0.695,
+        "downOdds": 0.305
+      },
+      {
+        "ts": "2026-02-17T09:01:03.591Z",
+        "secsLeft": 236,
+        "priceToBeat": null,
+        "btcPrice": 68164.284093,
+        "momentum": null,
+        "upOdds": 0.725,
+        "downOdds": 0.275
+      },
+      {
+        "ts": "2026-02-17T09:01:09.593Z",
+        "secsLeft": 230,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68164.15109616873,
+        "momentum": 0.0345,
+        "upOdds": 0.6045,
+        "downOdds": 0.3955
+      },
+      {
+        "ts": "2026-02-17T09:01:15.596Z",
+        "secsLeft": 224,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68153.86331607847,
+        "momentum": 0.0194,
+        "upOdds": 0.605,
+        "downOdds": 0.395
+      },
+      {
+        "ts": "2026-02-17T09:01:21.597Z",
+        "secsLeft": 218,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68154.0737416058,
+        "momentum": 0.0197,
+        "upOdds": 0.64,
+        "downOdds": 0.36
+      },
+      {
+        "ts": "2026-02-17T09:01:27.600Z",
+        "secsLeft": 212,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68156.162,
+        "momentum": 0.0228,
+        "upOdds": 0.68,
+        "downOdds": 0.32
+      },
+      {
+        "ts": "2026-02-17T09:01:33.604Z",
+        "secsLeft": 206,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68160.3587957524,
+        "momentum": 0.0289,
+        "upOdds": 0.65,
+        "downOdds": 0.35
+      },
+      {
+        "ts": "2026-02-17T09:01:39.608Z",
+        "secsLeft": 200,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68155.67422,
+        "momentum": 0.0221,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:01:45.609Z",
+        "secsLeft": 194,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68147.6722315,
+        "momentum": 0.0103,
+        "upOdds": 0.675,
+        "downOdds": 0.325
+      },
+      {
+        "ts": "2026-02-17T09:01:51.613Z",
+        "secsLeft": 188,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68162.65496011343,
+        "momentum": 0.0323,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:01:57.616Z",
+        "secsLeft": 182,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68164.91996259365,
+        "momentum": 0.0356,
+        "upOdds": 0.745,
+        "downOdds": 0.255
+      },
+      {
+        "ts": "2026-02-17T09:02:03.617Z",
+        "secsLeft": 176,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68170.61266848278,
+        "momentum": 0.044,
+        "upOdds": 0.815,
+        "downOdds": 0.185
+      },
+      {
+        "ts": "2026-02-17T09:02:09.622Z",
+        "secsLeft": 170,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68176.3836025,
+        "momentum": 0.0524,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:02:15.625Z",
+        "secsLeft": 164,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68168.9188397868,
+        "momentum": 0.0415,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:02:21.630Z",
+        "secsLeft": 158,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68171.09511615997,
+        "momentum": 0.0447,
+        "upOdds": 0.75,
+        "downOdds": 0.25
+      },
+      {
+        "ts": "2026-02-17T09:02:27.633Z",
+        "secsLeft": 152,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68167.24320100054,
+        "momentum": 0.039,
+        "upOdds": 0.74,
+        "downOdds": 0.26
+      },
+      {
+        "ts": "2026-02-17T09:02:33.635Z",
+        "secsLeft": 146,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68162.76763637095,
+        "momentum": 0.0325,
+        "upOdds": 0.725,
+        "downOdds": 0.275
+      },
+      {
+        "ts": "2026-02-17T09:02:39.638Z",
+        "secsLeft": 140,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68159.9091489154,
+        "momentum": 0.0283,
+        "upOdds": 0.73,
+        "downOdds": 0.27
+      },
+      {
+        "ts": "2026-02-17T09:02:45.640Z",
+        "secsLeft": 134,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68163.22553024444,
+        "momentum": 0.0331,
+        "upOdds": 0.745,
+        "downOdds": 0.255
+      },
+      {
+        "ts": "2026-02-17T09:02:51.641Z",
+        "secsLeft": 128,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68164.389876898,
+        "momentum": 0.0348,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:02:57.647Z",
+        "secsLeft": 122,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68164.65524233473,
+        "momentum": 0.0352,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:03:03.652Z",
+        "secsLeft": 116,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68164.56280302498,
+        "momentum": 0.0351,
+        "upOdds": 0.765,
+        "downOdds": 0.235
+      },
+      {
+        "ts": "2026-02-17T09:03:09.655Z",
+        "secsLeft": 110,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68169.86918371066,
+        "momentum": 0.0429,
+        "upOdds": 0.865,
+        "downOdds": 0.135
+      },
+      {
+        "ts": "2026-02-17T09:03:15.659Z",
+        "secsLeft": 104,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68179.91791699396,
+        "momentum": 0.0576,
+        "upOdds": 0.905,
+        "downOdds": 0.095
+      },
+      {
+        "ts": "2026-02-17T09:03:21.665Z",
+        "secsLeft": 98,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68186.10118087956,
+        "momentum": 0.0667,
+        "upOdds": 0.91,
+        "downOdds": 0.09
+      },
+      {
+        "ts": "2026-02-17T09:03:27.667Z",
+        "secsLeft": 92,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68184.2998128561,
+        "momentum": 0.0641,
+        "upOdds": 0.91,
+        "downOdds": 0.09
+      },
+      {
+        "ts": "2026-02-17T09:03:33.672Z",
+        "secsLeft": 86,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68185.0575530705,
+        "momentum": 0.0652,
+        "upOdds": 0.865,
+        "downOdds": 0.135
+      },
+      {
+        "ts": "2026-02-17T09:03:39.678Z",
+        "secsLeft": 80,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68176.659337,
+        "momentum": 0.0528,
+        "upOdds": 0.915,
+        "downOdds": 0.085
+      },
+      {
+        "ts": "2026-02-17T09:03:45.684Z",
+        "secsLeft": 74,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68180.30423266637,
+        "momentum": 0.0582,
+        "upOdds": 0.905,
+        "downOdds": 0.095
+      },
+      {
+        "ts": "2026-02-17T09:03:51.688Z",
+        "secsLeft": 68,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68180.63692897014,
+        "momentum": 0.0587,
+        "upOdds": 0.935,
+        "downOdds": 0.065
+      },
+      {
+        "ts": "2026-02-17T09:03:57.693Z",
+        "secsLeft": 62,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68196.38736340727,
+        "momentum": 0.0818,
+        "upOdds": 0.96,
+        "downOdds": 0.04
+      },
+      {
+        "ts": "2026-02-17T09:04:03.697Z",
+        "secsLeft": 56,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68201.18270891487,
+        "momentum": 0.0888,
+        "upOdds": 0.99,
+        "downOdds": 0.01
+      },
+      {
+        "ts": "2026-02-17T09:04:09.702Z",
+        "secsLeft": 50,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68220.86079990193,
+        "momentum": 0.1177,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:15.707Z",
+        "secsLeft": 44,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68219.4928275,
+        "momentum": 0.1157,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:21.711Z",
+        "secsLeft": 38,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68220.86234207841,
+        "momentum": 0.1177,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:27.715Z",
+        "secsLeft": 32,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68219.26868536821,
+        "momentum": 0.1154,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:33.721Z",
+        "secsLeft": 26,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68227.97447758933,
+        "momentum": 0.1282,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:39.724Z",
+        "secsLeft": 20,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68242.17336615709,
+        "momentum": 0.149,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:45.731Z",
+        "secsLeft": 14,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68244.39432393825,
+        "momentum": 0.1523,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:51.735Z",
+        "secsLeft": 8,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68257.14670127335,
+        "momentum": 0.171,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:04:57.742Z",
+        "secsLeft": 2,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68266.05963393423,
+        "momentum": 0.184,
+        "upOdds": 0.99,
+        "downOdds": 0.01
+      },
+      {
+        "ts": "2026-02-17T09:05:03.748Z",
+        "secsLeft": 0,
+        "priceToBeat": 68140.6487278622,
+        "btcPrice": 68266.25660256407,
+        "momentum": 0.1843,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      }
+    ],
+    "betPlaced": {
+      "direction": "UP",
+      "oddsAtBet": 0.96,
+      "buyPrice": 0.99,
+      "timestamp": "2026-02-17T09:03:58.222Z",
+      "success": true,
+      "source": "EARLY T-62"
+    },
+    "finalBtcPrice": 68266.25660256407,
+    "finalMomentum": 0.1843,
+    "finalOdds": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "actualOutcome": "UP",
+    "oddsAtT60": {
+      "up": 0.96,
+      "down": 0.04
+    },
+    "oddsAtT30": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "oddsAtT10": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771319100",
+    "title": "Bitcoin Up or Down - February 17, 4:05AM-4:10AM ET",
+    "startTime": "2026-02-17T09:05:00Z",
+    "endTime": "2026-02-17T09:10:00Z",
+    "priceToBeat": 68266.25571892083,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:05:15.066Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 68247.08929225212,
+        "momentum": null,
+        "upOdds": 0.47,
+        "downOdds": 0.53
+      },
+      {
+        "ts": "2026-02-17T09:05:21.066Z",
+        "secsLeft": 278,
+        "priceToBeat": null,
+        "btcPrice": 68251.07993861438,
+        "momentum": null,
+        "upOdds": 0.3955,
+        "downOdds": 0.6045
+      },
+      {
+        "ts": "2026-02-17T09:05:27.071Z",
+        "secsLeft": 272,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68246.87522393132,
+        "momentum": -0.0284,
+        "upOdds": 0.405,
+        "downOdds": 0.595
+      },
+      {
+        "ts": "2026-02-17T09:05:33.074Z",
+        "secsLeft": 266,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68247.45241110123,
+        "momentum": -0.0275,
+        "upOdds": 0.415,
+        "downOdds": 0.585
+      },
+      {
+        "ts": "2026-02-17T09:05:39.077Z",
+        "secsLeft": 260,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68247.43620782168,
+        "momentum": -0.0276,
+        "upOdds": 0.435,
+        "downOdds": 0.565
+      },
+      {
+        "ts": "2026-02-17T09:05:45.081Z",
+        "secsLeft": 254,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68251.15006018506,
+        "momentum": -0.0221,
+        "upOdds": 0.44,
+        "downOdds": 0.56
+      },
+      {
+        "ts": "2026-02-17T09:05:51.085Z",
+        "secsLeft": 248,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68251.67270041403,
+        "momentum": -0.0214,
+        "upOdds": 0.43,
+        "downOdds": 0.57
+      },
+      {
+        "ts": "2026-02-17T09:05:57.085Z",
+        "secsLeft": 242,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68261.19303472042,
+        "momentum": -0.0074,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:06:03.087Z",
+        "secsLeft": 236,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68253.76628369383,
+        "momentum": -0.0183,
+        "upOdds": 0.4,
+        "downOdds": 0.6
+      },
+      {
+        "ts": "2026-02-17T09:06:09.093Z",
+        "secsLeft": 230,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68255.65412774256,
+        "momentum": -0.0155,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:06:15.097Z",
+        "secsLeft": 224,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68249.12273974133,
+        "momentum": -0.0251,
+        "upOdds": 0.405,
+        "downOdds": 0.595
+      },
+      {
+        "ts": "2026-02-17T09:06:21.098Z",
+        "secsLeft": 218,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68250.9771441298,
+        "momentum": -0.0224,
+        "upOdds": 0.425,
+        "downOdds": 0.575
+      },
+      {
+        "ts": "2026-02-17T09:06:27.100Z",
+        "secsLeft": 212,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68251.84762,
+        "momentum": -0.0211,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T09:06:33.104Z",
+        "secsLeft": 206,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68251.84762,
+        "momentum": -0.0211,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:06:39.106Z",
+        "secsLeft": 200,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68265.09423382829,
+        "momentum": -0.0017,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:06:45.110Z",
+        "secsLeft": 194,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68266.69981133804,
+        "momentum": 0.0007,
+        "upOdds": 0.5755,
+        "downOdds": 0.4245
+      },
+      {
+        "ts": "2026-02-17T09:06:51.112Z",
+        "secsLeft": 188,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68271.37752823798,
+        "momentum": 0.0075,
+        "upOdds": 0.5345,
+        "downOdds": 0.4655
+      },
+      {
+        "ts": "2026-02-17T09:06:57.115Z",
+        "secsLeft": 182,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68271.45295988204,
+        "momentum": 0.0076,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:07:03.116Z",
+        "secsLeft": 176,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68271.20904377755,
+        "momentum": 0.0073,
+        "upOdds": 0.58,
+        "downOdds": 0.42
+      },
+      {
+        "ts": "2026-02-17T09:07:09.121Z",
+        "secsLeft": 170,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68269.12657094875,
+        "momentum": 0.0042,
+        "upOdds": 0.51,
+        "downOdds": 0.49
+      },
+      {
+        "ts": "2026-02-17T09:07:15.123Z",
+        "secsLeft": 164,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68269.52554417196,
+        "momentum": 0.0048,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:07:21.125Z",
+        "secsLeft": 158,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68258.62246245077,
+        "momentum": -0.0112,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:07:27.127Z",
+        "secsLeft": 152,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68261.38971183503,
+        "momentum": -0.0071,
+        "upOdds": 0.39,
+        "downOdds": 0.61
+      },
+      {
+        "ts": "2026-02-17T09:07:33.132Z",
+        "secsLeft": 146,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68238.58770878144,
+        "momentum": -0.0405,
+        "upOdds": 0.235,
+        "downOdds": 0.765
+      },
+      {
+        "ts": "2026-02-17T09:07:39.133Z",
+        "secsLeft": 140,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68245.67722070221,
+        "momentum": -0.0301,
+        "upOdds": 0.32,
+        "downOdds": 0.68
+      },
+      {
+        "ts": "2026-02-17T09:07:45.138Z",
+        "secsLeft": 134,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68241.16872645717,
+        "momentum": -0.0367,
+        "upOdds": 0.255,
+        "downOdds": 0.745
+      },
+      {
+        "ts": "2026-02-17T09:07:51.140Z",
+        "secsLeft": 128,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68242.52746143457,
+        "momentum": -0.0348,
+        "upOdds": 0.2095,
+        "downOdds": 0.7905
+      },
+      {
+        "ts": "2026-02-17T09:07:57.143Z",
+        "secsLeft": 122,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68236.78395621706,
+        "momentum": -0.0432,
+        "upOdds": 0.235,
+        "downOdds": 0.765
+      },
+      {
+        "ts": "2026-02-17T09:08:03.148Z",
+        "secsLeft": 116,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68236.6920975,
+        "momentum": -0.0433,
+        "upOdds": 0.205,
+        "downOdds": 0.795
+      },
+      {
+        "ts": "2026-02-17T09:08:09.150Z",
+        "secsLeft": 110,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68235.04250592872,
+        "momentum": -0.0457,
+        "upOdds": 0.18,
+        "downOdds": 0.82
+      },
+      {
+        "ts": "2026-02-17T09:08:15.152Z",
+        "secsLeft": 104,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68234.51550257832,
+        "momentum": -0.0465,
+        "upOdds": 0.125,
+        "downOdds": 0.875
+      },
+      {
+        "ts": "2026-02-17T09:08:21.154Z",
+        "secsLeft": 98,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68221.99824594456,
+        "momentum": -0.0648,
+        "upOdds": 0.105,
+        "downOdds": 0.895
+      },
+      {
+        "ts": "2026-02-17T09:08:27.159Z",
+        "secsLeft": 92,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68225.79021572178,
+        "momentum": -0.0593,
+        "upOdds": 0.11,
+        "downOdds": 0.89
+      },
+      {
+        "ts": "2026-02-17T09:08:33.164Z",
+        "secsLeft": 86,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68226.05569097056,
+        "momentum": -0.0589,
+        "upOdds": 0.085,
+        "downOdds": 0.915
+      },
+      {
+        "ts": "2026-02-17T09:08:39.168Z",
+        "secsLeft": 80,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68228.27196810064,
+        "momentum": -0.0556,
+        "upOdds": 0.11,
+        "downOdds": 0.89
+      },
+      {
+        "ts": "2026-02-17T09:08:45.172Z",
+        "secsLeft": 74,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68229.21734659205,
+        "momentum": -0.0543,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:08:51.176Z",
+        "secsLeft": 68,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68219.940541,
+        "momentum": -0.0678,
+        "upOdds": 0.06,
+        "downOdds": 0.94
+      },
+      {
+        "ts": "2026-02-17T09:08:57.178Z",
+        "secsLeft": 62,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68219.39575852017,
+        "momentum": -0.0686,
+        "upOdds": 0.045,
+        "downOdds": 0.955
+      },
+      {
+        "ts": "2026-02-17T09:09:03.182Z",
+        "secsLeft": 56,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68218.85775026337,
+        "momentum": -0.0694,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:09:09.184Z",
+        "secsLeft": 50,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68221.76817092669,
+        "momentum": -0.0652,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:09:15.188Z",
+        "secsLeft": 44,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68214.79129754366,
+        "momentum": -0.0754,
+        "upOdds": 0.025,
+        "downOdds": 0.975
+      },
+      {
+        "ts": "2026-02-17T09:09:21.192Z",
+        "secsLeft": 38,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68210.7601428866,
+        "momentum": -0.0813,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:09:27.197Z",
+        "secsLeft": 32,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68208.85796016509,
+        "momentum": -0.0841,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:09:33.200Z",
+        "secsLeft": 26,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68208.65146,
+        "momentum": -0.0844,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:09:39.204Z",
+        "secsLeft": 20,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68207.152155094,
+        "momentum": -0.0866,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:09:45.211Z",
+        "secsLeft": 14,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68205.22159892651,
+        "momentum": -0.0894,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:09:51.218Z",
+        "secsLeft": 8,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68195.87918211719,
+        "momentum": -0.1031,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:09:57.220Z",
+        "secsLeft": 2,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68193.06499044884,
+        "momentum": -0.1072,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:10:03.225Z",
+        "secsLeft": 0,
+        "priceToBeat": 68266.25571892083,
+        "btcPrice": 68173.17814680387,
+        "momentum": -0.1363,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.945,
+      "buyPrice": 0.975,
+      "timestamp": "2026-02-17T09:08:55.530Z",
+      "success": true,
+      "source": "EARLY T-64"
+    },
+    "finalBtcPrice": 68173.17814680387,
+    "finalMomentum": -0.1363,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.045,
+      "down": 0.955
+    },
+    "oddsAtT30": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsAtT10": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771319400",
+    "title": "Bitcoin Up or Down - February 17, 4:10AM-4:15AM ET",
+    "startTime": "2026-02-17T09:10:00Z",
+    "endTime": "2026-02-17T09:15:00Z",
+    "priceToBeat": 68193.85904319037,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:10:11.710Z",
+        "secsLeft": 288,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68149.8950025716,
+        "momentum": -0.0645,
+        "upOdds": 0.225,
+        "downOdds": 0.775
+      },
+      {
+        "ts": "2026-02-17T09:10:17.713Z",
+        "secsLeft": 282,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68086.5647105,
+        "momentum": -0.1573,
+        "upOdds": 0.18,
+        "downOdds": 0.82
+      },
+      {
+        "ts": "2026-02-17T09:10:23.716Z",
+        "secsLeft": 276,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68091.557014,
+        "momentum": -0.15,
+        "upOdds": 0.17,
+        "downOdds": 0.83
+      },
+      {
+        "ts": "2026-02-17T09:10:29.720Z",
+        "secsLeft": 270,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68084.20777958757,
+        "momentum": -0.1608,
+        "upOdds": 0.14,
+        "downOdds": 0.86
+      },
+      {
+        "ts": "2026-02-17T09:10:35.727Z",
+        "secsLeft": 264,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68084.53424112733,
+        "momentum": -0.1603,
+        "upOdds": 0.135,
+        "downOdds": 0.865
+      },
+      {
+        "ts": "2026-02-17T09:10:41.726Z",
+        "secsLeft": 258,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68081.26184184545,
+        "momentum": -0.1651,
+        "upOdds": 0.175,
+        "downOdds": 0.825
+      },
+      {
+        "ts": "2026-02-17T09:10:47.726Z",
+        "secsLeft": 252,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68081.7199825575,
+        "momentum": -0.1644,
+        "upOdds": 0.1745,
+        "downOdds": 0.8255
+      },
+      {
+        "ts": "2026-02-17T09:10:53.729Z",
+        "secsLeft": 246,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68081.90454608473,
+        "momentum": -0.1642,
+        "upOdds": 0.125,
+        "downOdds": 0.875
+      },
+      {
+        "ts": "2026-02-17T09:10:59.731Z",
+        "secsLeft": 240,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68085.6433095,
+        "momentum": -0.1587,
+        "upOdds": 0.11,
+        "downOdds": 0.89
+      },
+      {
+        "ts": "2026-02-17T09:11:05.731Z",
+        "secsLeft": 234,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68067.43043024621,
+        "momentum": -0.1854,
+        "upOdds": 0.115,
+        "downOdds": 0.885
+      },
+      {
+        "ts": "2026-02-17T09:11:11.735Z",
+        "secsLeft": 228,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68063.6618270582,
+        "momentum": -0.1909,
+        "upOdds": 0.095,
+        "downOdds": 0.905
+      },
+      {
+        "ts": "2026-02-17T09:11:17.741Z",
+        "secsLeft": 222,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68058.3565665,
+        "momentum": -0.1987,
+        "upOdds": 0.09,
+        "downOdds": 0.91
+      },
+      {
+        "ts": "2026-02-17T09:11:23.747Z",
+        "secsLeft": 216,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68058.986152,
+        "momentum": -0.1978,
+        "upOdds": 0.085,
+        "downOdds": 0.915
+      },
+      {
+        "ts": "2026-02-17T09:11:29.749Z",
+        "secsLeft": 210,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68058.601122,
+        "momentum": -0.1983,
+        "upOdds": 0.085,
+        "downOdds": 0.915
+      },
+      {
+        "ts": "2026-02-17T09:11:35.752Z",
+        "secsLeft": 204,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68050.42200629124,
+        "momentum": -0.2103,
+        "upOdds": 0.075,
+        "downOdds": 0.925
+      },
+      {
+        "ts": "2026-02-17T09:11:41.754Z",
+        "secsLeft": 198,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68050.82839615546,
+        "momentum": -0.2097,
+        "upOdds": 0.06,
+        "downOdds": 0.94
+      },
+      {
+        "ts": "2026-02-17T09:11:47.756Z",
+        "secsLeft": 192,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68053.587099,
+        "momentum": -0.2057,
+        "upOdds": 0.075,
+        "downOdds": 0.925
+      },
+      {
+        "ts": "2026-02-17T09:11:53.759Z",
+        "secsLeft": 186,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68045.27270329939,
+        "momentum": -0.2179,
+        "upOdds": 0.075,
+        "downOdds": 0.925
+      },
+      {
+        "ts": "2026-02-17T09:11:59.763Z",
+        "secsLeft": 180,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68033.5002542807,
+        "momentum": -0.2352,
+        "upOdds": 0.055,
+        "downOdds": 0.945
+      },
+      {
+        "ts": "2026-02-17T09:12:05.765Z",
+        "secsLeft": 174,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68032.46005703378,
+        "momentum": -0.2367,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:12:11.768Z",
+        "secsLeft": 168,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68065.93448082748,
+        "momentum": -0.1876,
+        "upOdds": 0.07,
+        "downOdds": 0.93
+      },
+      {
+        "ts": "2026-02-17T09:12:17.771Z",
+        "secsLeft": 162,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68057.14733763503,
+        "momentum": -0.2005,
+        "upOdds": 0.075,
+        "downOdds": 0.925
+      },
+      {
+        "ts": "2026-02-17T09:12:23.776Z",
+        "secsLeft": 156,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68057.92772524446,
+        "momentum": -0.1993,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:12:29.780Z",
+        "secsLeft": 150,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68054.42247677174,
+        "momentum": -0.2045,
+        "upOdds": 0.05,
+        "downOdds": 0.95
+      },
+      {
+        "ts": "2026-02-17T09:12:35.786Z",
+        "secsLeft": 144,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68052.97959881925,
+        "momentum": -0.2066,
+        "upOdds": 0.04,
+        "downOdds": 0.96
+      },
+      {
+        "ts": "2026-02-17T09:12:41.791Z",
+        "secsLeft": 138,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68052.81142677546,
+        "momentum": -0.2068,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:12:47.793Z",
+        "secsLeft": 132,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68042.45182281465,
+        "momentum": -0.222,
+        "upOdds": 0.045,
+        "downOdds": 0.955
+      },
+      {
+        "ts": "2026-02-17T09:12:53.797Z",
+        "secsLeft": 126,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68049.825087,
+        "momentum": -0.2112,
+        "upOdds": 0.055,
+        "downOdds": 0.945
+      },
+      {
+        "ts": "2026-02-17T09:12:59.802Z",
+        "secsLeft": 120,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68054.74960659222,
+        "momentum": -0.204,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:13:05.805Z",
+        "secsLeft": 114,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68056.767804,
+        "momentum": -0.201,
+        "upOdds": 0.025,
+        "downOdds": 0.975
+      },
+      {
+        "ts": "2026-02-17T09:13:11.807Z",
+        "secsLeft": 108,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68058.8434863831,
+        "momentum": -0.198,
+        "upOdds": 0.04,
+        "downOdds": 0.96
+      },
+      {
+        "ts": "2026-02-17T09:13:17.811Z",
+        "secsLeft": 102,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68064.81697070065,
+        "momentum": -0.1892,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:13:23.816Z",
+        "secsLeft": 96,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68063.88013924641,
+        "momentum": -0.1906,
+        "upOdds": 0.025,
+        "downOdds": 0.975
+      },
+      {
+        "ts": "2026-02-17T09:13:29.819Z",
+        "secsLeft": 90,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68063.574339,
+        "momentum": -0.1911,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:13:35.822Z",
+        "secsLeft": 84,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68065.26023599948,
+        "momentum": -0.1886,
+        "upOdds": 0.025,
+        "downOdds": 0.975
+      },
+      {
+        "ts": "2026-02-17T09:13:41.828Z",
+        "secsLeft": 78,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68073.07095621056,
+        "momentum": -0.1771,
+        "upOdds": 0.02,
+        "downOdds": 0.98
+      },
+      {
+        "ts": "2026-02-17T09:13:47.834Z",
+        "secsLeft": 72,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68084.80709327308,
+        "momentum": -0.1599,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:13:53.837Z",
+        "secsLeft": 66,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68085.89223,
+        "momentum": -0.1583,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:13:59.842Z",
+        "secsLeft": 60,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68085.8349500814,
+        "momentum": -0.1584,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:05.847Z",
+        "secsLeft": 54,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68086.07335929245,
+        "momentum": -0.1581,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:11.853Z",
+        "secsLeft": 48,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68087.41018935315,
+        "momentum": -0.1561,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:17.858Z",
+        "secsLeft": 42,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68084.1819375,
+        "momentum": -0.1608,
+        "upOdds": 0.01,
+        "downOdds": 0.99
+      },
+      {
+        "ts": "2026-02-17T09:14:23.864Z",
+        "secsLeft": 36,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68084.12176132134,
+        "momentum": -0.1609,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:29.870Z",
+        "secsLeft": 30,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68083.44752487534,
+        "momentum": -0.1619,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:35.874Z",
+        "secsLeft": 24,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68083.3499849507,
+        "momentum": -0.1621,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:41.880Z",
+        "secsLeft": 18,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68082.70249784102,
+        "momentum": -0.163,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:47.885Z",
+        "secsLeft": 12,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68078.684615,
+        "momentum": -0.1689,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:53.892Z",
+        "secsLeft": 6,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68078.85225965099,
+        "momentum": -0.1686,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:14:59.897Z",
+        "secsLeft": 0,
+        "priceToBeat": 68193.85904319037,
+        "btcPrice": 68077.6178416003,
+        "momentum": -0.1705,
+        "upOdds": 0.0005,
+        "downOdds": 0.9995
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.95,
+      "buyPrice": 0.98,
+      "timestamp": "2026-02-17T09:12:30.094Z",
+      "success": true,
+      "source": "EARLY T-150"
+    },
+    "finalBtcPrice": 68077.6178416003,
+    "finalMomentum": -0.1705,
+    "finalOdds": {
+      "up": 0.0005,
+      "down": 0.9995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsAtT30": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsAtT10": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771319700",
+    "title": "Bitcoin Up or Down - February 17, 4:15AM-4:20AM ET",
+    "startTime": "2026-02-17T09:15:00Z",
+    "endTime": "2026-02-17T09:20:00Z",
+    "priceToBeat": 68075.7122897064,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:15:09.073Z",
+        "secsLeft": 290,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68073.93954594871,
+        "momentum": -0.0026,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:15:15.074Z",
+        "secsLeft": 284,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68084.3168245,
+        "momentum": 0.0126,
+        "upOdds": 0.665,
+        "downOdds": 0.335
+      },
+      {
+        "ts": "2026-02-17T09:15:21.073Z",
+        "secsLeft": 278,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68089.72527620607,
+        "momentum": 0.0206,
+        "upOdds": 0.655,
+        "downOdds": 0.345
+      },
+      {
+        "ts": "2026-02-17T09:15:27.077Z",
+        "secsLeft": 272,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68094.19018672477,
+        "momentum": 0.0271,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:15:33.081Z",
+        "secsLeft": 266,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68090.03107034604,
+        "momentum": 0.021,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:15:39.085Z",
+        "secsLeft": 260,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68084.47681596242,
+        "momentum": 0.0129,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:15:45.088Z",
+        "secsLeft": 254,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68084.33384611165,
+        "momentum": 0.0127,
+        "upOdds": 0.605,
+        "downOdds": 0.395
+      },
+      {
+        "ts": "2026-02-17T09:15:51.088Z",
+        "secsLeft": 248,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68086.44555011393,
+        "momentum": 0.0158,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:15:57.091Z",
+        "secsLeft": 242,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68088.34506021476,
+        "momentum": 0.0186,
+        "upOdds": 0.595,
+        "downOdds": 0.405
+      },
+      {
+        "ts": "2026-02-17T09:16:03.095Z",
+        "secsLeft": 236,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68092.7301922554,
+        "momentum": 0.025,
+        "upOdds": 0.57,
+        "downOdds": 0.43
+      },
+      {
+        "ts": "2026-02-17T09:16:09.100Z",
+        "secsLeft": 230,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68086.76154536604,
+        "momentum": 0.0162,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T09:16:15.103Z",
+        "secsLeft": 224,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68079.3992685,
+        "momentum": 0.0054,
+        "upOdds": 0.445,
+        "downOdds": 0.555
+      },
+      {
+        "ts": "2026-02-17T09:16:21.105Z",
+        "secsLeft": 218,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68074.29873319162,
+        "momentum": -0.0021,
+        "upOdds": 0.55,
+        "downOdds": 0.45
+      },
+      {
+        "ts": "2026-02-17T09:16:27.108Z",
+        "secsLeft": 212,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68082.62144,
+        "momentum": 0.0101,
+        "upOdds": 0.56,
+        "downOdds": 0.44
+      },
+      {
+        "ts": "2026-02-17T09:16:33.112Z",
+        "secsLeft": 206,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68087.8995835,
+        "momentum": 0.0179,
+        "upOdds": 0.675,
+        "downOdds": 0.325
+      },
+      {
+        "ts": "2026-02-17T09:16:39.116Z",
+        "secsLeft": 200,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68105.51703140515,
+        "momentum": 0.0438,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:16:45.119Z",
+        "secsLeft": 194,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68106.604068,
+        "momentum": 0.0454,
+        "upOdds": 0.765,
+        "downOdds": 0.235
+      },
+      {
+        "ts": "2026-02-17T09:16:51.124Z",
+        "secsLeft": 188,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68119.633503,
+        "momentum": 0.0645,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:16:57.130Z",
+        "secsLeft": 182,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68120.34670744264,
+        "momentum": 0.0656,
+        "upOdds": 0.805,
+        "downOdds": 0.195
+      },
+      {
+        "ts": "2026-02-17T09:17:03.135Z",
+        "secsLeft": 176,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68112.634,
+        "momentum": 0.0542,
+        "upOdds": 0.74,
+        "downOdds": 0.26
+      },
+      {
+        "ts": "2026-02-17T09:17:09.138Z",
+        "secsLeft": 170,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68106.66338630166,
+        "momentum": 0.0455,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:17:15.142Z",
+        "secsLeft": 164,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68118.90480305327,
+        "momentum": 0.0634,
+        "upOdds": 0.85,
+        "downOdds": 0.15
+      },
+      {
+        "ts": "2026-02-17T09:17:21.144Z",
+        "secsLeft": 158,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68128.2688215,
+        "momentum": 0.0772,
+        "upOdds": 0.865,
+        "downOdds": 0.135
+      },
+      {
+        "ts": "2026-02-17T09:17:27.149Z",
+        "secsLeft": 152,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68129.32108343727,
+        "momentum": 0.0787,
+        "upOdds": 0.86,
+        "downOdds": 0.14
+      },
+      {
+        "ts": "2026-02-17T09:17:33.154Z",
+        "secsLeft": 146,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68127.2598580895,
+        "momentum": 0.0757,
+        "upOdds": 0.85,
+        "downOdds": 0.15
+      },
+      {
+        "ts": "2026-02-17T09:17:39.157Z",
+        "secsLeft": 140,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68119.32214127392,
+        "momentum": 0.0641,
+        "upOdds": 0.815,
+        "downOdds": 0.185
+      },
+      {
+        "ts": "2026-02-17T09:17:45.160Z",
+        "secsLeft": 134,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68071.81349341256,
+        "momentum": -0.0057,
+        "upOdds": 0.37,
+        "downOdds": 0.63
+      },
+      {
+        "ts": "2026-02-17T09:17:51.166Z",
+        "secsLeft": 128,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68058.09335070993,
+        "momentum": -0.0259,
+        "upOdds": 0.315,
+        "downOdds": 0.685
+      },
+      {
+        "ts": "2026-02-17T09:17:57.169Z",
+        "secsLeft": 122,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68052.87382690913,
+        "momentum": -0.0335,
+        "upOdds": 0.38,
+        "downOdds": 0.62
+      },
+      {
+        "ts": "2026-02-17T09:18:03.171Z",
+        "secsLeft": 116,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68059.33054011046,
+        "momentum": -0.0241,
+        "upOdds": 0.36,
+        "downOdds": 0.64
+      },
+      {
+        "ts": "2026-02-17T09:18:09.177Z",
+        "secsLeft": 110,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68057.6869411529,
+        "momentum": -0.0265,
+        "upOdds": 0.4,
+        "downOdds": 0.6
+      },
+      {
+        "ts": "2026-02-17T09:18:15.181Z",
+        "secsLeft": 104,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68058.01428484937,
+        "momentum": -0.026,
+        "upOdds": 0.375,
+        "downOdds": 0.625
+      },
+      {
+        "ts": "2026-02-17T09:18:21.183Z",
+        "secsLeft": 98,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68056.64193525419,
+        "momentum": -0.028,
+        "upOdds": 0.275,
+        "downOdds": 0.725
+      },
+      {
+        "ts": "2026-02-17T09:18:27.187Z",
+        "secsLeft": 92,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68037.15890091975,
+        "momentum": -0.0566,
+        "upOdds": 0.155,
+        "downOdds": 0.845
+      },
+      {
+        "ts": "2026-02-17T09:18:33.190Z",
+        "secsLeft": 86,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68026.87323386375,
+        "momentum": -0.0717,
+        "upOdds": 0.1,
+        "downOdds": 0.9
+      },
+      {
+        "ts": "2026-02-17T09:18:39.193Z",
+        "secsLeft": 80,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68019.58488692997,
+        "momentum": -0.0824,
+        "upOdds": 0.07,
+        "downOdds": 0.93
+      },
+      {
+        "ts": "2026-02-17T09:18:45.196Z",
+        "secsLeft": 74,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68015.96835656199,
+        "momentum": -0.0878,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:18:51.200Z",
+        "secsLeft": 68,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68017.91763287198,
+        "momentum": -0.0849,
+        "upOdds": 0.06,
+        "downOdds": 0.94
+      },
+      {
+        "ts": "2026-02-17T09:18:57.203Z",
+        "secsLeft": 62,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68028.5205530419,
+        "momentum": -0.0693,
+        "upOdds": 0.09,
+        "downOdds": 0.91
+      },
+      {
+        "ts": "2026-02-17T09:19:03.204Z",
+        "secsLeft": 56,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68014.62470203046,
+        "momentum": -0.0897,
+        "upOdds": 0.035,
+        "downOdds": 0.965
+      },
+      {
+        "ts": "2026-02-17T09:19:09.205Z",
+        "secsLeft": 50,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68006.72644741884,
+        "momentum": -0.1013,
+        "upOdds": 0.025,
+        "downOdds": 0.975
+      },
+      {
+        "ts": "2026-02-17T09:19:15.211Z",
+        "secsLeft": 44,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 67970.29826606941,
+        "momentum": -0.1548,
+        "upOdds": 0.015,
+        "downOdds": 0.985
+      },
+      {
+        "ts": "2026-02-17T09:19:21.213Z",
+        "secsLeft": 38,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 67966.84504080185,
+        "momentum": -0.1599,
+        "upOdds": 0.01,
+        "downOdds": 0.99
+      },
+      {
+        "ts": "2026-02-17T09:19:27.219Z",
+        "secsLeft": 32,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68002.87443025284,
+        "momentum": -0.107,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:19:33.222Z",
+        "secsLeft": 26,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68002.24733820808,
+        "momentum": -0.1079,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:19:39.226Z",
+        "secsLeft": 20,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68003.9133085,
+        "momentum": -0.1055,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:19:45.230Z",
+        "secsLeft": 14,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 67989.19333551331,
+        "momentum": -0.1271,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:19:51.230Z",
+        "secsLeft": 8,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 67987.34629577014,
+        "momentum": -0.1298,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:19:57.235Z",
+        "secsLeft": 2,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 67994.65932600606,
+        "momentum": -0.1191,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      },
+      {
+        "ts": "2026-02-17T09:20:03.238Z",
+        "secsLeft": 0,
+        "priceToBeat": 68075.7122897064,
+        "btcPrice": 68002.689366,
+        "momentum": -0.1073,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.965,
+      "buyPrice": 0.99,
+      "timestamp": "2026-02-17T09:19:05.608Z",
+      "success": true,
+      "source": "EARLY T-54"
+    },
+    "finalBtcPrice": 68002.689366,
+    "finalMomentum": -0.1073,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.09,
+      "down": 0.91
+    },
+    "oddsAtT30": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsAtT10": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771320000",
+    "title": "Bitcoin Up or Down - February 17, 4:20AM-4:25AM ET",
+    "startTime": "2026-02-17T09:20:00Z",
+    "endTime": "2026-02-17T09:25:00Z",
+    "priceToBeat": 68003.53266404707,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:20:13.535Z",
+        "secsLeft": 286,
+        "priceToBeat": null,
+        "btcPrice": 68044.51649948925,
+        "momentum": null,
+        "upOdds": 0.73,
+        "downOdds": 0.27
+      },
+      {
+        "ts": "2026-02-17T09:20:19.537Z",
+        "secsLeft": 280,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 68057.84272,
+        "momentum": 0.0799,
+        "upOdds": 0.8,
+        "downOdds": 0.2
+      },
+      {
+        "ts": "2026-02-17T09:20:25.538Z",
+        "secsLeft": 274,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 68058.54328250627,
+        "momentum": 0.0809,
+        "upOdds": 0.65,
+        "downOdds": 0.35
+      },
+      {
+        "ts": "2026-02-17T09:20:31.540Z",
+        "secsLeft": 268,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 68013.55467930908,
+        "momentum": 0.0147,
+        "upOdds": 0.5045,
+        "downOdds": 0.4955
+      },
+      {
+        "ts": "2026-02-17T09:20:37.546Z",
+        "secsLeft": 262,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67989.7740814081,
+        "momentum": -0.0202,
+        "upOdds": 0.455,
+        "downOdds": 0.545
+      },
+      {
+        "ts": "2026-02-17T09:20:43.552Z",
+        "secsLeft": 256,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67986.20432812674,
+        "momentum": -0.0255,
+        "upOdds": 0.44,
+        "downOdds": 0.56
+      },
+      {
+        "ts": "2026-02-17T09:20:49.554Z",
+        "secsLeft": 250,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67984.36525440816,
+        "momentum": -0.0282,
+        "upOdds": 0.425,
+        "downOdds": 0.575
+      },
+      {
+        "ts": "2026-02-17T09:20:55.557Z",
+        "secsLeft": 244,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67990.33894351877,
+        "momentum": -0.0194,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:21:01.561Z",
+        "secsLeft": 238,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67994.256532,
+        "momentum": -0.0136,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:21:07.564Z",
+        "secsLeft": 232,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67988.53086298246,
+        "momentum": -0.0221,
+        "upOdds": 0.485,
+        "downOdds": 0.515
+      },
+      {
+        "ts": "2026-02-17T09:21:13.565Z",
+        "secsLeft": 226,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67998.91034559863,
+        "momentum": -0.0068,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:21:19.568Z",
+        "secsLeft": 220,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67996.951116352,
+        "momentum": -0.0097,
+        "upOdds": 0.42,
+        "downOdds": 0.58
+      },
+      {
+        "ts": "2026-02-17T09:21:25.571Z",
+        "secsLeft": 214,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67984.30901545766,
+        "momentum": -0.0283,
+        "upOdds": 0.42,
+        "downOdds": 0.58
+      },
+      {
+        "ts": "2026-02-17T09:21:31.575Z",
+        "secsLeft": 208,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67989.648726,
+        "momentum": -0.0204,
+        "upOdds": 0.52,
+        "downOdds": 0.48
+      },
+      {
+        "ts": "2026-02-17T09:21:37.577Z",
+        "secsLeft": 202,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67989.5106055,
+        "momentum": -0.0206,
+        "upOdds": 0.45,
+        "downOdds": 0.55
+      },
+      {
+        "ts": "2026-02-17T09:21:43.583Z",
+        "secsLeft": 196,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67987.55139838162,
+        "momentum": -0.0235,
+        "upOdds": 0.395,
+        "downOdds": 0.605
+      },
+      {
+        "ts": "2026-02-17T09:21:49.586Z",
+        "secsLeft": 190,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67989.36229996507,
+        "momentum": -0.0208,
+        "upOdds": 0.485,
+        "downOdds": 0.515
+      },
+      {
+        "ts": "2026-02-17T09:21:55.586Z",
+        "secsLeft": 184,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67977.42708382185,
+        "momentum": -0.0384,
+        "upOdds": 0.375,
+        "downOdds": 0.625
+      },
+      {
+        "ts": "2026-02-17T09:22:01.588Z",
+        "secsLeft": 178,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67976.728867689,
+        "momentum": -0.0394,
+        "upOdds": 0.435,
+        "downOdds": 0.565
+      },
+      {
+        "ts": "2026-02-17T09:22:07.589Z",
+        "secsLeft": 172,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67985.4308812893,
+        "momentum": -0.0266,
+        "upOdds": 0.435,
+        "downOdds": 0.565
+      },
+      {
+        "ts": "2026-02-17T09:22:13.592Z",
+        "secsLeft": 166,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67982.45357828775,
+        "momentum": -0.031,
+        "upOdds": 0.355,
+        "downOdds": 0.645
+      },
+      {
+        "ts": "2026-02-17T09:22:19.597Z",
+        "secsLeft": 160,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67970.65269794973,
+        "momentum": -0.0484,
+        "upOdds": 0.345,
+        "downOdds": 0.655
+      },
+      {
+        "ts": "2026-02-17T09:22:25.598Z",
+        "secsLeft": 154,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67966.21771597648,
+        "momentum": -0.0549,
+        "upOdds": 0.2745,
+        "downOdds": 0.7255
+      },
+      {
+        "ts": "2026-02-17T09:22:31.601Z",
+        "secsLeft": 148,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67963.88038527193,
+        "momentum": -0.0583,
+        "upOdds": 0.29,
+        "downOdds": 0.71
+      },
+      {
+        "ts": "2026-02-17T09:22:37.604Z",
+        "secsLeft": 142,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67963.07152989066,
+        "momentum": -0.0595,
+        "upOdds": 0.265,
+        "downOdds": 0.735
+      },
+      {
+        "ts": "2026-02-17T09:22:43.608Z",
+        "secsLeft": 136,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67974.15120297004,
+        "momentum": -0.0432,
+        "upOdds": 0.325,
+        "downOdds": 0.675
+      },
+      {
+        "ts": "2026-02-17T09:22:49.612Z",
+        "secsLeft": 130,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67973.35233676563,
+        "momentum": -0.0444,
+        "upOdds": 0.3,
+        "downOdds": 0.7
+      },
+      {
+        "ts": "2026-02-17T09:22:55.617Z",
+        "secsLeft": 124,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67973.35865680629,
+        "momentum": -0.0444,
+        "upOdds": 0.32,
+        "downOdds": 0.68
+      },
+      {
+        "ts": "2026-02-17T09:23:01.622Z",
+        "secsLeft": 118,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67972.97331203721,
+        "momentum": -0.0449,
+        "upOdds": 0.305,
+        "downOdds": 0.695
+      },
+      {
+        "ts": "2026-02-17T09:23:07.627Z",
+        "secsLeft": 112,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67971.01196372327,
+        "momentum": -0.0478,
+        "upOdds": 0.23,
+        "downOdds": 0.77
+      },
+      {
+        "ts": "2026-02-17T09:23:13.632Z",
+        "secsLeft": 106,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67964.61844692974,
+        "momentum": -0.0572,
+        "upOdds": 0.235,
+        "downOdds": 0.765
+      },
+      {
+        "ts": "2026-02-17T09:23:19.638Z",
+        "secsLeft": 100,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67961.9356142266,
+        "momentum": -0.0612,
+        "upOdds": 0.1955,
+        "downOdds": 0.8045
+      },
+      {
+        "ts": "2026-02-17T09:23:25.641Z",
+        "secsLeft": 94,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67961.7543731512,
+        "momentum": -0.0614,
+        "upOdds": 0.175,
+        "downOdds": 0.825
+      },
+      {
+        "ts": "2026-02-17T09:23:31.645Z",
+        "secsLeft": 88,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67962.17883657834,
+        "momentum": -0.0608,
+        "upOdds": 0.175,
+        "downOdds": 0.825
+      },
+      {
+        "ts": "2026-02-17T09:23:37.649Z",
+        "secsLeft": 82,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67961.30800481042,
+        "momentum": -0.0621,
+        "upOdds": 0.175,
+        "downOdds": 0.825
+      },
+      {
+        "ts": "2026-02-17T09:23:43.654Z",
+        "secsLeft": 76,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67959.01264270119,
+        "momentum": -0.0655,
+        "upOdds": 0.14,
+        "downOdds": 0.86
+      },
+      {
+        "ts": "2026-02-17T09:23:49.657Z",
+        "secsLeft": 70,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67959.25497876196,
+        "momentum": -0.0651,
+        "upOdds": 0.15,
+        "downOdds": 0.85
+      },
+      {
+        "ts": "2026-02-17T09:23:55.661Z",
+        "secsLeft": 64,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67959.12251725556,
+        "momentum": -0.0653,
+        "upOdds": 0.08,
+        "downOdds": 0.92
+      },
+      {
+        "ts": "2026-02-17T09:24:01.667Z",
+        "secsLeft": 58,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67958.90832406013,
+        "momentum": -0.0656,
+        "upOdds": 0.08,
+        "downOdds": 0.92
+      },
+      {
+        "ts": "2026-02-17T09:24:07.673Z",
+        "secsLeft": 52,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67967.49574037979,
+        "momentum": -0.053,
+        "upOdds": 0.145,
+        "downOdds": 0.855
+      },
+      {
+        "ts": "2026-02-17T09:24:13.673Z",
+        "secsLeft": 46,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67968.5224905,
+        "momentum": -0.0515,
+        "upOdds": 0.23,
+        "downOdds": 0.77
+      },
+      {
+        "ts": "2026-02-17T09:24:19.678Z",
+        "secsLeft": 40,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67976.08524770939,
+        "momentum": -0.0404,
+        "upOdds": 0.16,
+        "downOdds": 0.84
+      },
+      {
+        "ts": "2026-02-17T09:24:25.683Z",
+        "secsLeft": 34,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67975.23147972165,
+        "momentum": -0.0416,
+        "upOdds": 0.135,
+        "downOdds": 0.865
+      },
+      {
+        "ts": "2026-02-17T09:24:31.684Z",
+        "secsLeft": 28,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67975.85276811056,
+        "momentum": -0.0407,
+        "upOdds": 0.085,
+        "downOdds": 0.915
+      },
+      {
+        "ts": "2026-02-17T09:24:37.686Z",
+        "secsLeft": 22,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67974.75033871342,
+        "momentum": -0.0423,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:24:43.690Z",
+        "secsLeft": 16,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67984.11243884153,
+        "momentum": -0.0286,
+        "upOdds": 0.0895,
+        "downOdds": 0.9105
+      },
+      {
+        "ts": "2026-02-17T09:24:49.694Z",
+        "secsLeft": 10,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67979.9693494062,
+        "momentum": -0.0347,
+        "upOdds": 0.03,
+        "downOdds": 0.97
+      },
+      {
+        "ts": "2026-02-17T09:24:55.699Z",
+        "secsLeft": 4,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67984.38256208668,
+        "momentum": -0.0282,
+        "upOdds": 0.055,
+        "downOdds": 0.945
+      },
+      {
+        "ts": "2026-02-17T09:25:01.703Z",
+        "secsLeft": 0,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67999.73753386995,
+        "momentum": -0.0056,
+        "upOdds": 0.01,
+        "downOdds": 0.99
+      },
+      {
+        "ts": "2026-02-17T09:25:07.708Z",
+        "secsLeft": 0,
+        "priceToBeat": 68003.53266404707,
+        "btcPrice": 67998.21146209956,
+        "momentum": -0.0078,
+        "upOdds": 0.01,
+        "downOdds": 0.99
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.945,
+      "buyPrice": 0.975,
+      "timestamp": "2026-02-17T09:24:40.142Z",
+      "success": true,
+      "source": "T-20"
+    },
+    "finalBtcPrice": 67998.21146209956,
+    "finalMomentum": -0.0078,
+    "finalOdds": {
+      "up": 0.01,
+      "down": 0.99
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.08,
+      "down": 0.92
+    },
+    "oddsAtT30": {
+      "up": 0.085,
+      "down": 0.915
+    },
+    "oddsAtT10": {
+      "up": 0.03,
+      "down": 0.97
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771320300",
+    "title": "Bitcoin Up or Down - February 17, 4:25AM-4:30AM ET",
+    "startTime": "2026-02-17T09:25:00Z",
+    "endTime": "2026-02-17T09:30:00Z",
+    "priceToBeat": 67999.73753386995,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:25:15.005Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 68022.7213078299,
+        "momentum": null,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:25:21.008Z",
+        "secsLeft": 278,
+        "priceToBeat": null,
+        "btcPrice": 68037.89780063182,
+        "momentum": null,
+        "upOdds": 0.655,
+        "downOdds": 0.345
+      },
+      {
+        "ts": "2026-02-17T09:25:27.009Z",
+        "secsLeft": 272,
+        "priceToBeat": null,
+        "btcPrice": 68010.15173832298,
+        "momentum": null,
+        "upOdds": 0.535,
+        "downOdds": 0.465
+      },
+      {
+        "ts": "2026-02-17T09:25:33.012Z",
+        "secsLeft": 266,
+        "priceToBeat": null,
+        "btcPrice": 68004.58772862169,
+        "momentum": null,
+        "upOdds": 0.52,
+        "downOdds": 0.48
+      },
+      {
+        "ts": "2026-02-17T09:25:39.015Z",
+        "secsLeft": 260,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68004.26468609237,
+        "momentum": 0.0067,
+        "upOdds": 0.54,
+        "downOdds": 0.46
+      },
+      {
+        "ts": "2026-02-17T09:25:45.020Z",
+        "secsLeft": 254,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68005.47147703066,
+        "momentum": 0.0084,
+        "upOdds": 0.49,
+        "downOdds": 0.51
+      },
+      {
+        "ts": "2026-02-17T09:25:51.027Z",
+        "secsLeft": 248,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67998.27295690087,
+        "momentum": -0.0022,
+        "upOdds": 0.5,
+        "downOdds": 0.5
+      },
+      {
+        "ts": "2026-02-17T09:25:57.030Z",
+        "secsLeft": 242,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67999.19799506624,
+        "momentum": -0.0008,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:26:03.033Z",
+        "secsLeft": 236,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68013.57679343833,
+        "momentum": 0.0204,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:26:09.036Z",
+        "secsLeft": 230,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68007.12225754547,
+        "momentum": 0.0109,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:26:15.042Z",
+        "secsLeft": 224,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68005.06681022415,
+        "momentum": 0.0078,
+        "upOdds": 0.525,
+        "downOdds": 0.475
+      },
+      {
+        "ts": "2026-02-17T09:26:21.044Z",
+        "secsLeft": 218,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68001.73601208048,
+        "momentum": 0.0029,
+        "upOdds": 0.5255,
+        "downOdds": 0.4745
+      },
+      {
+        "ts": "2026-02-17T09:26:27.049Z",
+        "secsLeft": 212,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68002.2346525,
+        "momentum": 0.0037,
+        "upOdds": 0.525,
+        "downOdds": 0.475
+      },
+      {
+        "ts": "2026-02-17T09:26:33.051Z",
+        "secsLeft": 206,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68002.2346525,
+        "momentum": 0.0037,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:26:39.054Z",
+        "secsLeft": 200,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68002.451009057,
+        "momentum": 0.004,
+        "upOdds": 0.54,
+        "downOdds": 0.46
+      },
+      {
+        "ts": "2026-02-17T09:26:45.059Z",
+        "secsLeft": 194,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68004.5533006818,
+        "momentum": 0.0071,
+        "upOdds": 0.57,
+        "downOdds": 0.43
+      },
+      {
+        "ts": "2026-02-17T09:26:51.060Z",
+        "secsLeft": 188,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68010.44999972737,
+        "momentum": 0.0158,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:26:57.066Z",
+        "secsLeft": 182,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68010.83162500047,
+        "momentum": 0.0163,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:27:03.069Z",
+        "secsLeft": 176,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68012.30874326018,
+        "momentum": 0.0185,
+        "upOdds": 0.525,
+        "downOdds": 0.475
+      },
+      {
+        "ts": "2026-02-17T09:27:09.072Z",
+        "secsLeft": 170,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68001.934901426,
+        "momentum": 0.0032,
+        "upOdds": 0.5,
+        "downOdds": 0.5
+      },
+      {
+        "ts": "2026-02-17T09:27:15.079Z",
+        "secsLeft": 164,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68000.5230902013,
+        "momentum": 0.0012,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:27:21.079Z",
+        "secsLeft": 158,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68000.61659711644,
+        "momentum": 0.0013,
+        "upOdds": 0.495,
+        "downOdds": 0.505
+      },
+      {
+        "ts": "2026-02-17T09:27:27.080Z",
+        "secsLeft": 152,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68000.8718592951,
+        "momentum": 0.0017,
+        "upOdds": 0.495,
+        "downOdds": 0.505
+      },
+      {
+        "ts": "2026-02-17T09:27:33.083Z",
+        "secsLeft": 146,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67999.1061621366,
+        "momentum": -0.0009,
+        "upOdds": 0.36,
+        "downOdds": 0.64
+      },
+      {
+        "ts": "2026-02-17T09:27:39.085Z",
+        "secsLeft": 140,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67974.1962299979,
+        "momentum": -0.0376,
+        "upOdds": 0.27,
+        "downOdds": 0.73
+      },
+      {
+        "ts": "2026-02-17T09:27:45.087Z",
+        "secsLeft": 134,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67972.10602422079,
+        "momentum": -0.0406,
+        "upOdds": 0.285,
+        "downOdds": 0.715
+      },
+      {
+        "ts": "2026-02-17T09:27:51.090Z",
+        "secsLeft": 128,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67973.024525,
+        "momentum": -0.0393,
+        "upOdds": 0.3,
+        "downOdds": 0.7
+      },
+      {
+        "ts": "2026-02-17T09:27:57.095Z",
+        "secsLeft": 122,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67971.52844705226,
+        "momentum": -0.0415,
+        "upOdds": 0.275,
+        "downOdds": 0.725
+      },
+      {
+        "ts": "2026-02-17T09:28:03.098Z",
+        "secsLeft": 116,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67976.45760761172,
+        "momentum": -0.0342,
+        "upOdds": 0.405,
+        "downOdds": 0.595
+      },
+      {
+        "ts": "2026-02-17T09:28:09.104Z",
+        "secsLeft": 110,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67986.18749583092,
+        "momentum": -0.0199,
+        "upOdds": 0.4,
+        "downOdds": 0.6
+      },
+      {
+        "ts": "2026-02-17T09:28:15.108Z",
+        "secsLeft": 104,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67998.20875817646,
+        "momentum": -0.0022,
+        "upOdds": 0.53,
+        "downOdds": 0.47
+      },
+      {
+        "ts": "2026-02-17T09:28:21.114Z",
+        "secsLeft": 98,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67993.15616252652,
+        "momentum": -0.0097,
+        "upOdds": 0.425,
+        "downOdds": 0.575
+      },
+      {
+        "ts": "2026-02-17T09:28:27.117Z",
+        "secsLeft": 92,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67992.94013781076,
+        "momentum": -0.01,
+        "upOdds": 0.43,
+        "downOdds": 0.57
+      },
+      {
+        "ts": "2026-02-17T09:28:33.119Z",
+        "secsLeft": 86,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67994.29876028666,
+        "momentum": -0.008,
+        "upOdds": 0.595,
+        "downOdds": 0.405
+      },
+      {
+        "ts": "2026-02-17T09:28:39.121Z",
+        "secsLeft": 80,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 68000.9019398287,
+        "momentum": 0.0017,
+        "upOdds": 0.415,
+        "downOdds": 0.585
+      },
+      {
+        "ts": "2026-02-17T09:28:45.127Z",
+        "secsLeft": 74,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67988.19616232983,
+        "momentum": -0.017,
+        "upOdds": 0.385,
+        "downOdds": 0.615
+      },
+      {
+        "ts": "2026-02-17T09:28:51.129Z",
+        "secsLeft": 68,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67987.034667492,
+        "momentum": -0.0187,
+        "upOdds": 0.46,
+        "downOdds": 0.54
+      },
+      {
+        "ts": "2026-02-17T09:28:57.129Z",
+        "secsLeft": 62,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67990.39324289009,
+        "momentum": -0.0137,
+        "upOdds": 0.435,
+        "downOdds": 0.565
+      },
+      {
+        "ts": "2026-02-17T09:29:03.134Z",
+        "secsLeft": 56,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67986.62569124794,
+        "momentum": -0.0193,
+        "upOdds": 0.28,
+        "downOdds": 0.72
+      },
+      {
+        "ts": "2026-02-17T09:29:09.137Z",
+        "secsLeft": 50,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67985.81215018654,
+        "momentum": -0.0205,
+        "upOdds": 0.23,
+        "downOdds": 0.77
+      },
+      {
+        "ts": "2026-02-17T09:29:15.139Z",
+        "secsLeft": 44,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67986.60960955851,
+        "momentum": -0.0193,
+        "upOdds": 0.245,
+        "downOdds": 0.755
+      },
+      {
+        "ts": "2026-02-17T09:29:21.144Z",
+        "secsLeft": 38,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67986.95549040075,
+        "momentum": -0.0188,
+        "upOdds": 0.315,
+        "downOdds": 0.685
+      },
+      {
+        "ts": "2026-02-17T09:29:27.147Z",
+        "secsLeft": 32,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67987.496345,
+        "momentum": -0.018,
+        "upOdds": 0.3,
+        "downOdds": 0.7
+      },
+      {
+        "ts": "2026-02-17T09:29:33.152Z",
+        "secsLeft": 26,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67987.64841121265,
+        "momentum": -0.0178,
+        "upOdds": 0.24,
+        "downOdds": 0.76
+      },
+      {
+        "ts": "2026-02-17T09:29:39.154Z",
+        "secsLeft": 20,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67987.58037766635,
+        "momentum": -0.0179,
+        "upOdds": 0.14,
+        "downOdds": 0.86
+      },
+      {
+        "ts": "2026-02-17T09:29:45.156Z",
+        "secsLeft": 14,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67986.24134710417,
+        "momentum": -0.0198,
+        "upOdds": 0.25,
+        "downOdds": 0.75
+      },
+      {
+        "ts": "2026-02-17T09:29:51.159Z",
+        "secsLeft": 8,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67990.36804737954,
+        "momentum": -0.0138,
+        "upOdds": 0.33,
+        "downOdds": 0.67
+      },
+      {
+        "ts": "2026-02-17T09:29:57.162Z",
+        "secsLeft": 2,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67993.0225238589,
+        "momentum": -0.0099,
+        "upOdds": 0.25,
+        "downOdds": 0.75
+      },
+      {
+        "ts": "2026-02-17T09:30:03.169Z",
+        "secsLeft": 0,
+        "priceToBeat": 67999.73753386995,
+        "btcPrice": 67992.66971692105,
+        "momentum": -0.0104,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": null,
+    "finalBtcPrice": 67992.66971692105,
+    "finalMomentum": -0.0104,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.435,
+      "down": 0.565
+    },
+    "oddsAtT30": {
+      "up": 0.3,
+      "down": 0.7
+    },
+    "oddsAtT10": {
+      "up": 0.33,
+      "down": 0.67
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771320600",
+    "title": "Bitcoin Up or Down - February 17, 4:30AM-4:35AM ET",
+    "startTime": "2026-02-17T09:30:00Z",
+    "endTime": "2026-02-17T09:35:00Z",
+    "priceToBeat": 67992.95685174764,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:30:15.503Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 67990.84430938873,
+        "momentum": null,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:30:21.506Z",
+        "secsLeft": 278,
+        "priceToBeat": null,
+        "btcPrice": 67988.40148272621,
+        "momentum": null,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:30:27.509Z",
+        "secsLeft": 272,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67988.01064245688,
+        "momentum": -0.0073,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T09:30:33.513Z",
+        "secsLeft": 266,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67977.97486606795,
+        "momentum": -0.022,
+        "upOdds": 0.415,
+        "downOdds": 0.585
+      },
+      {
+        "ts": "2026-02-17T09:30:39.515Z",
+        "secsLeft": 260,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67986.162072,
+        "momentum": -0.01,
+        "upOdds": 0.495,
+        "downOdds": 0.505
+      },
+      {
+        "ts": "2026-02-17T09:30:45.521Z",
+        "secsLeft": 254,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67998.90879854915,
+        "momentum": 0.0088,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:30:51.526Z",
+        "secsLeft": 248,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67999.86426021432,
+        "momentum": 0.0102,
+        "upOdds": 0.645,
+        "downOdds": 0.355
+      },
+      {
+        "ts": "2026-02-17T09:30:57.531Z",
+        "secsLeft": 242,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68009.8898479253,
+        "momentum": 0.0249,
+        "upOdds": 0.715,
+        "downOdds": 0.285
+      },
+      {
+        "ts": "2026-02-17T09:31:03.534Z",
+        "secsLeft": 236,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68009.74097105279,
+        "momentum": 0.0247,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:31:09.539Z",
+        "secsLeft": 230,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68006.46463510056,
+        "momentum": 0.0199,
+        "upOdds": 0.585,
+        "downOdds": 0.415
+      },
+      {
+        "ts": "2026-02-17T09:31:15.543Z",
+        "secsLeft": 224,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68004.1867486994,
+        "momentum": 0.0165,
+        "upOdds": 0.595,
+        "downOdds": 0.405
+      },
+      {
+        "ts": "2026-02-17T09:31:21.547Z",
+        "secsLeft": 218,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68003.73808270204,
+        "momentum": 0.0159,
+        "upOdds": 0.56,
+        "downOdds": 0.44
+      },
+      {
+        "ts": "2026-02-17T09:31:27.548Z",
+        "secsLeft": 212,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68003.5246433811,
+        "momentum": 0.0155,
+        "upOdds": 0.58,
+        "downOdds": 0.42
+      },
+      {
+        "ts": "2026-02-17T09:31:33.550Z",
+        "secsLeft": 206,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68006.10273703268,
+        "momentum": 0.0193,
+        "upOdds": 0.655,
+        "downOdds": 0.345
+      },
+      {
+        "ts": "2026-02-17T09:31:39.554Z",
+        "secsLeft": 200,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68011.81503974328,
+        "momentum": 0.0277,
+        "upOdds": 0.6855,
+        "downOdds": 0.3145
+      },
+      {
+        "ts": "2026-02-17T09:31:45.557Z",
+        "secsLeft": 194,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68041.09998898632,
+        "momentum": 0.0708,
+        "upOdds": 0.855,
+        "downOdds": 0.145
+      },
+      {
+        "ts": "2026-02-17T09:31:51.560Z",
+        "secsLeft": 188,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68048.64913303149,
+        "momentum": 0.0819,
+        "upOdds": 0.815,
+        "downOdds": 0.185
+      },
+      {
+        "ts": "2026-02-17T09:31:57.561Z",
+        "secsLeft": 182,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68042.55195997325,
+        "momentum": 0.0729,
+        "upOdds": 0.78,
+        "downOdds": 0.22
+      },
+      {
+        "ts": "2026-02-17T09:32:03.564Z",
+        "secsLeft": 176,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68036.02823343438,
+        "momentum": 0.0633,
+        "upOdds": 0.8305,
+        "downOdds": 0.1695
+      },
+      {
+        "ts": "2026-02-17T09:32:09.567Z",
+        "secsLeft": 170,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68037.0831299383,
+        "momentum": 0.0649,
+        "upOdds": 0.815,
+        "downOdds": 0.185
+      },
+      {
+        "ts": "2026-02-17T09:32:15.572Z",
+        "secsLeft": 164,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68032.02378729597,
+        "momentum": 0.0575,
+        "upOdds": 0.775,
+        "downOdds": 0.225
+      },
+      {
+        "ts": "2026-02-17T09:32:21.574Z",
+        "secsLeft": 158,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68027.05249874931,
+        "momentum": 0.0501,
+        "upOdds": 0.73,
+        "downOdds": 0.27
+      },
+      {
+        "ts": "2026-02-17T09:32:27.576Z",
+        "secsLeft": 152,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68013.7437647212,
+        "momentum": 0.0306,
+        "upOdds": 0.705,
+        "downOdds": 0.295
+      },
+      {
+        "ts": "2026-02-17T09:32:33.578Z",
+        "secsLeft": 146,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68009.7371025,
+        "momentum": 0.0247,
+        "upOdds": 0.67,
+        "downOdds": 0.33
+      },
+      {
+        "ts": "2026-02-17T09:32:39.580Z",
+        "secsLeft": 140,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68003.2541437167,
+        "momentum": 0.0151,
+        "upOdds": 0.5195,
+        "downOdds": 0.4805
+      },
+      {
+        "ts": "2026-02-17T09:32:45.581Z",
+        "secsLeft": 134,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67997.58550309182,
+        "momentum": 0.0068,
+        "upOdds": 0.57,
+        "downOdds": 0.43
+      },
+      {
+        "ts": "2026-02-17T09:32:51.585Z",
+        "secsLeft": 128,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67997.62526301995,
+        "momentum": 0.0069,
+        "upOdds": 0.57,
+        "downOdds": 0.43
+      },
+      {
+        "ts": "2026-02-17T09:32:57.587Z",
+        "secsLeft": 122,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67997.48361853283,
+        "momentum": 0.0067,
+        "upOdds": 0.485,
+        "downOdds": 0.515
+      },
+      {
+        "ts": "2026-02-17T09:33:03.589Z",
+        "secsLeft": 116,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67980.50025812688,
+        "momentum": -0.0183,
+        "upOdds": 0.385,
+        "downOdds": 0.615
+      },
+      {
+        "ts": "2026-02-17T09:33:09.594Z",
+        "secsLeft": 110,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67984.66676266774,
+        "momentum": -0.0122,
+        "upOdds": 0.62,
+        "downOdds": 0.38
+      },
+      {
+        "ts": "2026-02-17T09:33:15.599Z",
+        "secsLeft": 104,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68000.6257225,
+        "momentum": 0.0113,
+        "upOdds": 0.675,
+        "downOdds": 0.325
+      },
+      {
+        "ts": "2026-02-17T09:33:21.604Z",
+        "secsLeft": 98,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67987.83592914307,
+        "momentum": -0.0075,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:33:27.607Z",
+        "secsLeft": 92,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67988.5880095,
+        "momentum": -0.0064,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:33:33.612Z",
+        "secsLeft": 86,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68000.55648441685,
+        "momentum": 0.0112,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:33:39.616Z",
+        "secsLeft": 80,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67998.1097175,
+        "momentum": 0.0076,
+        "upOdds": 0.6355,
+        "downOdds": 0.3645
+      },
+      {
+        "ts": "2026-02-17T09:33:45.621Z",
+        "secsLeft": 74,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68005.39733218284,
+        "momentum": 0.0183,
+        "upOdds": 0.67,
+        "downOdds": 0.33
+      },
+      {
+        "ts": "2026-02-17T09:33:51.625Z",
+        "secsLeft": 68,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68003.62060562664,
+        "momentum": 0.0157,
+        "upOdds": 0.725,
+        "downOdds": 0.275
+      },
+      {
+        "ts": "2026-02-17T09:33:57.628Z",
+        "secsLeft": 62,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68005.22700211141,
+        "momentum": 0.018,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:34:03.631Z",
+        "secsLeft": 56,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68010.98708245814,
+        "momentum": 0.0265,
+        "upOdds": 0.785,
+        "downOdds": 0.215
+      },
+      {
+        "ts": "2026-02-17T09:34:09.632Z",
+        "secsLeft": 50,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67996.893201,
+        "momentum": 0.0058,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:34:15.636Z",
+        "secsLeft": 44,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67996.28696626336,
+        "momentum": 0.0049,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:34:21.640Z",
+        "secsLeft": 38,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67996.6778720553,
+        "momentum": 0.0055,
+        "upOdds": 0.705,
+        "downOdds": 0.295
+      },
+      {
+        "ts": "2026-02-17T09:34:27.644Z",
+        "secsLeft": 32,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68002.48117229491,
+        "momentum": 0.014,
+        "upOdds": 0.7795,
+        "downOdds": 0.2205
+      },
+      {
+        "ts": "2026-02-17T09:34:33.647Z",
+        "secsLeft": 26,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68002.5286254381,
+        "momentum": 0.0141,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:34:39.650Z",
+        "secsLeft": 20,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68002.12234221004,
+        "momentum": 0.0135,
+        "upOdds": 0.43,
+        "downOdds": 0.57
+      },
+      {
+        "ts": "2026-02-17T09:34:45.655Z",
+        "secsLeft": 14,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67995.93508513048,
+        "momentum": 0.0044,
+        "upOdds": 0.6,
+        "downOdds": 0.4
+      },
+      {
+        "ts": "2026-02-17T09:34:51.659Z",
+        "secsLeft": 8,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67996.3907605,
+        "momentum": 0.0051,
+        "upOdds": 0.73,
+        "downOdds": 0.27
+      },
+      {
+        "ts": "2026-02-17T09:34:57.661Z",
+        "secsLeft": 2,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 67996.3950000689,
+        "momentum": 0.0051,
+        "upOdds": 0.88,
+        "downOdds": 0.12
+      },
+      {
+        "ts": "2026-02-17T09:35:03.668Z",
+        "secsLeft": 0,
+        "priceToBeat": 67992.95685174764,
+        "btcPrice": 68001.352622,
+        "momentum": 0.0123,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      }
+    ],
+    "betPlaced": null,
+    "finalBtcPrice": 68001.352622,
+    "finalMomentum": 0.0123,
+    "finalOdds": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "actualOutcome": "UP",
+    "oddsAtT60": {
+      "up": 0.795,
+      "down": 0.205
+    },
+    "oddsAtT30": {
+      "up": 0.7795,
+      "down": 0.2205
+    },
+    "oddsAtT10": {
+      "up": 0.73,
+      "down": 0.27
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771320900",
+    "title": "Bitcoin Up or Down - February 17, 4:35AM-4:40AM ET",
+    "startTime": "2026-02-17T09:35:00Z",
+    "endTime": "2026-02-17T09:40:00Z",
+    "priceToBeat": 68000.83085371325,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:35:14.968Z",
+        "secsLeft": 285,
+        "priceToBeat": null,
+        "btcPrice": 67983.25752751213,
+        "momentum": null,
+        "upOdds": 0.44,
+        "downOdds": 0.56
+      },
+      {
+        "ts": "2026-02-17T09:35:20.967Z",
+        "secsLeft": 279,
+        "priceToBeat": null,
+        "btcPrice": 67983.4649101064,
+        "momentum": null,
+        "upOdds": 0.47,
+        "downOdds": 0.53
+      },
+      {
+        "ts": "2026-02-17T09:35:26.968Z",
+        "secsLeft": 273,
+        "priceToBeat": null,
+        "btcPrice": 67999.39895457053,
+        "momentum": null,
+        "upOdds": 0.5545,
+        "downOdds": 0.4455
+      },
+      {
+        "ts": "2026-02-17T09:35:32.971Z",
+        "secsLeft": 267,
+        "priceToBeat": null,
+        "btcPrice": 68001.18674817626,
+        "momentum": null,
+        "upOdds": 0.54,
+        "downOdds": 0.46
+      },
+      {
+        "ts": "2026-02-17T09:35:38.974Z",
+        "secsLeft": 261,
+        "priceToBeat": null,
+        "btcPrice": 68001.295498,
+        "momentum": null,
+        "upOdds": 0.53,
+        "downOdds": 0.47
+      },
+      {
+        "ts": "2026-02-17T09:35:44.978Z",
+        "secsLeft": 255,
+        "priceToBeat": null,
+        "btcPrice": 68004.3559472682,
+        "momentum": null,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:35:50.983Z",
+        "secsLeft": 249,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68007.52770906826,
+        "momentum": 0.0098,
+        "upOdds": 0.58,
+        "downOdds": 0.42
+      },
+      {
+        "ts": "2026-02-17T09:35:56.986Z",
+        "secsLeft": 243,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68007.387736,
+        "momentum": 0.0096,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:36:02.988Z",
+        "secsLeft": 237,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68012.20811179106,
+        "momentum": 0.0167,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T09:36:08.988Z",
+        "secsLeft": 231,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68001.35507326196,
+        "momentum": 0.0008,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:36:14.993Z",
+        "secsLeft": 225,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68002.1014975,
+        "momentum": 0.0019,
+        "upOdds": 0.53,
+        "downOdds": 0.47
+      },
+      {
+        "ts": "2026-02-17T09:36:20.995Z",
+        "secsLeft": 219,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68003.7004398877,
+        "momentum": 0.0042,
+        "upOdds": 0.525,
+        "downOdds": 0.475
+      },
+      {
+        "ts": "2026-02-17T09:36:27.000Z",
+        "secsLeft": 213,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68004.41316715805,
+        "momentum": 0.0053,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T09:36:33.004Z",
+        "secsLeft": 206,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68004.676952,
+        "momentum": 0.0057,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:36:39.006Z",
+        "secsLeft": 200,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68002.47036960474,
+        "momentum": 0.0024,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:36:45.010Z",
+        "secsLeft": 194,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68002.43747726377,
+        "momentum": 0.0024,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:36:51.013Z",
+        "secsLeft": 188,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67998.37469058899,
+        "momentum": -0.0036,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:36:57.017Z",
+        "secsLeft": 182,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67998.27979677106,
+        "momentum": -0.0038,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:37:03.018Z",
+        "secsLeft": 176,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67998.49040406889,
+        "momentum": -0.0034,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:37:09.020Z",
+        "secsLeft": 170,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68001.084904,
+        "momentum": 0.0004,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:37:15.025Z",
+        "secsLeft": 164,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68000.43658144835,
+        "momentum": -0.0006,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:37:21.028Z",
+        "secsLeft": 158,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68000.56134419874,
+        "momentum": -0.0004,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:37:27.029Z",
+        "secsLeft": 152,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67991.03615897536,
+        "momentum": -0.0144,
+        "upOdds": 0.42,
+        "downOdds": 0.58
+      },
+      {
+        "ts": "2026-02-17T09:37:33.032Z",
+        "secsLeft": 146,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67989.7268755,
+        "momentum": -0.0163,
+        "upOdds": 0.455,
+        "downOdds": 0.545
+      },
+      {
+        "ts": "2026-02-17T09:37:39.037Z",
+        "secsLeft": 140,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67996.22256508603,
+        "momentum": -0.0068,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T09:37:45.037Z",
+        "secsLeft": 134,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67995.11093674591,
+        "momentum": -0.0084,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:37:51.041Z",
+        "secsLeft": 128,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68001.01815104613,
+        "momentum": 0.0003,
+        "upOdds": 0.55,
+        "downOdds": 0.45
+      },
+      {
+        "ts": "2026-02-17T09:37:57.046Z",
+        "secsLeft": 122,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68000.54113829488,
+        "momentum": -0.0004,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:38:03.049Z",
+        "secsLeft": 116,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68000.20998854058,
+        "momentum": -0.0009,
+        "upOdds": 0.535,
+        "downOdds": 0.465
+      },
+      {
+        "ts": "2026-02-17T09:38:09.053Z",
+        "secsLeft": 110,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68000.61320874625,
+        "momentum": -0.0003,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:38:15.057Z",
+        "secsLeft": 104,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68000.80807722968,
+        "momentum": 0,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T09:38:21.061Z",
+        "secsLeft": 98,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68002.19121778726,
+        "momentum": 0.002,
+        "upOdds": 0.6,
+        "downOdds": 0.4
+      },
+      {
+        "ts": "2026-02-17T09:38:27.065Z",
+        "secsLeft": 92,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68003.10864011337,
+        "momentum": 0.0033,
+        "upOdds": 0.605,
+        "downOdds": 0.395
+      },
+      {
+        "ts": "2026-02-17T09:38:33.066Z",
+        "secsLeft": 86,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67999.21834740145,
+        "momentum": -0.0024,
+        "upOdds": 0.61,
+        "downOdds": 0.39
+      },
+      {
+        "ts": "2026-02-17T09:38:39.072Z",
+        "secsLeft": 80,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68005.85631335367,
+        "momentum": 0.0074,
+        "upOdds": 0.775,
+        "downOdds": 0.225
+      },
+      {
+        "ts": "2026-02-17T09:38:45.076Z",
+        "secsLeft": 74,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68015.84662976592,
+        "momentum": 0.0221,
+        "upOdds": 0.6845,
+        "downOdds": 0.3155
+      },
+      {
+        "ts": "2026-02-17T09:38:51.081Z",
+        "secsLeft": 68,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68009.0959081139,
+        "momentum": 0.0122,
+        "upOdds": 0.595,
+        "downOdds": 0.405
+      },
+      {
+        "ts": "2026-02-17T09:38:57.084Z",
+        "secsLeft": 62,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68006.41176581472,
+        "momentum": 0.0082,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:39:03.091Z",
+        "secsLeft": 56,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68010.6813340257,
+        "momentum": 0.0145,
+        "upOdds": 0.655,
+        "downOdds": 0.345
+      },
+      {
+        "ts": "2026-02-17T09:39:09.095Z",
+        "secsLeft": 50,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68007.62597964126,
+        "momentum": 0.01,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:39:15.097Z",
+        "secsLeft": 44,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68004.76828695468,
+        "momentum": 0.0058,
+        "upOdds": 0.635,
+        "downOdds": 0.365
+      },
+      {
+        "ts": "2026-02-17T09:39:21.103Z",
+        "secsLeft": 38,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68005.25418131835,
+        "momentum": 0.0065,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:39:27.107Z",
+        "secsLeft": 32,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68007.23591226064,
+        "momentum": 0.0094,
+        "upOdds": 0.76,
+        "downOdds": 0.24
+      },
+      {
+        "ts": "2026-02-17T09:39:33.113Z",
+        "secsLeft": 26,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68012.11983649436,
+        "momentum": 0.0166,
+        "upOdds": 0.72,
+        "downOdds": 0.28
+      },
+      {
+        "ts": "2026-02-17T09:39:39.117Z",
+        "secsLeft": 20,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68004.38633320916,
+        "momentum": 0.0052,
+        "upOdds": 0.595,
+        "downOdds": 0.405
+      },
+      {
+        "ts": "2026-02-17T09:39:45.121Z",
+        "secsLeft": 14,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68003.88911027255,
+        "momentum": 0.0045,
+        "upOdds": 0.365,
+        "downOdds": 0.635
+      },
+      {
+        "ts": "2026-02-17T09:39:51.126Z",
+        "secsLeft": 8,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 68003.74666693497,
+        "momentum": 0.0043,
+        "upOdds": 0.315,
+        "downOdds": 0.685
+      },
+      {
+        "ts": "2026-02-17T09:39:57.131Z",
+        "secsLeft": 2,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67991.52639,
+        "momentum": -0.0137,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:40:03.135Z",
+        "secsLeft": 0,
+        "priceToBeat": 68000.83085371325,
+        "btcPrice": 67985.30919579347,
+        "momentum": -0.0228,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.905,
+      "buyPrice": 0.935,
+      "timestamp": "2026-02-17T09:39:56.635Z",
+      "success": true,
+      "source": "LAST-RESORT T-3"
+    },
+    "finalBtcPrice": 67985.30919579347,
+    "finalMomentum": -0.0228,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.735,
+      "down": 0.265
+    },
+    "oddsAtT30": {
+      "up": 0.76,
+      "down": 0.24
+    },
+    "oddsAtT10": {
+      "up": 0.315,
+      "down": 0.685
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771321200",
+    "title": "Bitcoin Up or Down - February 17, 4:40AM-4:45AM ET",
+    "startTime": "2026-02-17T09:40:00Z",
+    "endTime": "2026-02-17T09:45:00Z",
+    "priceToBeat": 67985.33981681251,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:40:15.485Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 67987.08470932124,
+        "momentum": null,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:40:21.489Z",
+        "secsLeft": 278,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67985.65312505576,
+        "momentum": 0.0005,
+        "upOdds": 0.53,
+        "downOdds": 0.47
+      },
+      {
+        "ts": "2026-02-17T09:40:27.489Z",
+        "secsLeft": 272,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67985.6824277131,
+        "momentum": 0.0005,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:40:33.490Z",
+        "secsLeft": 266,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67986.12524777326,
+        "momentum": 0.0012,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:40:39.493Z",
+        "secsLeft": 260,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67985.93243345662,
+        "momentum": 0.0009,
+        "upOdds": 0.535,
+        "downOdds": 0.465
+      },
+      {
+        "ts": "2026-02-17T09:40:45.497Z",
+        "secsLeft": 254,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67984.25770927253,
+        "momentum": -0.0016,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T09:40:51.500Z",
+        "secsLeft": 248,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67959.08563404212,
+        "momentum": -0.0386,
+        "upOdds": 0.335,
+        "downOdds": 0.665
+      },
+      {
+        "ts": "2026-02-17T09:40:57.504Z",
+        "secsLeft": 242,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67959.00935892673,
+        "momentum": -0.0387,
+        "upOdds": 0.355,
+        "downOdds": 0.645
+      },
+      {
+        "ts": "2026-02-17T09:41:03.506Z",
+        "secsLeft": 236,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67961.549453,
+        "momentum": -0.035,
+        "upOdds": 0.33,
+        "downOdds": 0.67
+      },
+      {
+        "ts": "2026-02-17T09:41:09.508Z",
+        "secsLeft": 230,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67960.5490098081,
+        "momentum": -0.0365,
+        "upOdds": 0.365,
+        "downOdds": 0.635
+      },
+      {
+        "ts": "2026-02-17T09:41:15.512Z",
+        "secsLeft": 224,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67961.70747635982,
+        "momentum": -0.0348,
+        "upOdds": 0.395,
+        "downOdds": 0.605
+      },
+      {
+        "ts": "2026-02-17T09:41:21.514Z",
+        "secsLeft": 218,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67967.146223,
+        "momentum": -0.0268,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:41:27.518Z",
+        "secsLeft": 212,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67974.97187379951,
+        "momentum": -0.0153,
+        "upOdds": 0.5,
+        "downOdds": 0.5
+      },
+      {
+        "ts": "2026-02-17T09:41:33.524Z",
+        "secsLeft": 206,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67976.55983070057,
+        "momentum": -0.0129,
+        "upOdds": 0.3845,
+        "downOdds": 0.6155
+      },
+      {
+        "ts": "2026-02-17T09:41:39.530Z",
+        "secsLeft": 200,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67971.0109605137,
+        "momentum": -0.0211,
+        "upOdds": 0.48,
+        "downOdds": 0.52
+      },
+      {
+        "ts": "2026-02-17T09:41:45.534Z",
+        "secsLeft": 194,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67970.42793733477,
+        "momentum": -0.0219,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:41:51.538Z",
+        "secsLeft": 188,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67974.530644,
+        "momentum": -0.0159,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T09:41:57.543Z",
+        "secsLeft": 182,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67976.0842738603,
+        "momentum": -0.0136,
+        "upOdds": 0.53,
+        "downOdds": 0.47
+      },
+      {
+        "ts": "2026-02-17T09:42:03.545Z",
+        "secsLeft": 176,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67976.38937019595,
+        "momentum": -0.0132,
+        "upOdds": 0.5,
+        "downOdds": 0.5
+      },
+      {
+        "ts": "2026-02-17T09:42:09.550Z",
+        "secsLeft": 170,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67990.53042046452,
+        "momentum": 0.0076,
+        "upOdds": 0.57,
+        "downOdds": 0.43
+      },
+      {
+        "ts": "2026-02-17T09:42:15.553Z",
+        "secsLeft": 164,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67985.39242821136,
+        "momentum": 0.0001,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:42:21.558Z",
+        "secsLeft": 158,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67984.01162928645,
+        "momentum": -0.002,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:42:27.560Z",
+        "secsLeft": 152,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67985.26357287652,
+        "momentum": -0.0001,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:42:33.566Z",
+        "secsLeft": 146,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67985.64568022142,
+        "momentum": 0.0004,
+        "upOdds": 0.575,
+        "downOdds": 0.425
+      },
+      {
+        "ts": "2026-02-17T09:42:39.569Z",
+        "secsLeft": 140,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67989.80887981545,
+        "momentum": 0.0066,
+        "upOdds": 0.665,
+        "downOdds": 0.335
+      },
+      {
+        "ts": "2026-02-17T09:42:45.574Z",
+        "secsLeft": 134,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67991.6430287737,
+        "momentum": 0.0093,
+        "upOdds": 0.64,
+        "downOdds": 0.36
+      },
+      {
+        "ts": "2026-02-17T09:42:51.576Z",
+        "secsLeft": 128,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67981.64432156403,
+        "momentum": -0.0054,
+        "upOdds": 0.46,
+        "downOdds": 0.54
+      },
+      {
+        "ts": "2026-02-17T09:42:57.578Z",
+        "secsLeft": 122,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67981.20674013293,
+        "momentum": -0.0061,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:43:03.580Z",
+        "secsLeft": 116,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67986.49178524861,
+        "momentum": 0.0017,
+        "upOdds": 0.745,
+        "downOdds": 0.255
+      },
+      {
+        "ts": "2026-02-17T09:43:09.584Z",
+        "secsLeft": 110,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67995.23592445183,
+        "momentum": 0.0146,
+        "upOdds": 0.6,
+        "downOdds": 0.4
+      },
+      {
+        "ts": "2026-02-17T09:43:15.587Z",
+        "secsLeft": 104,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67994.09138326813,
+        "momentum": 0.0129,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:43:21.592Z",
+        "secsLeft": 98,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67992.85006535726,
+        "momentum": 0.011,
+        "upOdds": 0.635,
+        "downOdds": 0.365
+      },
+      {
+        "ts": "2026-02-17T09:43:27.596Z",
+        "secsLeft": 92,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67991.08573655711,
+        "momentum": 0.0085,
+        "upOdds": 0.65,
+        "downOdds": 0.35
+      },
+      {
+        "ts": "2026-02-17T09:43:33.600Z",
+        "secsLeft": 86,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67993.03515363295,
+        "momentum": 0.0113,
+        "upOdds": 0.685,
+        "downOdds": 0.315
+      },
+      {
+        "ts": "2026-02-17T09:43:39.603Z",
+        "secsLeft": 80,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 67993.13635895602,
+        "momentum": 0.0115,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:43:45.607Z",
+        "secsLeft": 74,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68003.30746855977,
+        "momentum": 0.0264,
+        "upOdds": 0.85,
+        "downOdds": 0.15
+      },
+      {
+        "ts": "2026-02-17T09:43:51.609Z",
+        "secsLeft": 68,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68000.88235511542,
+        "momentum": 0.0229,
+        "upOdds": 0.845,
+        "downOdds": 0.155
+      },
+      {
+        "ts": "2026-02-17T09:43:57.611Z",
+        "secsLeft": 62,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68004.82321227598,
+        "momentum": 0.0287,
+        "upOdds": 0.915,
+        "downOdds": 0.085
+      },
+      {
+        "ts": "2026-02-17T09:44:03.612Z",
+        "secsLeft": 56,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68008.35175579319,
+        "momentum": 0.0338,
+        "upOdds": 0.86,
+        "downOdds": 0.14
+      },
+      {
+        "ts": "2026-02-17T09:44:09.614Z",
+        "secsLeft": 50,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68006.2968999054,
+        "momentum": 0.0308,
+        "upOdds": 0.87,
+        "downOdds": 0.13
+      },
+      {
+        "ts": "2026-02-17T09:44:15.618Z",
+        "secsLeft": 44,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68007.209943,
+        "momentum": 0.0322,
+        "upOdds": 0.805,
+        "downOdds": 0.195
+      },
+      {
+        "ts": "2026-02-17T09:44:21.624Z",
+        "secsLeft": 38,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68006.8602725,
+        "momentum": 0.0317,
+        "upOdds": 0.94,
+        "downOdds": 0.06
+      },
+      {
+        "ts": "2026-02-17T09:44:27.626Z",
+        "secsLeft": 32,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68011.86374106114,
+        "momentum": 0.039,
+        "upOdds": 0.985,
+        "downOdds": 0.015
+      },
+      {
+        "ts": "2026-02-17T09:44:33.631Z",
+        "secsLeft": 26,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68046.60933117624,
+        "momentum": 0.0901,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:44:39.636Z",
+        "secsLeft": 20,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68048.71156667222,
+        "momentum": 0.0932,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:44:45.641Z",
+        "secsLeft": 14,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68059.8506904093,
+        "momentum": 0.1096,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:44:51.645Z",
+        "secsLeft": 8,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68040.854419,
+        "momentum": 0.0817,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:44:57.651Z",
+        "secsLeft": 2,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68040.17088676894,
+        "momentum": 0.0807,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:45:03.656Z",
+        "secsLeft": 0,
+        "priceToBeat": 67985.33981681251,
+        "btcPrice": 68044.8684137919,
+        "momentum": 0.0876,
+        "upOdds": 0.99,
+        "downOdds": 0.01
+      }
+    ],
+    "betPlaced": {
+      "direction": "UP",
+      "oddsAtBet": 0.98,
+      "buyPrice": 0.99,
+      "timestamp": "2026-02-17T09:44:30.120Z",
+      "success": true,
+      "source": "T-30"
+    },
+    "finalBtcPrice": 68044.8684137919,
+    "finalMomentum": 0.0876,
+    "finalOdds": {
+      "up": 0.99,
+      "down": 0.01
+    },
+    "actualOutcome": "UP",
+    "oddsAtT60": {
+      "up": 0.915,
+      "down": 0.085
+    },
+    "oddsAtT30": {
+      "up": 0.985,
+      "down": 0.015
+    },
+    "oddsAtT10": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771321500",
+    "title": "Bitcoin Up or Down - February 17, 4:45AM-4:50AM ET",
+    "startTime": "2026-02-17T09:45:00Z",
+    "endTime": "2026-02-17T09:50:00Z",
+    "priceToBeat": 68040.52847923474,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:45:15.290Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 68071.11722287258,
+        "momentum": null,
+        "upOdds": 0.705,
+        "downOdds": 0.295
+      },
+      {
+        "ts": "2026-02-17T09:45:21.292Z",
+        "secsLeft": 278,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68115.89232136749,
+        "momentum": 0.1108,
+        "upOdds": 0.775,
+        "downOdds": 0.225
+      },
+      {
+        "ts": "2026-02-17T09:45:27.296Z",
+        "secsLeft": 272,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68114.70202519033,
+        "momentum": 0.109,
+        "upOdds": 0.79,
+        "downOdds": 0.21
+      },
+      {
+        "ts": "2026-02-17T09:45:33.298Z",
+        "secsLeft": 266,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68114.11839257559,
+        "momentum": 0.1082,
+        "upOdds": 0.805,
+        "downOdds": 0.195
+      },
+      {
+        "ts": "2026-02-17T09:45:39.300Z",
+        "secsLeft": 260,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68100.2964275138,
+        "momentum": 0.0878,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:45:45.303Z",
+        "secsLeft": 254,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68090.21634944712,
+        "momentum": 0.073,
+        "upOdds": 0.715,
+        "downOdds": 0.285
+      },
+      {
+        "ts": "2026-02-17T09:45:51.306Z",
+        "secsLeft": 248,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68089.57789695445,
+        "momentum": 0.0721,
+        "upOdds": 0.75,
+        "downOdds": 0.25
+      },
+      {
+        "ts": "2026-02-17T09:45:57.313Z",
+        "secsLeft": 242,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68095.09702676091,
+        "momentum": 0.0802,
+        "upOdds": 0.805,
+        "downOdds": 0.195
+      },
+      {
+        "ts": "2026-02-17T09:46:03.316Z",
+        "secsLeft": 236,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68110.68038430675,
+        "momentum": 0.1031,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:46:09.319Z",
+        "secsLeft": 230,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68107.90807492557,
+        "momentum": 0.099,
+        "upOdds": 0.785,
+        "downOdds": 0.215
+      },
+      {
+        "ts": "2026-02-17T09:46:15.320Z",
+        "secsLeft": 224,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68122.2531218045,
+        "momentum": 0.1201,
+        "upOdds": 0.865,
+        "downOdds": 0.135
+      },
+      {
+        "ts": "2026-02-17T09:46:21.323Z",
+        "secsLeft": 218,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68125.85579982583,
+        "momentum": 0.1254,
+        "upOdds": 0.84,
+        "downOdds": 0.16
+      },
+      {
+        "ts": "2026-02-17T09:46:27.329Z",
+        "secsLeft": 212,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68121.50308548797,
+        "momentum": 0.119,
+        "upOdds": 0.86,
+        "downOdds": 0.14
+      },
+      {
+        "ts": "2026-02-17T09:46:33.332Z",
+        "secsLeft": 206,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68115.10112488086,
+        "momentum": 0.1096,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:46:39.334Z",
+        "secsLeft": 200,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68108.92108164294,
+        "momentum": 0.1005,
+        "upOdds": 0.785,
+        "downOdds": 0.215
+      },
+      {
+        "ts": "2026-02-17T09:46:45.334Z",
+        "secsLeft": 194,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68094.64642558516,
+        "momentum": 0.0795,
+        "upOdds": 0.705,
+        "downOdds": 0.295
+      },
+      {
+        "ts": "2026-02-17T09:46:51.338Z",
+        "secsLeft": 188,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68088.37082752037,
+        "momentum": 0.0703,
+        "upOdds": 0.725,
+        "downOdds": 0.275
+      },
+      {
+        "ts": "2026-02-17T09:46:57.340Z",
+        "secsLeft": 182,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68088.25897453772,
+        "momentum": 0.0702,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:47:03.342Z",
+        "secsLeft": 176,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68088.2602055,
+        "momentum": 0.0702,
+        "upOdds": 0.75,
+        "downOdds": 0.25
+      },
+      {
+        "ts": "2026-02-17T09:47:09.347Z",
+        "secsLeft": 170,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68087.9813298027,
+        "momentum": 0.0697,
+        "upOdds": 0.765,
+        "downOdds": 0.235
+      },
+      {
+        "ts": "2026-02-17T09:47:15.353Z",
+        "secsLeft": 164,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68089.1560082286,
+        "momentum": 0.0715,
+        "upOdds": 0.765,
+        "downOdds": 0.235
+      },
+      {
+        "ts": "2026-02-17T09:47:21.358Z",
+        "secsLeft": 158,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68078.317748,
+        "momentum": 0.0555,
+        "upOdds": 0.765,
+        "downOdds": 0.235
+      },
+      {
+        "ts": "2026-02-17T09:47:27.364Z",
+        "secsLeft": 152,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68085.25771711934,
+        "momentum": 0.0657,
+        "upOdds": 0.7695,
+        "downOdds": 0.2305
+      },
+      {
+        "ts": "2026-02-17T09:47:33.367Z",
+        "secsLeft": 146,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68087.83084045163,
+        "momentum": 0.0695,
+        "upOdds": 0.78,
+        "downOdds": 0.22
+      },
+      {
+        "ts": "2026-02-17T09:47:39.368Z",
+        "secsLeft": 140,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68085.5099925,
+        "momentum": 0.0661,
+        "upOdds": 0.775,
+        "downOdds": 0.225
+      },
+      {
+        "ts": "2026-02-17T09:47:45.372Z",
+        "secsLeft": 134,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68077.73935154072,
+        "momentum": 0.0547,
+        "upOdds": 0.715,
+        "downOdds": 0.285
+      },
+      {
+        "ts": "2026-02-17T09:47:51.376Z",
+        "secsLeft": 128,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68080.458354,
+        "momentum": 0.0587,
+        "upOdds": 0.755,
+        "downOdds": 0.245
+      },
+      {
+        "ts": "2026-02-17T09:47:57.380Z",
+        "secsLeft": 122,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68080.3315445,
+        "momentum": 0.0585,
+        "upOdds": 0.78,
+        "downOdds": 0.22
+      },
+      {
+        "ts": "2026-02-17T09:48:03.384Z",
+        "secsLeft": 116,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68080.34231987005,
+        "momentum": 0.0585,
+        "upOdds": 0.795,
+        "downOdds": 0.205
+      },
+      {
+        "ts": "2026-02-17T09:48:09.387Z",
+        "secsLeft": 110,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68080.24571159756,
+        "momentum": 0.0584,
+        "upOdds": 0.845,
+        "downOdds": 0.155
+      },
+      {
+        "ts": "2026-02-17T09:48:15.394Z",
+        "secsLeft": 104,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68089.76734403087,
+        "momentum": 0.0724,
+        "upOdds": 0.87,
+        "downOdds": 0.13
+      },
+      {
+        "ts": "2026-02-17T09:48:21.399Z",
+        "secsLeft": 98,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68090.08599331898,
+        "momentum": 0.0728,
+        "upOdds": 0.875,
+        "downOdds": 0.125
+      },
+      {
+        "ts": "2026-02-17T09:48:27.401Z",
+        "secsLeft": 92,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68079.45160523476,
+        "momentum": 0.0572,
+        "upOdds": 0.815,
+        "downOdds": 0.185
+      },
+      {
+        "ts": "2026-02-17T09:48:33.404Z",
+        "secsLeft": 86,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68076.3084238298,
+        "momentum": 0.0526,
+        "upOdds": 0.765,
+        "downOdds": 0.235
+      },
+      {
+        "ts": "2026-02-17T09:48:39.407Z",
+        "secsLeft": 80,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68068.640581,
+        "momentum": 0.0413,
+        "upOdds": 0.695,
+        "downOdds": 0.305
+      },
+      {
+        "ts": "2026-02-17T09:48:45.409Z",
+        "secsLeft": 74,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68063.2650915,
+        "momentum": 0.0334,
+        "upOdds": 0.72,
+        "downOdds": 0.28
+      },
+      {
+        "ts": "2026-02-17T09:48:51.411Z",
+        "secsLeft": 68,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68063.03542322223,
+        "momentum": 0.0331,
+        "upOdds": 0.735,
+        "downOdds": 0.265
+      },
+      {
+        "ts": "2026-02-17T09:48:57.417Z",
+        "secsLeft": 62,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68061.77748729032,
+        "momentum": 0.0312,
+        "upOdds": 0.695,
+        "downOdds": 0.305
+      },
+      {
+        "ts": "2026-02-17T09:49:03.420Z",
+        "secsLeft": 56,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68049.22871750729,
+        "momentum": 0.0128,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:49:09.421Z",
+        "secsLeft": 50,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68032.37676554518,
+        "momentum": -0.012,
+        "upOdds": 0.295,
+        "downOdds": 0.705
+      },
+      {
+        "ts": "2026-02-17T09:49:15.423Z",
+        "secsLeft": 44,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68026.0026561248,
+        "momentum": -0.0213,
+        "upOdds": 0.225,
+        "downOdds": 0.775
+      },
+      {
+        "ts": "2026-02-17T09:49:21.424Z",
+        "secsLeft": 38,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68019.67485446674,
+        "momentum": -0.0306,
+        "upOdds": 0.125,
+        "downOdds": 0.875
+      },
+      {
+        "ts": "2026-02-17T09:49:27.428Z",
+        "secsLeft": 32,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68024.15530623737,
+        "momentum": -0.0241,
+        "upOdds": 0.29,
+        "downOdds": 0.71
+      },
+      {
+        "ts": "2026-02-17T09:49:33.433Z",
+        "secsLeft": 26,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68024.3757554892,
+        "momentum": -0.0237,
+        "upOdds": 0.19,
+        "downOdds": 0.81
+      },
+      {
+        "ts": "2026-02-17T09:49:39.437Z",
+        "secsLeft": 20,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68020.29706726242,
+        "momentum": -0.0297,
+        "upOdds": 0.205,
+        "downOdds": 0.795
+      },
+      {
+        "ts": "2026-02-17T09:49:45.441Z",
+        "secsLeft": 14,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68020.48007978003,
+        "momentum": -0.0295,
+        "upOdds": 0.105,
+        "downOdds": 0.895
+      },
+      {
+        "ts": "2026-02-17T09:49:51.443Z",
+        "secsLeft": 8,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68018.98096296849,
+        "momentum": -0.0317,
+        "upOdds": 0.03,
+        "downOdds": 0.97
+      },
+      {
+        "ts": "2026-02-17T09:49:57.446Z",
+        "secsLeft": 2,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68013.58108248681,
+        "momentum": -0.0396,
+        "upOdds": 0.04,
+        "downOdds": 0.96
+      },
+      {
+        "ts": "2026-02-17T09:50:03.450Z",
+        "secsLeft": 0,
+        "priceToBeat": 68040.52847923474,
+        "btcPrice": 68011.54448451864,
+        "momentum": -0.0426,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.96,
+      "buyPrice": 0.99,
+      "timestamp": "2026-02-17T09:49:49.964Z",
+      "success": true,
+      "source": "T-10"
+    },
+    "finalBtcPrice": 68011.54448451864,
+    "finalMomentum": -0.0426,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.695,
+      "down": 0.305
+    },
+    "oddsAtT30": {
+      "up": 0.29,
+      "down": 0.71
+    },
+    "oddsAtT10": {
+      "up": 0.03,
+      "down": 0.97
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771321800",
+    "title": "Bitcoin Up or Down - February 17, 4:50AM-4:55AM ET",
+    "startTime": "2026-02-17T09:50:00Z",
+    "endTime": "2026-02-17T09:55:00Z",
+    "priceToBeat": 68011.5163354528,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:50:15.688Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 68017.211723,
+        "momentum": null,
+        "upOdds": 0.52,
+        "downOdds": 0.48
+      },
+      {
+        "ts": "2026-02-17T09:50:21.692Z",
+        "secsLeft": 278,
+        "priceToBeat": null,
+        "btcPrice": 68015.94284306347,
+        "momentum": null,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T09:50:27.696Z",
+        "secsLeft": 272,
+        "priceToBeat": null,
+        "btcPrice": 68017.36554124395,
+        "momentum": null,
+        "upOdds": 0.54,
+        "downOdds": 0.46
+      },
+      {
+        "ts": "2026-02-17T09:50:33.696Z",
+        "secsLeft": 266,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68017.43669408726,
+        "momentum": 0.0087,
+        "upOdds": 0.525,
+        "downOdds": 0.475
+      },
+      {
+        "ts": "2026-02-17T09:50:39.699Z",
+        "secsLeft": 260,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68017.34708691467,
+        "momentum": 0.0086,
+        "upOdds": 0.55,
+        "downOdds": 0.45
+      },
+      {
+        "ts": "2026-02-17T09:50:45.704Z",
+        "secsLeft": 254,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68018.84259173169,
+        "momentum": 0.0108,
+        "upOdds": 0.685,
+        "downOdds": 0.315
+      },
+      {
+        "ts": "2026-02-17T09:50:51.706Z",
+        "secsLeft": 248,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68050.99370099888,
+        "momentum": 0.058,
+        "upOdds": 0.76,
+        "downOdds": 0.24
+      },
+      {
+        "ts": "2026-02-17T09:50:57.712Z",
+        "secsLeft": 242,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68051.014888,
+        "momentum": 0.0581,
+        "upOdds": 0.8255,
+        "downOdds": 0.1745
+      },
+      {
+        "ts": "2026-02-17T09:51:03.718Z",
+        "secsLeft": 236,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68072.70990609092,
+        "momentum": 0.09,
+        "upOdds": 0.81,
+        "downOdds": 0.19
+      },
+      {
+        "ts": "2026-02-17T09:51:09.724Z",
+        "secsLeft": 230,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68072.90279226028,
+        "momentum": 0.0903,
+        "upOdds": 0.835,
+        "downOdds": 0.165
+      },
+      {
+        "ts": "2026-02-17T09:51:15.728Z",
+        "secsLeft": 224,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68075.89794136066,
+        "momentum": 0.0947,
+        "upOdds": 0.86,
+        "downOdds": 0.14
+      },
+      {
+        "ts": "2026-02-17T09:51:21.730Z",
+        "secsLeft": 218,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68092.70306872457,
+        "momentum": 0.1194,
+        "upOdds": 0.895,
+        "downOdds": 0.105
+      },
+      {
+        "ts": "2026-02-17T09:51:27.733Z",
+        "secsLeft": 212,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68090.37802839545,
+        "momentum": 0.116,
+        "upOdds": 0.855,
+        "downOdds": 0.145
+      },
+      {
+        "ts": "2026-02-17T09:51:33.736Z",
+        "secsLeft": 206,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68096.21259615132,
+        "momentum": 0.1245,
+        "upOdds": 0.875,
+        "downOdds": 0.125
+      },
+      {
+        "ts": "2026-02-17T09:51:39.741Z",
+        "secsLeft": 200,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68101.2857307017,
+        "momentum": 0.132,
+        "upOdds": 0.885,
+        "downOdds": 0.115
+      },
+      {
+        "ts": "2026-02-17T09:51:45.746Z",
+        "secsLeft": 194,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68097.93815172413,
+        "momentum": 0.1271,
+        "upOdds": 0.905,
+        "downOdds": 0.095
+      },
+      {
+        "ts": "2026-02-17T09:51:51.751Z",
+        "secsLeft": 188,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.55605942545,
+        "momentum": 0.1309,
+        "upOdds": 0.91,
+        "downOdds": 0.09
+      },
+      {
+        "ts": "2026-02-17T09:51:57.754Z",
+        "secsLeft": 182,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68108.57351601438,
+        "momentum": 0.1427,
+        "upOdds": 0.92,
+        "downOdds": 0.08
+      },
+      {
+        "ts": "2026-02-17T09:52:03.755Z",
+        "secsLeft": 176,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68096.93845074122,
+        "momentum": 0.1256,
+        "upOdds": 0.905,
+        "downOdds": 0.095
+      },
+      {
+        "ts": "2026-02-17T09:52:09.759Z",
+        "secsLeft": 170,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68104.7008055662,
+        "momentum": 0.137,
+        "upOdds": 0.915,
+        "downOdds": 0.085
+      },
+      {
+        "ts": "2026-02-17T09:52:15.763Z",
+        "secsLeft": 164,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68112.32350193085,
+        "momentum": 0.1482,
+        "upOdds": 0.935,
+        "downOdds": 0.065
+      },
+      {
+        "ts": "2026-02-17T09:52:21.766Z",
+        "secsLeft": 158,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68116.44604579224,
+        "momentum": 0.1543,
+        "upOdds": 0.92,
+        "downOdds": 0.08
+      },
+      {
+        "ts": "2026-02-17T09:52:27.770Z",
+        "secsLeft": 152,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68109.32872739057,
+        "momentum": 0.1438,
+        "upOdds": 0.925,
+        "downOdds": 0.075
+      },
+      {
+        "ts": "2026-02-17T09:52:33.771Z",
+        "secsLeft": 146,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68096.69936817707,
+        "momentum": 0.1252,
+        "upOdds": 0.91,
+        "downOdds": 0.09
+      },
+      {
+        "ts": "2026-02-17T09:52:39.777Z",
+        "secsLeft": 140,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68099.85915768477,
+        "momentum": 0.1299,
+        "upOdds": 0.92,
+        "downOdds": 0.08
+      },
+      {
+        "ts": "2026-02-17T09:52:45.779Z",
+        "secsLeft": 134,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.50847352637,
+        "momentum": 0.1308,
+        "upOdds": 0.895,
+        "downOdds": 0.105
+      },
+      {
+        "ts": "2026-02-17T09:52:51.783Z",
+        "secsLeft": 128,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.61832509143,
+        "momentum": 0.131,
+        "upOdds": 0.92,
+        "downOdds": 0.08
+      },
+      {
+        "ts": "2026-02-17T09:52:57.788Z",
+        "secsLeft": 122,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68099.20688505874,
+        "momentum": 0.1289,
+        "upOdds": 0.92,
+        "downOdds": 0.08
+      },
+      {
+        "ts": "2026-02-17T09:53:03.794Z",
+        "secsLeft": 116,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68097.30601458508,
+        "momentum": 0.1261,
+        "upOdds": 0.94,
+        "downOdds": 0.06
+      },
+      {
+        "ts": "2026-02-17T09:53:09.801Z",
+        "secsLeft": 110,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68097.3800219545,
+        "momentum": 0.1262,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T09:53:15.805Z",
+        "secsLeft": 104,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68097.55601604999,
+        "momentum": 0.1265,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T09:53:21.809Z",
+        "secsLeft": 98,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68101.4716935414,
+        "momentum": 0.1323,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T09:53:27.814Z",
+        "secsLeft": 92,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.88972669808,
+        "momentum": 0.1314,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T09:53:33.816Z",
+        "secsLeft": 86,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68099.00354842804,
+        "momentum": 0.1286,
+        "upOdds": 0.96,
+        "downOdds": 0.04
+      },
+      {
+        "ts": "2026-02-17T09:53:39.821Z",
+        "secsLeft": 80,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68091.7229883061,
+        "momentum": 0.1179,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T09:53:45.823Z",
+        "secsLeft": 74,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68097.27115528939,
+        "momentum": 0.1261,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T09:53:51.832Z",
+        "secsLeft": 68,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68098.575387399,
+        "momentum": 0.128,
+        "upOdds": 0.975,
+        "downOdds": 0.025
+      },
+      {
+        "ts": "2026-02-17T09:53:57.841Z",
+        "secsLeft": 62,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68098.2169327268,
+        "momentum": 0.1275,
+        "upOdds": 0.975,
+        "downOdds": 0.025
+      },
+      {
+        "ts": "2026-02-17T09:54:03.846Z",
+        "secsLeft": 56,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68098.89541920702,
+        "momentum": 0.1285,
+        "upOdds": 0.975,
+        "downOdds": 0.025
+      },
+      {
+        "ts": "2026-02-17T09:54:09.853Z",
+        "secsLeft": 50,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68099.99049781275,
+        "momentum": 0.1301,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:15.856Z",
+        "secsLeft": 44,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68107.12305257062,
+        "momentum": 0.1406,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:21.860Z",
+        "secsLeft": 38,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68107.36886102222,
+        "momentum": 0.1409,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:27.868Z",
+        "secsLeft": 32,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68104.5180765,
+        "momentum": 0.1367,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:33.874Z",
+        "secsLeft": 26,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.4961435,
+        "momentum": 0.1308,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:39.881Z",
+        "secsLeft": 20,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68099.63659404992,
+        "momentum": 0.1296,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:45.887Z",
+        "secsLeft": 14,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68101.41683081476,
+        "momentum": 0.1322,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:51.890Z",
+        "secsLeft": 8,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.35450066782,
+        "momentum": 0.1306,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:54:57.894Z",
+        "secsLeft": 2,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.408535387,
+        "momentum": 0.1307,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      },
+      {
+        "ts": "2026-02-17T09:55:03.901Z",
+        "secsLeft": 0,
+        "priceToBeat": 68011.5163354528,
+        "btcPrice": 68100.4659923338,
+        "momentum": 0.1308,
+        "upOdds": 0.995,
+        "downOdds": 0.005
+      }
+    ],
+    "betPlaced": {
+      "direction": "UP",
+      "oddsAtBet": 0.945,
+      "buyPrice": 0.975,
+      "timestamp": "2026-02-17T09:53:08.122Z",
+      "success": true,
+      "source": "EARLY T-112"
+    },
+    "finalBtcPrice": 68100.4659923338,
+    "finalMomentum": 0.1308,
+    "finalOdds": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "actualOutcome": "UP",
+    "oddsAtT60": {
+      "up": 0.975,
+      "down": 0.025
+    },
+    "oddsAtT30": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "oddsAtT10": {
+      "up": 0.995,
+      "down": 0.005
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771322100",
+    "title": "Bitcoin Up or Down - February 17, 4:55AM-5:00AM ET",
+    "startTime": "2026-02-17T09:55:00Z",
+    "endTime": "2026-02-17T10:00:00Z",
+    "priceToBeat": 68100.40918015181,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T09:55:15.171Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 68102.9770333325,
+        "momentum": null,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T09:55:21.174Z",
+        "secsLeft": 278,
+        "priceToBeat": null,
+        "btcPrice": 68102.51470868698,
+        "momentum": null,
+        "upOdds": 0.455,
+        "downOdds": 0.545
+      },
+      {
+        "ts": "2026-02-17T09:55:27.178Z",
+        "secsLeft": 272,
+        "priceToBeat": null,
+        "btcPrice": 68095.08044615995,
+        "momentum": null,
+        "upOdds": 0.445,
+        "downOdds": 0.555
+      },
+      {
+        "ts": "2026-02-17T09:55:33.180Z",
+        "secsLeft": 266,
+        "priceToBeat": null,
+        "btcPrice": 68096.59635226084,
+        "momentum": null,
+        "upOdds": 0.455,
+        "downOdds": 0.545
+      },
+      {
+        "ts": "2026-02-17T09:55:39.182Z",
+        "secsLeft": 260,
+        "priceToBeat": null,
+        "btcPrice": 68096.43276262177,
+        "momentum": null,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:55:45.186Z",
+        "secsLeft": 254,
+        "priceToBeat": null,
+        "btcPrice": 68098.84936759101,
+        "momentum": null,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T09:55:51.189Z",
+        "secsLeft": 248,
+        "priceToBeat": null,
+        "btcPrice": 68111.45073130135,
+        "momentum": null,
+        "upOdds": 0.625,
+        "downOdds": 0.375
+      },
+      {
+        "ts": "2026-02-17T09:55:57.193Z",
+        "secsLeft": 242,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68112.9838855,
+        "momentum": 0.0185,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T09:56:03.194Z",
+        "secsLeft": 236,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68112.49150765658,
+        "momentum": 0.0177,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T09:56:09.199Z",
+        "secsLeft": 230,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68112.63596165658,
+        "momentum": 0.018,
+        "upOdds": 0.59,
+        "downOdds": 0.41
+      },
+      {
+        "ts": "2026-02-17T09:56:15.202Z",
+        "secsLeft": 224,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68113.10531630293,
+        "momentum": 0.0186,
+        "upOdds": 0.58,
+        "downOdds": 0.42
+      },
+      {
+        "ts": "2026-02-17T09:56:21.205Z",
+        "secsLeft": 218,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68113.2336932997,
+        "momentum": 0.0188,
+        "upOdds": 0.59,
+        "downOdds": 0.41
+      },
+      {
+        "ts": "2026-02-17T09:56:27.209Z",
+        "secsLeft": 212,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68113.0182307371,
+        "momentum": 0.0185,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T09:56:33.212Z",
+        "secsLeft": 206,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68113.23780434276,
+        "momentum": 0.0188,
+        "upOdds": 0.585,
+        "downOdds": 0.415
+      },
+      {
+        "ts": "2026-02-17T09:56:39.218Z",
+        "secsLeft": 200,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68113.315544484,
+        "momentum": 0.019,
+        "upOdds": 0.585,
+        "downOdds": 0.415
+      },
+      {
+        "ts": "2026-02-17T09:56:45.221Z",
+        "secsLeft": 194,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68114.6178975,
+        "momentum": 0.0209,
+        "upOdds": 0.605,
+        "downOdds": 0.395
+      },
+      {
+        "ts": "2026-02-17T09:56:51.223Z",
+        "secsLeft": 188,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68113.30150036962,
+        "momentum": 0.0189,
+        "upOdds": 0.605,
+        "downOdds": 0.395
+      },
+      {
+        "ts": "2026-02-17T09:56:57.226Z",
+        "secsLeft": 182,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68114.31808887525,
+        "momentum": 0.0204,
+        "upOdds": 0.585,
+        "downOdds": 0.415
+      },
+      {
+        "ts": "2026-02-17T09:57:03.229Z",
+        "secsLeft": 176,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68100.541117,
+        "momentum": 0.0002,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T09:57:09.230Z",
+        "secsLeft": 170,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68100.338221,
+        "momentum": -0.0001,
+        "upOdds": 0.46,
+        "downOdds": 0.54
+      },
+      {
+        "ts": "2026-02-17T09:57:15.233Z",
+        "secsLeft": 164,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68099.4818674251,
+        "momentum": -0.0014,
+        "upOdds": 0.44,
+        "downOdds": 0.56
+      },
+      {
+        "ts": "2026-02-17T09:57:21.236Z",
+        "secsLeft": 158,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68099.21875614946,
+        "momentum": -0.0017,
+        "upOdds": 0.42,
+        "downOdds": 0.58
+      },
+      {
+        "ts": "2026-02-17T09:57:27.241Z",
+        "secsLeft": 152,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68099.13658194571,
+        "momentum": -0.0019,
+        "upOdds": 0.3,
+        "downOdds": 0.7
+      },
+      {
+        "ts": "2026-02-17T09:57:33.244Z",
+        "secsLeft": 146,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68084.8571782526,
+        "momentum": -0.0228,
+        "upOdds": 0.215,
+        "downOdds": 0.785
+      },
+      {
+        "ts": "2026-02-17T09:57:39.248Z",
+        "secsLeft": 140,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68078.83083403816,
+        "momentum": -0.0317,
+        "upOdds": 0.14,
+        "downOdds": 0.86
+      },
+      {
+        "ts": "2026-02-17T09:57:45.250Z",
+        "secsLeft": 134,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68069.97188730506,
+        "momentum": -0.0447,
+        "upOdds": 0.155,
+        "downOdds": 0.845
+      },
+      {
+        "ts": "2026-02-17T09:57:51.253Z",
+        "secsLeft": 128,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68070.24497321418,
+        "momentum": -0.0443,
+        "upOdds": 0.155,
+        "downOdds": 0.845
+      },
+      {
+        "ts": "2026-02-17T09:57:57.256Z",
+        "secsLeft": 122,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68071.7204872713,
+        "momentum": -0.0421,
+        "upOdds": 0.195,
+        "downOdds": 0.805
+      },
+      {
+        "ts": "2026-02-17T09:58:03.261Z",
+        "secsLeft": 116,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68072.4576134317,
+        "momentum": -0.041,
+        "upOdds": 0.17,
+        "downOdds": 0.83
+      },
+      {
+        "ts": "2026-02-17T09:58:09.267Z",
+        "secsLeft": 110,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68072.1675749317,
+        "momentum": -0.0415,
+        "upOdds": 0.175,
+        "downOdds": 0.825
+      },
+      {
+        "ts": "2026-02-17T09:58:15.272Z",
+        "secsLeft": 104,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68072.40538426544,
+        "momentum": -0.0411,
+        "upOdds": 0.145,
+        "downOdds": 0.855
+      },
+      {
+        "ts": "2026-02-17T09:58:21.277Z",
+        "secsLeft": 98,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68071.84037634422,
+        "momentum": -0.042,
+        "upOdds": 0.13,
+        "downOdds": 0.87
+      },
+      {
+        "ts": "2026-02-17T09:58:27.283Z",
+        "secsLeft": 92,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68072.50091903175,
+        "momentum": -0.041,
+        "upOdds": 0.145,
+        "downOdds": 0.855
+      },
+      {
+        "ts": "2026-02-17T09:58:33.286Z",
+        "secsLeft": 86,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68072.55208287864,
+        "momentum": -0.0409,
+        "upOdds": 0.175,
+        "downOdds": 0.825
+      },
+      {
+        "ts": "2026-02-17T09:58:39.292Z",
+        "secsLeft": 80,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68075.37407460387,
+        "momentum": -0.0368,
+        "upOdds": 0.145,
+        "downOdds": 0.855
+      },
+      {
+        "ts": "2026-02-17T09:58:45.297Z",
+        "secsLeft": 74,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68078.2062225106,
+        "momentum": -0.0326,
+        "upOdds": 0.2,
+        "downOdds": 0.8
+      },
+      {
+        "ts": "2026-02-17T09:58:51.303Z",
+        "secsLeft": 68,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68079.01092651077,
+        "momentum": -0.0314,
+        "upOdds": 0.185,
+        "downOdds": 0.815
+      },
+      {
+        "ts": "2026-02-17T09:58:57.306Z",
+        "secsLeft": 62,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68077.62682266053,
+        "momentum": -0.0335,
+        "upOdds": 0.115,
+        "downOdds": 0.885
+      },
+      {
+        "ts": "2026-02-17T09:59:03.310Z",
+        "secsLeft": 56,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68077.8755275,
+        "momentum": -0.0331,
+        "upOdds": 0.125,
+        "downOdds": 0.875
+      },
+      {
+        "ts": "2026-02-17T09:59:09.312Z",
+        "secsLeft": 50,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68077.733225,
+        "momentum": -0.0333,
+        "upOdds": 0.16,
+        "downOdds": 0.84
+      },
+      {
+        "ts": "2026-02-17T09:59:15.314Z",
+        "secsLeft": 44,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68077.72122670505,
+        "momentum": -0.0333,
+        "upOdds": 0.135,
+        "downOdds": 0.865
+      },
+      {
+        "ts": "2026-02-17T09:59:21.320Z",
+        "secsLeft": 38,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68078.1850085,
+        "momentum": -0.0326,
+        "upOdds": 0.085,
+        "downOdds": 0.915
+      },
+      {
+        "ts": "2026-02-17T09:59:27.325Z",
+        "secsLeft": 32,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68078.039816,
+        "momentum": -0.0328,
+        "upOdds": 0.065,
+        "downOdds": 0.935
+      },
+      {
+        "ts": "2026-02-17T09:59:33.328Z",
+        "secsLeft": 26,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68077.68398406543,
+        "momentum": -0.0334,
+        "upOdds": 0.03,
+        "downOdds": 0.97
+      },
+      {
+        "ts": "2026-02-17T09:59:39.333Z",
+        "secsLeft": 20,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68078.04516737236,
+        "momentum": -0.0328,
+        "upOdds": 0.05,
+        "downOdds": 0.95
+      },
+      {
+        "ts": "2026-02-17T09:59:45.336Z",
+        "secsLeft": 14,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68079.84269872945,
+        "momentum": -0.0302,
+        "upOdds": 0.195,
+        "downOdds": 0.805
+      },
+      {
+        "ts": "2026-02-17T09:59:51.341Z",
+        "secsLeft": 8,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68089.12995732394,
+        "momentum": -0.0166,
+        "upOdds": 0.07,
+        "downOdds": 0.93
+      },
+      {
+        "ts": "2026-02-17T09:59:57.348Z",
+        "secsLeft": 2,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68086.46052555293,
+        "momentum": -0.0205,
+        "upOdds": 0.055,
+        "downOdds": 0.945
+      },
+      {
+        "ts": "2026-02-17T10:00:03.352Z",
+        "secsLeft": 0,
+        "priceToBeat": 68100.40918015181,
+        "btcPrice": 68086.59478918697,
+        "momentum": -0.0203,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": {
+      "direction": "DOWN",
+      "oddsAtBet": 0.945,
+      "buyPrice": 0.975,
+      "timestamp": "2026-02-17T09:59:29.830Z",
+      "success": true,
+      "source": "T-30"
+    },
+    "finalBtcPrice": 68086.59478918697,
+    "finalMomentum": -0.0203,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.115,
+      "down": 0.885
+    },
+    "oddsAtT30": {
+      "up": 0.065,
+      "down": 0.935
+    },
+    "oddsAtT10": {
+      "up": 0.07,
+      "down": 0.93
+    },
+    "oddsCorrect": true
+  },
+  {
+    "slug": "btc-updown-5m-1771322400",
+    "title": "Bitcoin Up or Down - February 17, 5:00AM-5:05AM ET",
+    "startTime": "2026-02-17T10:00:00Z",
+    "endTime": "2026-02-17T10:05:00Z",
+    "priceToBeat": 68088.36980803835,
+    "snapshots": [
+      {
+        "ts": "2026-02-17T10:00:15.742Z",
+        "secsLeft": 284,
+        "priceToBeat": null,
+        "btcPrice": 68059.84498269144,
+        "momentum": null,
+        "upOdds": 0.395,
+        "downOdds": 0.605
+      },
+      {
+        "ts": "2026-02-17T10:00:21.747Z",
+        "secsLeft": 278,
+        "priceToBeat": null,
+        "btcPrice": 68076.63516085982,
+        "momentum": null,
+        "upOdds": 0.48,
+        "downOdds": 0.52
+      },
+      {
+        "ts": "2026-02-17T10:00:27.749Z",
+        "secsLeft": 272,
+        "priceToBeat": null,
+        "btcPrice": 68080.09650692371,
+        "momentum": null,
+        "upOdds": 0.515,
+        "downOdds": 0.485
+      },
+      {
+        "ts": "2026-02-17T10:00:33.749Z",
+        "secsLeft": 266,
+        "priceToBeat": null,
+        "btcPrice": 68084.44411002497,
+        "momentum": null,
+        "upOdds": 0.43,
+        "downOdds": 0.57
+      },
+      {
+        "ts": "2026-02-17T10:00:39.753Z",
+        "secsLeft": 260,
+        "priceToBeat": null,
+        "btcPrice": 68077.26319099445,
+        "momentum": null,
+        "upOdds": 0.415,
+        "downOdds": 0.585
+      },
+      {
+        "ts": "2026-02-17T10:00:45.755Z",
+        "secsLeft": 254,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68076.477323,
+        "momentum": -0.0175,
+        "upOdds": 0.43,
+        "downOdds": 0.57
+      },
+      {
+        "ts": "2026-02-17T10:00:51.757Z",
+        "secsLeft": 248,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68084.03278113788,
+        "momentum": -0.0064,
+        "upOdds": 0.51,
+        "downOdds": 0.49
+      },
+      {
+        "ts": "2026-02-17T10:00:57.760Z",
+        "secsLeft": 242,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68085.04253253166,
+        "momentum": -0.0049,
+        "upOdds": 0.52,
+        "downOdds": 0.48
+      },
+      {
+        "ts": "2026-02-17T10:01:03.760Z",
+        "secsLeft": 236,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68085.27603236862,
+        "momentum": -0.0045,
+        "upOdds": 0.58,
+        "downOdds": 0.42
+      },
+      {
+        "ts": "2026-02-17T10:01:09.763Z",
+        "secsLeft": 230,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68088.02582468677,
+        "momentum": -0.0005,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T10:01:15.766Z",
+        "secsLeft": 224,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68090.21739726885,
+        "momentum": 0.0027,
+        "upOdds": 0.565,
+        "downOdds": 0.435
+      },
+      {
+        "ts": "2026-02-17T10:01:21.769Z",
+        "secsLeft": 218,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68090.970642,
+        "momentum": 0.0038,
+        "upOdds": 0.505,
+        "downOdds": 0.495
+      },
+      {
+        "ts": "2026-02-17T10:01:27.771Z",
+        "secsLeft": 212,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68091.1130375277,
+        "momentum": 0.004,
+        "upOdds": 0.585,
+        "downOdds": 0.415
+      },
+      {
+        "ts": "2026-02-17T10:01:33.775Z",
+        "secsLeft": 206,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68091.8254195,
+        "momentum": 0.0051,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T10:01:39.775Z",
+        "secsLeft": 200,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68091.9201695,
+        "momentum": 0.0052,
+        "upOdds": 0.535,
+        "downOdds": 0.465
+      },
+      {
+        "ts": "2026-02-17T10:01:45.777Z",
+        "secsLeft": 194,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68094.74854623049,
+        "momentum": 0.0094,
+        "upOdds": 0.68,
+        "downOdds": 0.32
+      },
+      {
+        "ts": "2026-02-17T10:01:51.779Z",
+        "secsLeft": 188,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68100.36124003379,
+        "momentum": 0.0176,
+        "upOdds": 0.615,
+        "downOdds": 0.385
+      },
+      {
+        "ts": "2026-02-17T10:01:57.782Z",
+        "secsLeft": 182,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68086.1397665,
+        "momentum": -0.0033,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T10:02:03.783Z",
+        "secsLeft": 176,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68087.82458142603,
+        "momentum": -0.0008,
+        "upOdds": 0.495,
+        "downOdds": 0.505
+      },
+      {
+        "ts": "2026-02-17T10:02:09.785Z",
+        "secsLeft": 170,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68088.11640471019,
+        "momentum": -0.0004,
+        "upOdds": 0.475,
+        "downOdds": 0.525
+      },
+      {
+        "ts": "2026-02-17T10:02:15.786Z",
+        "secsLeft": 164,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68084.20299117123,
+        "momentum": -0.0061,
+        "upOdds": 0.4,
+        "downOdds": 0.6
+      },
+      {
+        "ts": "2026-02-17T10:02:21.788Z",
+        "secsLeft": 158,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68078.1147878083,
+        "momentum": -0.0151,
+        "upOdds": 0.375,
+        "downOdds": 0.625
+      },
+      {
+        "ts": "2026-02-17T10:02:27.790Z",
+        "secsLeft": 152,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68080.79269973419,
+        "momentum": -0.0111,
+        "upOdds": 0.435,
+        "downOdds": 0.565
+      },
+      {
+        "ts": "2026-02-17T10:02:33.791Z",
+        "secsLeft": 146,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68080.07868218067,
+        "momentum": -0.0122,
+        "upOdds": 0.44,
+        "downOdds": 0.56
+      },
+      {
+        "ts": "2026-02-17T10:02:39.794Z",
+        "secsLeft": 140,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68084.4015514041,
+        "momentum": -0.0058,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T10:02:45.794Z",
+        "secsLeft": 134,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68087.4606125,
+        "momentum": -0.0013,
+        "upOdds": 0.46,
+        "downOdds": 0.54
+      },
+      {
+        "ts": "2026-02-17T10:02:51.795Z",
+        "secsLeft": 128,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68085.4832195,
+        "momentum": -0.0042,
+        "upOdds": 0.465,
+        "downOdds": 0.535
+      },
+      {
+        "ts": "2026-02-17T10:02:57.797Z",
+        "secsLeft": 122,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68089.32313851723,
+        "momentum": 0.0014,
+        "upOdds": 0.53,
+        "downOdds": 0.47
+      },
+      {
+        "ts": "2026-02-17T10:03:03.798Z",
+        "secsLeft": 116,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68093.8917315,
+        "momentum": 0.0081,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T10:03:09.801Z",
+        "secsLeft": 110,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68091.963892,
+        "momentum": 0.0053,
+        "upOdds": 0.595,
+        "downOdds": 0.405
+      },
+      {
+        "ts": "2026-02-17T10:03:15.803Z",
+        "secsLeft": 104,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68092.640874,
+        "momentum": 0.0063,
+        "upOdds": 0.555,
+        "downOdds": 0.445
+      },
+      {
+        "ts": "2026-02-17T10:03:21.805Z",
+        "secsLeft": 98,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68094.21694680427,
+        "momentum": 0.0086,
+        "upOdds": 0.415,
+        "downOdds": 0.585
+      },
+      {
+        "ts": "2026-02-17T10:03:27.807Z",
+        "secsLeft": 92,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68095.27454801527,
+        "momentum": 0.0101,
+        "upOdds": 0.43,
+        "downOdds": 0.57
+      },
+      {
+        "ts": "2026-02-17T10:03:33.811Z",
+        "secsLeft": 86,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68095.20816496329,
+        "momentum": 0.01,
+        "upOdds": 0.225,
+        "downOdds": 0.775
+      },
+      {
+        "ts": "2026-02-17T10:03:39.817Z",
+        "secsLeft": 80,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68089.39106818188,
+        "momentum": 0.0015,
+        "upOdds": 0.485,
+        "downOdds": 0.515
+      },
+      {
+        "ts": "2026-02-17T10:03:45.822Z",
+        "secsLeft": 74,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68091.294495,
+        "momentum": 0.0043,
+        "upOdds": 0.455,
+        "downOdds": 0.545
+      },
+      {
+        "ts": "2026-02-17T10:03:51.826Z",
+        "secsLeft": 68,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68092.255308,
+        "momentum": 0.0057,
+        "upOdds": 0.405,
+        "downOdds": 0.595
+      },
+      {
+        "ts": "2026-02-17T10:03:57.826Z",
+        "secsLeft": 62,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68091.29363999612,
+        "momentum": 0.0043,
+        "upOdds": 0.38,
+        "downOdds": 0.62
+      },
+      {
+        "ts": "2026-02-17T10:04:03.830Z",
+        "secsLeft": 56,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68088.9477385,
+        "momentum": 0.0008,
+        "upOdds": 0.425,
+        "downOdds": 0.575
+      },
+      {
+        "ts": "2026-02-17T10:04:09.833Z",
+        "secsLeft": 50,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68097.88053085316,
+        "momentum": 0.014,
+        "upOdds": 0.545,
+        "downOdds": 0.455
+      },
+      {
+        "ts": "2026-02-17T10:04:15.833Z",
+        "secsLeft": 44,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68111.12588927451,
+        "momentum": 0.0334,
+        "upOdds": 0.605,
+        "downOdds": 0.395
+      },
+      {
+        "ts": "2026-02-17T10:04:21.837Z",
+        "secsLeft": 38,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68119.99672299424,
+        "momentum": 0.0464,
+        "upOdds": 0.915,
+        "downOdds": 0.085
+      },
+      {
+        "ts": "2026-02-17T10:04:27.843Z",
+        "secsLeft": 32,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68132.73789370598,
+        "momentum": 0.0652,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T10:04:33.844Z",
+        "secsLeft": 26,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68130.64842759747,
+        "momentum": 0.0621,
+        "upOdds": 0.93,
+        "downOdds": 0.07
+      },
+      {
+        "ts": "2026-02-17T10:04:39.845Z",
+        "secsLeft": 20,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68128.3193497557,
+        "momentum": 0.0587,
+        "upOdds": 0.955,
+        "downOdds": 0.045
+      },
+      {
+        "ts": "2026-02-17T10:04:45.852Z",
+        "secsLeft": 14,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68122.37638646601,
+        "momentum": 0.0499,
+        "upOdds": 0.945,
+        "downOdds": 0.055
+      },
+      {
+        "ts": "2026-02-17T10:04:51.856Z",
+        "secsLeft": 8,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68121.77980936487,
+        "momentum": 0.0491,
+        "upOdds": 0.855,
+        "downOdds": 0.145
+      },
+      {
+        "ts": "2026-02-17T10:04:57.860Z",
+        "secsLeft": 2,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68121.39911832602,
+        "momentum": 0.0485,
+        "upOdds": 0.635,
+        "downOdds": 0.365
+      },
+      {
+        "ts": "2026-02-17T10:05:03.864Z",
+        "secsLeft": 0,
+        "priceToBeat": 68088.36980803835,
+        "btcPrice": 68081.83427238818,
+        "momentum": -0.0096,
+        "upOdds": 0.005,
+        "downOdds": 0.995
+      }
+    ],
+    "betPlaced": {
+      "direction": "UP",
+      "oddsAtBet": 0.9299999999999999,
+      "buyPrice": 0.96,
+      "timestamp": "2026-02-17T10:04:30.236Z",
+      "success": true,
+      "source": "T-30"
+    },
+    "finalBtcPrice": 68081.83427238818,
+    "finalMomentum": -0.0096,
+    "finalOdds": {
+      "up": 0.005,
+      "down": 0.995
+    },
+    "actualOutcome": "DOWN",
+    "oddsAtT60": {
+      "up": 0.38,
+      "down": 0.62
+    },
+    "oddsAtT30": {
+      "up": 0.945,
+      "down": 0.055
+    },
+    "oddsAtT10": {
+      "up": 0.855,
+      "down": 0.145
+    },
+    "oddsCorrect": true
   }
 ]
