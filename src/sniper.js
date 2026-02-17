@@ -114,10 +114,11 @@ async function placeSellOrder(tokenId, tokenAmount, price) {
 
   const clampedPrice = Math.min(0.99, Math.max(0.01, Math.round(price * 100) / 100));
 
-  // SELL side: makerAmount = tokens to sell, takerAmount = USDC to receive
-  const makerAmount = String(Math.round(tokenAmount * 10000) * 100);
-  const rawTaker = tokenAmount * clampedPrice;
-  const takerAmount = String(Math.round(rawTaker * 100) * 10000);
+  // SELL side: makerAmount = tokens to sell (max 2 decimals), takerAmount = USDC to receive (max 4 decimals)
+  const roundedTokens = Math.floor(tokenAmount * 100) / 100; // floor to 2 decimals to avoid over-selling
+  const makerAmount = String(Math.round(roundedTokens * 100) * 10000);
+  const rawTaker = roundedTokens * clampedPrice;
+  const takerAmount = String(Math.round(rawTaker * 10000) * 100);
 
   try {
     logs.push(`SELL ${tokenAmount.toFixed(4)} tokens @ ${clampedPrice} | maker=${makerAmount} taker=${takerAmount}`);

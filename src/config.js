@@ -15,7 +15,7 @@ module.exports = {
   PROXY_WALLET: process.env.PROXY_WALLET,
 
   // Trading parameters
-  BET_AMOUNT_USD: parseFloat(process.env.BET_AMOUNT_USD) || 3,
+  BET_AMOUNT_USD: parseFloat(process.env.BET_AMOUNT_USD) || 2,
   SNIPE_SECONDS: parseInt(process.env.SNIPE_SECONDS) || 30,
   MIN_ODDS: parseFloat(process.env.MIN_ODDS) || 0.85,
   STOP_LOSS_CENTS: parseFloat(process.env.STOP_LOSS_CENTS) || 0.30,

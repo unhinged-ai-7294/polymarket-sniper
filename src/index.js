@@ -570,13 +570,29 @@ async function checkStopLoss() {
 
   // Current price of the token we hold
   const currentPrice = position.direction === 'UP' ? upOdds : downOdds;
-  const drop = position.entryPrice - currentPrice;
+  const oddsDrop = position.entryPrice - currentPrice;
 
-  if (drop >= config.STOP_LOSS_CENTS) {
+  // Check 1: Odds dropped 30c+ from entry
+  const oddsTriggered = oddsDrop >= config.STOP_LOSS_CENTS;
+
+  // Check 2: BTC price crossed to the wrong side of price-to-beat
+  let priceTriggered = false;
+  if (btcOpenPrice && btcCurrentPrice) {
+    if (position.direction === 'UP' && btcCurrentPrice < btcOpenPrice) {
+      priceTriggered = true;
+    } else if (position.direction === 'DOWN' && btcCurrentPrice > btcOpenPrice) {
+      priceTriggered = true;
+    }
+  }
+
+  if (oddsTriggered || priceTriggered) {
     isExecutingStopLoss = true;
     stopLossFired = true;
 
-    log(`>>> STOP LOSS TRIGGERED: ${position.direction} dropped from ${position.entryPrice.toFixed(2)} to ${currentPrice.toFixed(2)} (${(drop * 100).toFixed(0)}c drop, threshold ${(config.STOP_LOSS_CENTS * 100).toFixed(0)}c)`);
+    const reason = oddsTriggered
+      ? `odds dropped ${(oddsDrop * 100).toFixed(0)}c (${(position.entryPrice * 100).toFixed(1)}c → ${(currentPrice * 100).toFixed(1)}c)`
+      : `BTC crossed to wrong side (bet ${position.direction}, BTC now $${btcCurrentPrice.toFixed(2)} vs open $${btcOpenPrice.toFixed(2)})`;
+    log(`>>> STOP LOSS TRIGGERED: ${reason}`);
 
     // Retry with increasing slippage to guarantee fill
     const SL_SLIPPAGE_STEPS = [0.02, 0.05, 0.10, 0.15];
@@ -624,7 +640,7 @@ async function checkStopLoss() {
           log(`BTC at entry: $${position.btcAtEntry ? position.btcAtEntry.toFixed(2) : '??'} (open: $${position.btcOpen ? position.btcOpen.toFixed(2) : '??'})`);
           log(`Secs left:    ${position.secsLeftAtEntry}s at entry`);
           log(`─────────────────────────────────────────────`);
-          log(`Reason:       STOP LOSS — odds dropped ${(drop * 100).toFixed(0)}c (${(position.entryPrice * 100).toFixed(1)}c → ${(currentPrice * 100).toFixed(1)}c)`);
+          log(`Reason:       STOP LOSS — ${reason}`);
           log(`Sold at:      ${(sellPrice * 100).toFixed(1)}c`);
           log(`Loss:         ~$${loss.toFixed(2)}`);
           log(`BTC now:      $${btcCurrentPrice ? btcCurrentPrice.toFixed(2) : '??'}`);
