@@ -429,6 +429,18 @@ async function checkSnipe() {
     return;
   }
 
+  // BTC must be at least $10 from price-to-beat to confirm odds aren't misleading
+  if (btcOpenPrice && btcCurrentPrice) {
+    const btcDist = Math.abs(btcCurrentPrice - btcOpenPrice);
+    if (btcDist < 10) {
+      const next = nextCheckpointIdx < CHECKPOINTS.length
+        ? `next T-${CHECKPOINTS[nextCheckpointIdx].at} (${(CHECKPOINTS[nextCheckpointIdx].minOdds*100)}%+)`
+        : 'no more checkpoints';
+      log(`T-${cp.at}: SKIP — ${leader} at ${(leaderOdds*100).toFixed(1)}% but BTC only $${btcDist.toFixed(0)} from open (need $10+) → ${next}`);
+      return;
+    }
+  }
+
   // We have an edge — buy the leader via checkpoint
   log(`>>> BUY ${leader} — ${(leaderOdds*100).toFixed(1)}% odds (T-${cp.at}, threshold ${(cp.minOdds*100)}%+)`);
   executeTrade(leader, leaderOdds, `T-${cp.at}`);
