@@ -337,55 +337,6 @@ function checkEarlyEntry() {
   executeTrade(leader, leaderOdds, `EARLY T-${secsLeft}`);
 }
 
-// ─── Last resort: final 3 seconds, no bet placed yet ─────────────────
-// All checkpoints passed without a trade. Look at BTC price and odds momentum
-// to decide which side to buy. Either signal is enough:
-//   A) BTC price is $15+ from open → buy the side price favors
-//   B) Odds momentum surging 3c+ for one side → buy the surging side
-function checkLastResort() {
-  if (!currentMarket || hasBet || isExecutingTrade) return;
-  if (upOdds === null || downOdds === null) return;
-  if (!btcOpenPrice || !btcCurrentPrice) return;
-
-  const secsLeft = getSecondsRemaining(currentMarket.endDate);
-  if (secsLeft > 3 || secsLeft < 1) return;
-
-  let buyDir = null;
-  let reason = '';
-
-  // Signal A: BTC price $15+ from open — price is telling us a direction
-  const btcDiff = btcCurrentPrice - btcOpenPrice;
-  const absBtcDiff = Math.abs(btcDiff);
-  const btcDir = btcDiff >= 0 ? 'UP' : 'DOWN';
-
-  if (absBtcDiff >= 15) {
-    buyDir = btcDir;
-    reason = `BTC $${absBtcDiff.toFixed(0)} from open`;
-  }
-
-  // Signal B: Odds momentum surging one direction (15c+ in recent ticks)
-  if (!buyDir && oddsHistory.length >= 3) {
-    const recent = oddsHistory.slice(-3);
-    const upRise = recent[recent.length - 1].upOdds - recent[0].upOdds;
-    const downRise = recent[recent.length - 1].downOdds - recent[0].downOdds;
-
-    if (upRise >= 0.15) {
-      buyDir = 'UP';
-      reason = `odds surging UP +${(upRise*100).toFixed(0)}c`;
-    } else if (downRise >= 0.15) {
-      buyDir = 'DOWN';
-      reason = `odds surging DOWN +${(downRise*100).toFixed(0)}c`;
-    }
-  }
-
-  if (!buyDir) return;
-
-  const buyOdds = buyDir === 'UP' ? upOdds : downOdds;
-  const leaderOdds = Math.max(upOdds, downOdds);
-  log(`>>> LAST RESORT: ${buyDir} — ${reason} | odds ${(leaderOdds*100).toFixed(1)}% | T-${secsLeft}`);
-  executeTrade(buyDir, buyOdds, `LAST-RESORT T-${secsLeft}`);
-}
-
 // ─── Snipe check (tiered checkpoints) ─────────────────────────────────
 // T-30 → 90%+, T-20 → 87%+, T-10 → 85%+
 const CHECKPOINTS = [
@@ -400,12 +351,6 @@ async function checkSnipe() {
   if (upOdds === null || downOdds === null) return;
 
   const secsLeft = getSecondsRemaining(currentMarket.endDate);
-
-  // Last resort: final 3 seconds, all checkpoints exhausted
-  if (secsLeft <= 3 && secsLeft >= 1) {
-    checkLastResort();
-    return;
-  }
 
   if (nextCheckpointIdx >= CHECKPOINTS.length) return;
 
@@ -696,8 +641,6 @@ function computeSignal() {
     signal = lastBetResult
       ? `BET ${lastBetResult.direction} (${lastBetResult.success ? 'OK' : 'FAILED'})`
       : 'BETTING...';
-  } else if (nextCheckpointIdx >= CHECKPOINTS.length && secsLeft <= 3) {
-    signal = `LAST RESORT >>> ${leader} ${(leaderOdds*100).toFixed(1)}%`;
   } else if (nextCheckpointIdx >= CHECKPOINTS.length) {
     signal = 'DONE (all checkpoints passed)';
   } else if (!earlyEntryFired && secsLeft > 30 && secsLeft <= 240 && leaderOdds !== null) {
