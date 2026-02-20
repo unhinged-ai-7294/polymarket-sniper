@@ -35,7 +35,7 @@ module.exports = {
   TELEGRAM_TOPIC_ID: process.env.TELEGRAM_TOPIC_ID,
 
   // Arb strategy
-  BINANCE_WSS: 'wss://stream.binance.com:9443/ws/btcusdt@bookTicker',
+  BINANCE_WSS: 'wss://stream.binance.us:9443/ws/btcusdt@bookTicker',
   DIVERGENCE_THRESHOLD: parseFloat(process.env.DIVERGENCE_THRESHOLD) || 0.08,
   MODEL_K_BASE: parseFloat(process.env.MODEL_K_BASE) || 4.76,
   ARB_BET_AMOUNT_USD: parseFloat(process.env.ARB_BET_AMOUNT_USD) || 1,
