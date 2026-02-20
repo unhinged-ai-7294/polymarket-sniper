@@ -5,7 +5,12 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "dev": "node --watch src/index.js",
+    "sniper": "node src/index.js",
+    "passive": "node src/passive.js",
+    "passive:dev": "node --watch src/passive.js",
+    "arb": "node src/arb.js",
+    "arb:dev": "node --watch src/arb.js"
   },
   "keywords": [
     "polymarket",

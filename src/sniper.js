@@ -101,6 +101,144 @@ async function placeOrder(tokenId, amount, price) {
 }
 
 /**
+ * Build, sign, and POST a GTC (resting) limit order.
+ * Same as placeOrder() but with orderType 'GTC' instead of 'FAK'.
+ * Returns the order ID from the response for later cancellation/polling.
+ */
+async function placeGTCOrder(tokenId, amount, price) {
+  const logs = [];
+  const client = getClient();
+  const wallet = getWallet();
+  if (!client || !wallet) {
+    logs.push('ERROR: Client not initialized');
+    return { orderID: null, error: 'Client not initialized', logs };
+  }
+
+  const clampedPrice = Math.min(0.99, Math.max(0.01, Math.round(price * 100) / 100));
+
+  const dollarAmount = parseFloat(amount);
+  const makerAmount = String(Math.round(dollarAmount * 100) * 10000);
+  const rawTaker = dollarAmount / clampedPrice;
+  const takerAmount = String(Math.round(rawTaker * 10000) * 100);
+
+  try {
+    logs.push(`GTC BUY $${dollarAmount} @ ${clampedPrice} | maker=${makerAmount} taker=${takerAmount}`);
+
+    const orderBuilder = new ExchangeOrderBuilder(EXCHANGE_ADDRESS, config.CHAIN_ID, wallet);
+    const order = await orderBuilder.buildSignedOrder({
+      maker: config.PROXY_WALLET,
+      taker: '0x0000000000000000000000000000000000000000',
+      tokenId,
+      makerAmount,
+      takerAmount,
+      side: UtilsSide.BUY,
+      feeRateBps: '1000',
+      nonce: '0',
+      signer: wallet.address,
+      expiration: '0',
+      signatureType: 1
+    });
+
+    const payload = {
+      order: {
+        salt: parseInt(order.salt),
+        maker: order.maker,
+        signer: order.signer,
+        taker: order.taker,
+        tokenId: order.tokenId,
+        makerAmount: order.makerAmount,
+        takerAmount: order.takerAmount,
+        side: 'BUY',
+        expiration: order.expiration,
+        nonce: order.nonce,
+        feeRateBps: order.feeRateBps,
+        signatureType: order.signatureType,
+        signature: order.signature
+      },
+      owner: client.creds?.key || '',
+      orderType: 'GTC'
+    };
+
+    const { createL2Headers } = require('@polymarket/clob-client/dist/headers');
+    const headers = await createL2Headers(wallet, client.creds, {
+      method: 'POST',
+      requestPath: '/order',
+      body: JSON.stringify(payload)
+    });
+
+    const resp = await axios.post(`${config.CLOB_HOST}/order`, payload, { headers });
+    const response = resp.data;
+    logs.push('Response: ' + JSON.stringify(response));
+
+    if (response?.error) {
+      logs.push('GTC order error: ' + response.error);
+      return { orderID: null, error: response.error, logs };
+    }
+
+    const orderID = response?.orderID || response?.id || null;
+    logs.push('Order ID: ' + orderID);
+
+    return { orderID, error: null, logs };
+  } catch (error) {
+    const apiError = error.response?.data?.error || error.response?.data?.errorMsg;
+    logs.push('GTC order failed: ' + (apiError || error.message));
+    if (error.response?.data) {
+      logs.push('API response: ' + JSON.stringify(error.response.data));
+    }
+    return { orderID: null, error: apiError || error.message, logs };
+  }
+}
+
+/**
+ * Cancel a resting order by its order ID.
+ */
+async function cancelOrder(orderID) {
+  const logs = [];
+  const client = getClient();
+  const wallet = getWallet();
+  if (!client || !wallet) {
+    logs.push('ERROR: Client not initialized');
+    return { success: false, error: 'Client not initialized', logs };
+  }
+
+  try {
+    logs.push(`Cancelling order ${orderID}`);
+
+    const { createL2Headers } = require('@polymarket/clob-client/dist/headers');
+    const body = JSON.stringify({ orderID });
+    const headers = await createL2Headers(wallet, client.creds, {
+      method: 'DELETE',
+      requestPath: '/order',
+      body
+    });
+
+    const resp = await axios.delete(`${config.CLOB_HOST}/order`, {
+      data: { orderID },
+      headers
+    });
+    logs.push('Cancel response: ' + JSON.stringify(resp.data));
+
+    return { success: true, error: null, logs };
+  } catch (error) {
+    const apiError = error.response?.data?.error || error.response?.data?.errorMsg;
+    logs.push('Cancel failed: ' + (apiError || error.message));
+    return { success: false, error: apiError || error.message, logs };
+  }
+}
+
+/**
+ * Fetch the status of an order by its ID.
+ */
+async function getOrderStatus(orderID) {
+  try {
+    const resp = await axios.get(`${config.CLOB_HOST}/data/order/${orderID}`, { timeout: 10000 });
+    return resp.data;
+  } catch (error) {
+    return null;
+  }
+}
+
+/**
  * Build, sign, and POST a SELL order (to exit a position).
  */
 async function placeSellOrder(tokenId, tokenAmount, price) {
@@ -258,6 +396,11 @@ async function executeSnipe(market, direction, price) {
 }
 
 module.exports = {
+  placeOrder,
   executeSnipe,
-  executeStopLoss
+  executeStopLoss,
+  placeSellOrder,
+  placeGTCOrder,
+  cancelOrder,
+  getOrderStatus
 };
